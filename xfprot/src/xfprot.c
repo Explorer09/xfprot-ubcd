@@ -1024,7 +1024,7 @@ static void detect_fprot_version(void)
 			/* fpscan version 6.2.x (f-prot version 6.0.x) */
 			if (strstr(tmp,"F-PROT Antivirus version 6.2") != NULL)
 				SET2(have_version, 620);
-			/* fpscan version 6.3.x (f-prot version 6.0.x) */
+			/* fpscan version 6.3.x (f-prot version 6.0.3) */
 			if (strstr(tmp,"F-PROT Antivirus version 6.3") != NULL)
 				SET2(have_version, 630);
 			/* Generic signature for fpscan 6.5+ (f-prot 6.1+) */
