@@ -998,6 +998,8 @@ static void detect_fprot_version(void)
 	FILE *fd;
 
 	/* Detect f-prot version */
+	/* Please note that the version of fpscan binary might be different 
+	   from the f-prot release version. */
 	if (strcmp(basename(fprot_bin), "f-prot") == 0) {
 		cmd = xmake_message("%s -verno", fprot_bin);
 		fd = xpopen(cmd, "r");
@@ -1019,10 +1021,21 @@ static void detect_fprot_version(void)
 		cmd = xmake_message("%s --version", fprot_bin);
 		fd = xpopen(cmd, "r");
 		while (fgets(tmp, sizeof(tmp), fd) != NULL) {
+			/* fpscan version 6.2.x (f-prot version 6.0.x) */
 			if (strstr(tmp,"F-PROT Antivirus version 6.2") != NULL)
-				SET2(have_version, 620); /* f-prot version 6.2.x */
+				SET2(have_version, 620);
+			/* fpscan version 6.3.x (f-prot version 6.0.x) */
 			if (strstr(tmp,"F-PROT Antivirus version 6.3") != NULL)
-				SET2(have_version, 630); /* f-prot version 6.3.x */
+				SET2(have_version, 630);
+			/* Generic signature for fpscan 6.5+ (f-prot 6.1+) */
+			if (strstr(tmp,"F-PROT Antivirus CLS version 6") != NULL)
+				SET2(have_version, 650);
+			/* fpscan version 6.5.x (f-prot version 6.1.x) */
+			if (strstr(tmp,"F-PROT Antivirus CLS version 6.5") != NULL)
+				SET2(have_version, 650);
+			/* fpscan version 6.7.x (f-prot version 6.2.x) */
+			if (strstr(tmp,"F-PROT Antivirus CLS version 6.7") != NULL)
+				SET2(have_version, 670);
 		}
 	}
 	xpclose_nostdin(fd);
@@ -1053,6 +1066,10 @@ static void setup_commands(void)
 		case 620:
 			/* Fallthrough */
 		case 630:
+			/* Fallthrough */
+		case 650:
+			/* Fallthrough */
+		case 670:
 			update_cmd = xmake_message("Xfprot_Update %s/fpupdate", fprot_dir);
 			/* no leading space here*/
 			info_cmd     = "--version";
