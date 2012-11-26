@@ -1165,10 +1165,10 @@ void setbusycursor(GtkWidget *widget, int flag)
 	GdkCursor *busyCursor = gdk_cursor_new(GDK_WATCH);
 	
 	if (flag == TRUE) {
-		if(GTK_WIDGET_VISIBLE(widget))
+		if(gtk_widget_get_visible(widget))
 			gdk_window_set_cursor(widget->window, busyCursor);
 	} else {
-		if(GTK_WIDGET_VISIBLE(widget))
+		if(gtk_widget_get_visible(widget))
 			gdk_window_set_cursor(widget->window, NULL);
 	}
 }
