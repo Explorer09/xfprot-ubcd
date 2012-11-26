@@ -1,0 +1,122 @@
+#!/bin/sh
+#
+# XFPROT Copyright (C) 2002-2009 by Tito Ragusa <tito-wolit@tiscali.it>
+#
+# File scan wrapper script
+#
+# This file is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+#
+# Please read the COPYING and README file!!!
+#
+# Report bugs to <tito-wolit@tiscali.it>
+
+echo "Please wait...scanning"
+
+# Poor man's clear command "\033[H\033[J" Don't edit.
+CLEAR="echo [H[J"
+MSG="Hit Q to quit or SPACE to go to the next page"
+PAGER_END_MSG=""
+XFPROT_PAGER="none"
+
+# save IFS
+SAVED_IFS=$IFS
+
+# implemented 'which' embedded in the script
+IFS=:
+for i in $PATH
+do
+	#echo "test $i/less"
+	# test if there is 'less'
+	if test -x "$i/less" ; then
+		#echo "found  less"
+		XFPROT_PAGER="less"
+		PAGER_END_MSG=$MSG
+		break
+	fi
+done
+if test "$XFPROT_PAGER" = "none" ; then
+	for i in $PATH
+	do
+		#echo "test $i/more"
+		# test if there is 'more'
+		if test -x "$i/more" ; then
+			#echo "found  more"
+			XFPROT_PAGER="more"
+			PAGER_END_MSG=$MSG
+			break
+		fi
+	done
+fi
+
+#echo $XFPROT_PAGER
+
+# test if there is 'clear'
+for i in $PATH
+do
+	#echo "test $i/clear"
+	if test -x "$i/clear" ; then
+		#echo "found  clear"
+		CLEAR="clear"
+		break
+	fi
+done
+
+# get logfile name
+IFS==
+for i in $1
+do
+	#echo $i
+	LOGFILE="$i"
+done
+
+# Restore IFS
+IFS=$SAVED_IFS
+
+fpscan "$@"
+
+shift `expr $# - 1`
+echo "Scanned: $1" >> "$LOGFILE"
+# less shows the log file name, more and cat not so add it.
+if test "$XFPROT_PAGER" = "none" -o "$XFPROT_PAGER" = "more" ; then
+	echo "Logfile: \"$LOGFILE\"" >> "$LOGFILE"
+fi
+echo "$PAGER_END_MSG" >> "$LOGFILE"
+
+if test "$XFPROT_PAGER" != "none" ; then
+	$CLEAR
+	$XFPROT_PAGER "$LOGFILE"
+	# if we have a pager we don't need this
+	#read dummy
+else
+	$CLEAR
+	cat "$LOGFILE"
+	echo "Hit Enter to quit."
+	read dummy
+fi
+# Kill the terminal emulator except when using roxterm and lxterminal
+if test -e /proc/$PPID/cmdline ; then
+	terminal="x`grep -c roxterm /proc/$PPID/cmdline`"
+	if test "$terminal" == "x0" ; then	
+		terminal="x`grep -c lxterminal /proc/$PPID/cmdline`"
+	fi
+else
+	terminal="x1"
+fi
+if test "$terminal" == "x0" ; then
+	kill $PPID
+else
+	echo "You can close the terminal emulator now."
+fi
+exit 0

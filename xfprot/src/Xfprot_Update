@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+# XFPROT Copyright (C) 2002-2009 by Tito Ragusa <tito-wolit@tiscali.it>
+#
+# Update wrapper script.
+#
+# This file is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+#
+# Please read the COPYING and README file!!!
+
+#
+# Report bugs to <tito-wolit@tiscali.it>
+
+"$1" --version
+# echo $1
+echo "Please wait...contacting Update server"
+# Valid values 1-7
+FPUPDATE_LOGLEVEL=6 "$1"
+echo 
+echo "Done."
+echo "You can close the terminal emulator now."
+# Kill the terminal emulator except when using roxterm or su
+if test -e /proc/$PPID/cmdline ; then
+	terminal="x`grep -c roxterm /proc/$PPID/cmdline`"
+	if test "$terminal" == "x0" ; then	
+		terminal="x`grep -c lxterminal /proc/$PPID/cmdline`"
+	fi
+else
+	terminal="x1"
+fi
+if test "$terminal" == "x0" ; then
+	if test -e /proc/$PPID/cmdline ; then
+		#Check if we were launched by su or sudo
+		use_sudo="x`grep -c /bin/sudo /proc/$PPID/cmdline 2> /dev/null `"
+		if test "$use_sudo" == "x1" ; then
+			echo "Hit Enter to close."
+			read dummy
+			kill $PPID
+		else 
+			# we are using su, don't kill the terminal
+			read dummy
+		fi
+	else
+		read dummy
+	fi
+else
+	read dummy
+fi
+exit 0

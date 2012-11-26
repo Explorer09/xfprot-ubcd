@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Xfprot
+GenericName=Anti-Virus Application
+Comment=Anti-Virus Application
+TryExec=xfprot
+Exec=xfprot
+Icon=@ac_datarootdir@/pixmaps/xfprot-48x48.png
+Type=Application
+Categories=GTK;Utility;
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-Desktop-File-Install-Version=0.15

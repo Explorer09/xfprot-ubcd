@@ -1,0 +1,1195 @@
+
+
+No changelogs available before Xfprot-0.10beta
+
+28-01-2003 Version 0.11beta
+
+Added getenv() to detect to home directory of the user;
+
+Fixed a bug in file_select() not releasing the lock=1
+(to lock=0) when the Cancel Button was pressed;
+
+09-02-2003
+
+Created internal text file viewer applet
+for displaying License and reports;
+Removed report.sh license.sh;
+Removed -wrap checkbox from gui;
+Added run() to remove duplicate code;
+Removed readlog.c and changed Makefile;
+
+11-02-2003
+Changed XFPROT_HOME with XFPROT_DIR;
+Rewrote run(), fprot_virinfo(),
+fprot_virlist(), fprot_update(),
+fprot_test(), view_report(),
+read_license();
+Added vf_window();
+
+12-02-2003
+Changed scan_f();
+Added add_to_command();
+Removed unused vars;
+
+13-02-2003
+Removed add_to_command()
+Reverted scan_f();
+Fixed memory corruption in run() and scan_f();
+
+14-02-2003
+Changed scan_f();
+Added add_to_command();
+Removed unused vars;
+Fixed memory corruption in add_to_command() and scan_f();
+
+15-02-2003
+Pop up version number to 0.12beta
+
+16-02-2003
+Fixed handling of broken links in list_f()
+
+21-02-2003
+Popped up version number to 0.13beta
+
+03-04-2003
+F-prot info button now for f-prot >=3.13 uses f-prot's -verno switch
+Removed  unused "-report=$HOME/f-prot-test.log" from virtest.sh
+Removed non needed malloc()'s from read_license(),fprot_test(),
+fprot_update(),fprot_virlist(),fprot_virinfo() and run().
+Renamed fprot_virinfo() to fprot_info() and VIRINFO_CMD to INFO_CMD.
+GUI consistence improvements.
+Removed resize_f().
+Added toggle1_f() and toggle2_f().
+Removed non needed vars y,z.
+Added var reset2.
+
+09-04-2003
+Marcelo Samsoniuk fixed a nasty bug in the file_selection widget.
+Display error message in view_file() if file could not be opened.
+Added free_list() function.
+
+10-04-2003
+Added vf_window_close().
+Fixed memory leak in view_file().
+Removed read_license().
+Changed about_f().
+
+13-04-2003
+Added simple_free_list().
+Added about_window_close_f().
+Changed config.h.
+Popped up version number to 0.14beta.
+
+16-04-2003
+Fixed segfault in view_file() if opening non existant file.
+Fixed memory corruption in view_file() due to bad handling of `\t`.
+Added view_file_error() and changed vf_window(), view_report() and
+about_f() accordingly.
+Fixed about_window_close_f() to use window_close(win[0]).
+Changed struct xtree *win to struct xtree *win[2].
+Minor code clean-up.
+Popped up version number to 0.15beta.
+
+20-04-2003
+Fixed some file permissions that did not allow to normal users
+to run xfprot correctly.
+Improved README file.
+Popped up version number to 0.16beta.
+
+06-05-2003
+Changed virtest.sh to use f-prot-test-file in xfprot's bin dir
+ather than create it on the fly.
+Added xgetcwd(), check() for snprintf, safe_strncpy(),
+xmalloc(), xrealloc() functions for better code security.
+
+07-05-2003
+Fixed permissions set by Makefile once again.
+Changed XFPROT_DIR to XFPROT_BIN_DIR and
+added XFPROT_PRIV_DIR and DEF_REPORT_FILE
+in configure script.
+
+08-05-2003
+Moved scan_f() to do_scan_f(), added new scan_f(),
+file_exists_and_overwrite_window_close_f() and
+file_exists_and_jump_out_window_close_f().
+
+11-05-2003
+Created a builtin applet xfprot --read_stdin to display
+piped output from scripts.
+Changed view_file() so that it can read stdin
+and modified virinfo.sh, virtest.sh, update.sh,
+virlist.sh and makefile accordingly.
+
+12-05-2003
+aterm, rxvt and gnome-terminal are no more supported
+in configure script as they don't have a command line switch
+that avoids closing the terminal when command exits.
+Reverted fprot_update() and update.sh to old behaviour.
+Added -v command line switch that returns the xfprot version.
+Removed scan.sh.
+
+14-05-2003
+Added a check_old_install.sh script to make install
+that promts the user to uninstall previous xfprot
+versions if found.
+
+25-05-2003
+Removed check_install.sh as it is not needed.
+Make process not dumpable under Linux 2.4
+
+10-06-2003
+Added illegal_chars_in_filename() to check that report file's
+name doesn't contain special chars or illegal char sequences
+leading to unexpected results if passed to a shell through a
+system() call.
+Added a private version of libxstep's edit.c with better support
+for non US keyboards.
+
+26-06-2003
+Ported xfprot to Gtk 1.2.10 because the development of the xstep
+library  IS NOW STOPPED FOR INDEFINED TIME.
+Renamed f-prot-test-file to eicar.com.txt as in www.eicar.org.
+
+28-06-2003
+Changed  int illegal_chars_in_filename(char *filename,int substitute)
+to char *illegal_chars_in_filename(char *filename,int substitute).
+Removed safe_strncpy.c and check_snprintf.c.
+Reverted xgetcwd.c to the original busybox one.
+
+28-06-2003
+Renamed default report file to xfprot.log.
+
+04-07-2003
+Added a lock to file_selection() so we can run just one instance.
+Changed textview_window() so that it now accepts File *fd from
+fopen(), popen() , pipe from stdin(as standalone app) and char *filename.
+Made textview_window() modal for read_stdin==0.
+Changed  fprot_virlist() to use popen() and removed virlist.sh script.
+Changed  fprot_test() to use popen() and removed virtest.sh script.
+
+06-07-2003
+Now xfprot only works if it could set up its own private dir.
+The no logging mode no longer exists.
+Removed no_report() and int do_report flag.
+Added a lock file to ensure that only one instance of xfprot runs.
+Added do_lock_file() and remove_lock() functions.
+Added a xfprot.h file.
+
+07-07-2003
+Fixed about_f().
+
+08-07-2003
+Fixed some bad  malloc() and free() calls in view_report() ,textview_window(),
+file_sel_ok(), file_sel_exit(),  delete_event() and do_scan_f();
+
+09-07-2003
+Added fgets_str() from busybox to textview_window() to replace fgets().
+Added set_dir_properties() function.
+Added check_for_bin() to see if f-prot is at PATH_TO_F_PROT_BIN.
+
+10-07-2003
+Changed fprot_update(), configure script and config.h to get rid of update.sh
+script.
+
+13-07-2003
+Added  gtk_set_locale() to main();
+Fixed do_file_selection() with gtk_file_selection_hide_fileop_buttons();
+
+16-07-2003
+Created mygtk.h, FileSelector.c and DialogWindow.c and changed xfprot-gtk code
+accordingly.
+Some code clean up in main().
+
+19-07-2003
+Created mylib.h and mylib.c to contain xgetcwd(), xmalloc(), xrealloc(),
+xcalloc(), fgets_str().
+Cleaned up illegal_chars_in_filename() and renamed it to
+illegal_chars_in_string().
+
+21-07-2003
+Added functions xchdir(), xmkdir(), xchown(), xchmod() and window_create().
+
+22-07-2003
+Made window_create() accept more args.
+Cleaned up check_for_bin() and main().
+Added a tooltip to disinfect_button, rename_button and delete_button.
+Warning: gtk_tooltips_set_delay doesn't work as expected as guint delay is not
+equal to seconds but to seconds*1000 .
+
+23-07-2003
+Added table_create().
+Substituted all gtk_widget_show() function calls in main()
+and in dialog_window() with one gtk_widget_show_all().
+Removed duplicate code in dialog_window() and do_lock_file().
+Added button_create() and button_create_on_grid().
+
+24-07-2003
+Added check_create() and check_create_on_grid().
+Fixed a bug in do_scan_f() that has broken some commandline switches.
+Changed virinfo.sh to use xfprot -r.
+Added better exception handling for commandline parsing.
+
+25-07-2003
+Changed button_create_on_grid() to button_create_on_table().
+Changed check_create_on_grid() to check_create_on_table().
+Added textview_window_create();
+
+28-07-2003
+Added text_box_create_on_table().
+Fixed a bug in remove macro radio button group missing a callback function,
+added flag_macro_action_callback() and fixed toggle1_f() and toggle2_f().
+Removed set_action_defaults() and set_macro_remove_defaults().
+
+29-07-2003
+Added frame_create_on_table().
+
+30-07-2003
+Added button_create_in_container(), button_box_create_on_table(),
+default_button_box_create_on_table().
+Get rid of flag_nosub_callback(), flag_disinf_callback(),
+flag_rename_callback(),
+flag_delete_callback(), flag_append_callback(), flag_list_callback(),
+flag_archives_callback(),
+flag_comp_exe_callback(), flag_collect_callback(), flag_ai_callback(),
+flag_follow_callback(),
+flag_old_callback() and substitute them with flag_callback().
+Removed flags.c.
+
+01-08-2003
+Modified fprot_info() so that virinfo.sh could be removed.
+Fixed configure script and Makefile accordingly.
+Removed fget_str() from mylib.c, mylib.h and TextViewWindow.c.
+Removed xfprot -r commandline switch code.
+Added fgetc_buf() to mylib.c.
+
+02-08-2003
+Now textview_window_create() can read from a FILE *fd and from a char *ptr;
+Fixed fprot_info().
+Fixed delete_event() declaration.
+Added signal_handler() for SIGTERM and SIGINT.
+Set SIGHUP to SIG_IGN.
+
+07-08-2003
+Added textpad_create_on_table() and modified textview_window_create().
+
+19-08-2003
+Minor GUI improvemets.
+Removed check_old_install.sh and changed Makefile.
+
+21-03-2003
+Xfprot works with new f-prot for linux version 4.2.0.
+Core dumping prevention seems to work also for Linux-2.6.0-test3,
+so we change the configure script and the define name from LINUX_24
+to NO_CORE_DUMPS.
+
+28-08-2003
+Fixed bug signaled by Gerald Schnabel
+xfprot crashes after the "Can't open file!" notification if there's no
+report script when you
+press the 'Report' button. The fix is to call fclose only when the
+filehandle fd is not NULL...
+
+28-08-2003
+Added xfclose_nostdin() and xpclose_nostdin() to mylib.c and mylib.h
+and substituted fclose() and pclose() with them in xfprot-gtk.c.
+Removed dead code in  fprot_info() .
+
+30-08-2003
+Fixed lots of bugs in GUI code relative to radio button initialization
+that breaks the command-line building logic and fixed broken radio_create()
+function in mygtk.h.
+Reverted check button label  to "Scan inside archives" .
+Fixed "Report file exists. Overwrite?" dialog window in scan_f() displaying
+only one button.
+
+31-08-2003
+Added dialog_do_nothing_callback() to dialog_window() to disable the
+windows "delete_event" callback, to force the user to interact only
+through the gui's buttons.
+Removed -pedantic switch from Makefile.
+Fixed debug_puts() and debug_printf().
+scan_f() and textview_window_create() code clean up.
+
+02-09-2003
+Fixed homepage URL in configure script and README file.
+
+05-09-2003
+Fixed typo in xcalloc().
+
+06-09-2003
+Added xalloc_die() __attribute__(( __noreturn__ )), exit()
+__attribute__(( __noreturn__ )).
+and void xopen_die (const char *path) __attribute__(( __noreturn__ )).
+Cleaned up xmalloc, xcalloc, xrealloc.
+
+07-09-2003
+Fixed default value in file_types_group to be "Attempt to identify files".
+
+12-09-2003
+Added a disclaimer to be printed to the tty at startup.
+
+07-10-2003
+Cleaned up prepare_report_path() and removed a bad logic about "/".
+Added xconcat_path_file() and last_char_is() to mylib.c and mylib.h.
+Cleaned up do_scan_f() and about_f().
+
+08-10-2003
+Added xclose_error() to mylib.c and mylib.h.
+Added #ifdef DEBUG statements to mygtk.h functions for size optimization.
+Added #ifdef DEBUG statements to mylib.c functions for size optimization.
+Removed debug_printf() and debug_puts() from mygtk.h.
+Added msg(), err_msg(), and debug_msg() to mylib.c and mylib.h.
+Cleaned up the text of all messages.
+Cleaned up check_for_bin().
+Added dialog_window error messages to all calls linked with an
+exit(EXIT_FAILURE).
+Removed xclose_error(void) from mylib.c and mylib.h.
+
+12-10-2003
+Cleaned up xfprot.h.
+Added functions case_flag_is() and  case_callback_is() for size optimization to
+xfprot-gtk.c xfprot.h.
+Fixed wrong var name in do_scan_f().
+Defined debug_msg is err_msg with DEBUG set.
+Removed debug_msg from mylib.c and mylib.h.
+Added #ifdef DEBUG to every  debug_msg call.
+More size optimization.
+Popped up version to rc1.
+
+15-10-2003
+Added GTK_SIGNAL_FUNC() to all signal functions.
+Addded get_radio_button_group(GtkRadioButton *radio_button) to mygtk.h.
+In xfprot-gtk.c gtk_tooltips_set_delay is now used only with gtk 1.2.
+
+16-10-2003
+Ported mygtk.h & C. to Gtk-2.0, so now we can choose at compile time if we want
+gtk-1.2 or gtk-2.0.
+Changed configure script.
+Renamed Makefile to Makefile.gtk1 and added Makefile.gtk2.
+More GUI improvements for gtk+2.2 in xfprot.c for the select button, in mygtk.h
+for table_create()
+and in TextViewWindow.c for textview_window_create().
+
+17-10-2003
+Applied patch by wwp <subscript@free.fr> who emailed me:
+"I've found useful to make more standard Makefile structures and
+more usual C .h/.c split and #include's." and sent also
+a fixed version of the Makefile for GNU/Linux w/ gtk2.
+Applied a fix to the configure script by  David Ronis
+<ronis@montroll.chem.mcgill.ca>.
+Cleaned up things after all the patching and fixed 2 minor bugs preventing a
+clean compilation.
+More tweaking of the configure script.
+Added a check for widget==NULL to all callback functions to shut up some
+compiler warnings about
+unused parameters.
+
+18-10-2003
+Added xputs() call to mylib.c/.h.
+
+21-10-2003
+Added xconcat_subpath_file() yo mylib.c/.h.
+
+26-10-2003
+Improved xmalloc, xrealloc and xcalloc in mylib.c.
+Modified xalloc_die in mylib.c/h.
+Added xstrncat and xstrdup to mylib.c/h.
+Changed strncat to xstrncat in add_to_command().
+
+29-10-2003
+Added xsnprintf() to mylib.c/h and changed all instances of sprintf and
+snprintf
+to it.
+
+01-11-2003
+Changed GtkWidget *table_create( int rows, int cols , GtkWidget* window , int
+border) to
+GtkWidget *table_create(int cols, int rows , GtkWidget* window , int border)
+for consistency
+with all other mygtk calls.
+Added gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_MOUSE) to
+dialog_window().
+Added first_char_is() to mylib.c/h.
+
+08-11-2003
+Remove not needed #define SCAN_CMD from configure script and from config.h.
+
+10-11-2003
+Little code clean up in xsnprintf().
+
+11-11-2003
+Fixed typo for xconcat_subpath_file() in mylib.c/h.
+
+12-11-2003
+Added fixed font to TextViewWindow.c for Gtk+1.2 and Gtk+2.2.
+
+16-11-2003
+Added "su -c" to update command as in QtFprot.
+Added some icons from the QtFprot 0.2.1 package
+and modified the install and uninstall sections of the Makefiles.
+
+26-11-2003
+Makefile clean up.
+
+30-11-2003
+More Makefile clean up and changes in mylib.c for using -DL_* in makefiles
+for binary size reduction.
+
+03-12-2003
+Moved textpad_create_on_table from TextEditWindow.c to mygtk.c as it is used
+by other widgets as TextEditWindow and created a USE_GTK_2 mode version.
+Fixed size of textview widget in USE_GTK_2 mode.
+Removed Makefile.gtk1 and Makefile.gtk2 and modified configure script to
+create Makefile.in.
+Added -include mylib.h -include mygtk.h -include config.h -include xfprot.h
+to the Makefile and removed -Wshadow.
+
+04-12-2003
+Removed debug_msg macro from mylibc.h and substituted it with err_msg in all*.c
+files.
+Added prompt for -DDEBUG in configure script.
+
+06-12-2003
+Added config.guess
+
+18-01-2004
+Removed #define DEBUG created by configure in config.h as this now is in
+Makefile.in.
+
+01-02-2004
+Fixed some bugs due to incorrect UTF-8 strings handling  in file selector,
+text entry widgets and textview widget with GTK+-2.2.
+
+04-02-2004
+Fixed  bug in illegal_chars_in_string() where counter was increased  twice and
+added feature
+to skip leading white space and to avoid check for '/'(legal in paths).
+
+06-02-2004
+Get rid of  illegal_chars_in_string() and prepare_report_path().
+Changed report file entry box to be not editable and to use
+a file selector widget.
+Changed XFPROT_PRIV_DIR	 to ".xfprot" in configure script.
+Removed a couple of global vars.
+Updated DialogWindow.c to latest.
+More code cleanup.
+
+07-02-2004
+Removed extern char* progname for err_msg and msg and substituted
+with #ifdef PROGNAME.
+Updated FileSelector.c to latest.
+Updated TextViewWindow.c to latest and added TextCommon.c.
+Fixed bug in about_f: if first time dialog_window should not be modal.
+
+08-02-2004
+Updated FileSelector.c to latest (removed a global var and added xstrdup).
+
+11-02-2004
+Fixed a memory leak in  do_file_selection(void) and
+do_report_file_selection(void)
+when #define USE_GTK_2_0.
+Cleaned up TextViewWindow, improved UTF-8 handling and lowered memory usage.
+
+12-02-2004
+Fixed look of DialogWindow with gtk+-1.2.
+
+13-02-2004
+One more leak in File Selector plugged.
+Changed position policy of DialogWindow and FileSelector from 
+GTK_WIN_POS_MOUSE to GTK_WIN_POS_CENTER.
+
+14-02-2004
+More fixes in TextViewWindow to improve speed and error handling
+(when user quit the app while it is loading  a file).
+
+15-02-2004
+Fix a segfault in TextViewWindow.
+
+19-02-2004
+Changed ability to read from pointers in TextViewWindow so
+that it cannot read more than DEF_BUFFER_SIZE bytes from pointer.
+Changed all popen() calls tp xpopen().
+Reduced memory usage in fprot_info()'s test for old f-prot versions.
+Added check for (fd=open_file())==NULL in view_report().
+
+22-02-2004
+Make  text view window revalidate the iterator for every text insertion (with
+Gtk+2.x).
+Added read_and_convert(), text_view_error()to TextViewWindow.c.
+Added xfgetc_nbuf() to mylib.c.
+
+23-02-2004
+Added a text edit window to the view_report().
+
+24-02-2004
+Added DBG_FUNCTION_NAME err_msg("%s()",__FUNCTION__) to mylib.h
+and applied it to most *.c files.
+
+26-02-2004
+Remove some not needed newlines from the debug messages in mygtk.c.
+
+28-02-2004
+Added new widget functions about_window_create() and error_window().
+Fixed some bugs in text edit/view/about windows when loading text
+using Gtk+-1.x: text was scrolled to the end.
+
+29-02-2004
+Enhanced Dialog Window to display a checkbutton on request.
+Startup nag screen and root warning screen now can be disabled.
+Added create_file().
+Fixed configure script to accept commandline args.
+
+01-03-2004
+Cleaned up configure script.
+
+04-03-2004
+More configure script clean up.
+
+11-03-2004
+Fixed bug in create_file().
+
+13-03-2004
+Starting to move all flags from char to int.
+Fixed all check buttons of the GUI to use this new model.
+Changed flag_callback(), toggle1_f(), scan_f(), do_scan_f().
+
+14-03-2003
+Fix the configure script as it seems to be broken on Conectiva 9.0.
+Changed #define PATH_TO_F_PROT_BIN "/usr/local/f-prot/f-prot" to
+#define PATH_TO_F_PROT_BIN "/usr/local/bin/f-prot".
+Moved all flags from char to int.
+Fixed all radio buttons of the GUI to use this new model.
+Changed all callback functions, toggle1_f(), scan_f(), do_scan_f() and removed
+case_callback_is().
+Some code cleanup.
+do_lock_file() doesn't write the pid to the lock file anymore as this is
+unused. 
+
+16-03-2004
+More configure script clean up.
+Starting to add I18n support.  
+Added support for i18n to configure script
+
+17-03-2004
+More configure script tweaking for i18n.
+
+18-03-2004
+Added brasilian translation contributed by Renan <renan_gallete@brfree.com.br>.
+Added a spec file for Fedora Core 1 contributed by  "Leonardo S. Leopando"
+<lsl@pacific.net.ph>.
+Applied two patches for configure script and Makefile contributed by Chris
+Clayton <chris@theclaytons.giointernet.co.uk>.
+
+The first amends the Makefile so that installation works even if the
+target install directories don't exist. This will be very useful to (rpm)
+packagers who will want to install into a fake, buildroot directory.
+
+The second patch tries to make the language messages from ./configure a bit 
+more sane when --with-lang has been passed to ./configure.
+
+20-03-2004
+Set defaults as in f-prot 4.4.1 (-dumb -packed -archives) and fix
+initialization
+values for the flags.
+Remove SCAN_COMPRESSED_EXECUTABLES checkbox if f-prot 4.4.1 is detected as this
+is
+a default value that cannot be switched off and substitute it with a 
+"Scan within password protected archives" checkbox to 
+ add support for the new -server/-noserver switch.
+Allow -ai only if -heur is set.
+Add a tooltip for "use heuristics :only".
+
+21-03-2004
+Detection of f-prot version and -verno switch unified in main().
+Before scanning check if at least a flag for actions is set, 
+if not warn and make sure that scanmode is set to report only.
+Made -archive/-noarchive and -server/-noserver consistent in the GUI.
+
+22-03-2004
+Fixed bug in fgetc_nbuf() causing text corruption in text-widgets.
+Updated pt_BR.h
+
+23-03-2004
+Revert PATH_TO_F_PROT_BIN to /usr/local/f-prot/f-prot as  /usr/local/bin/f-prot 
+which points to  /usr/local/f-prot/f-prot.sh seems not to work with older
+versions
+of f-prot.
+
+25-03-2004
+Moved Eterm to the end of the autodetection list as it is a trouble maker.
+
+27-03-2004
+Optimized mylib.c in non DEBUG mode for size and silenced not
+needed output.
+
+28-03-2004
+Removed error_window() and ErrorWindow.c.
+Changed dialog_window to accept varargs and update all the code. 
+
+31-03-2004
+Removed about_wrap_callback as it duplucates wrap_callback which 
+is included.
+Removed exit_if_null() and replaced it with an assert statement.
+Changed the configure script to explicitly set -DNDEBUG.
+
+01-04-2004
+Move wrap_callback really to TextCommon.c
+Create new function void read_from_fd_and_display_text(GtkWidget *text,
+GtkWidget *edit_window, int modal_flag, FILE *fd)
+and optimize TextViewWindow TextEditWindow and AboutWindow.
+Removed ability to read from a pointer in textview_window_create as this was
+never used.
+Modified and cleaned up mygtk.h and xfprot-gtk.c accordingly.
+
+07-04-2004
+Added "-Os -pipe" to configure script for Makefile.in creation in non-debug
+mode.
+Cleaned up Makefile.
+
+09-04-2004
+Added main_loop to mygtk.c/h and to DialogWindow.c
+
+18-04-2004
+Use g_spawn_command_line_async() instead of run() with GTk+2.x.
+
+20-04-2004
+Use g_spawn_async_with_pipes() instead of xfopen() or xpopen() with GTk+2.x
+in  fprot_test(), fprot_virlist() and fprot_info() and optimize the code.
+Removed code in #ifdef OLD_INFO and #ifdef USE_OLD_VIEW_REPORT.
+Plugged a memory leak in view_report(), do_scan_f(), scan_f() with GTk+2.x.
+
+27-04-2004
+Fixed configure script error when no gtk-devel libs are found: now we exit
+cleanly.
+GPL header is added during configure to config.h and Makefile.in.
+
+28-04-2004
+Updated TextEditWindow.c to latest. 
+
+29-04-2004
+Added autodetection of f-prot binary directory to configure script.
+
+01-05-2004
+More configure tweaking.
+
+02-05-2004
+Updated TextCommon.c to latest: added a sanity check for filename==NULL in
+open_file().
+
+11-05-2004
+Removed config.guess script and substituted in configure with uname.
+
+13-05-2004
+Added a main menu bar and reworked the GUI a little.
+
+16-05-2004
+More main menu work.
+Updated TextEditWindow.c to latest.
+
+19-05-2004
+In scan_f() return after resetting to report-only mode if no flag for actions
+is set.
+Fixed bug in configure script when prompting user for libs or debug where wrong
+values 
+were not intercepted.
+
+20-05-2004
+Removed #ifdef DEBUG on xalloc_die() error message.
+Removed xmalloc() and made it a wrapper for xcalloc by 
+#define xmalloc(x) xcalloc( 1, x) so we are sure that allocated memory is
+zeroed.
+Fixed bug in TextViewWindow when closing it by clicking on the title bar.
+
+22-05-2004
+Fixed bug in TextEditwWindow when closing it by clicking on the title bar.
+Fixed regression bug in TextEditwWindow when closing it by clicking on the
+title bar with GTK+1.x libs.
+More GUI fixes with GTK+1.x libs in About.c and Dialog.c.
+Improved XFREE macro in mylib.h
+
+25-05-2004
+More configure script clean up.
+Addedd --with-fprot-autodetection switch to configure script.
+Changed free() calls paired with g_filename_from_utf8() to XFREE().
+
+29-05-2004
+More configure script clean up.
+
+08-06-2004
+Bump version number to 1.4
+
+15-06-2004
+Updated pt_BR.h. Thanks to renan_gallete@brfree.com.br.
+
+16-06-2004
+Changed XFREE macro into function void *xfree(void *ptr) that avoids freeing a
+NULL pointer
+and sets the pointer to NULL after it has been freed (usage is
+ptr=xfree(ptr);).
+
+17-06-2004
+Changed all occurrences of strlen() to xstrlen(), which returns the length of a
+string (even if it is NULL).
+
+23-06-2004
+Added new macro debug(x) to mylib.h and cleaned up most of the
+code from #ifdef DEBUG statements.
+
+27-06-2004
+Added a polish translation by  Krzysztof Pawlak <jmnemonic at gazeta dot pl>, <mnemonic at cad dot pl>.
+Added a workaround in the configure script as in gtk+2.4 (and maybe in gtk+2.3) some of our widgets (gtkitemfactory)
+are deprecated, so for the moment we avoid to set DISABLE_DEPRECATED flags as this breaks compiling.
+
+05-07-2004
+Updated mygtk.h/c end TextEditWindow.c and configure script to latest that include the porting of main_menu_create()
+to Gtk+2.4.
+
+07-07-2004
+Cleaned up i18n/*.h files and TextEditWindow.c.
+Removed #define xmalloc(x) xcalloc( 1, x).
+Optimized and added a gtk_main_iteration in read_and_convert.
+Optimized char * xfgetc_nbuf(FILE *fd, int size).
+Optimized main_loop() and fixed DialogWindow.c.
+Fixed a bug in license_callback() in About.c not setting ptr_status correctly
+if clicked more then once.
+
+11-07-2004
+Added spanish trabslation by Jos�Baeza <joseba0@supercable.es>
+Removed Virus List button from Gui when using Gtk+1.2.x libs as it 
+is not so frequently used and makes more space for the other buttons
+and their labels.
+
+12-07-2004
+bump version number to 1.6.
+
+13-07-2004
+Major code cleanup in mygtk.c: moved some redundant checks to debug code.
+
+14-07-2004
+Added attach_to_table() to mygtk.c/h.
+
+17-07-2004
+Removed do_nothing() from mygtk.c/h.
+Major code cleanup in mygtk.c: moved some redundant checks to debug code.
+Added a couple of #defines  to mygtk.c/h to make code easier to understand when
+using different versions of Gtk. 
+
+26-07-2004
+Cleaned up code in void do_scan_f().
+Checked compatibility with f-prot-4.4.3.
+
+01-08-2004
+Updated AboutWindow.c, TextEditWindow.c, DialogWindow.c, mygtk.c/h to latest.
+Added quit_window() to mygtk.h.
+Cleaned up code in TextEditwindow.c.
+Fixed bug with size of columns in string_list_create_on_table() with Gtk+1.2 so that
+the columns are at least as big as the title's  string length. 
+
+09-08-2004
+Added a french version i18n for xfprot from coste_remi@sfr.fr
+
+10-08-2004
+Cleaned up code in AboutWindow.c and mygtk.h and fixed window closing once again.
+
+11-08-2004
+More window closing fixes in AboutWindow.c, TextViewWindow.c, TextCommon.c, xfprot-gtk.c and xfprot.h.
+Memory leak in  read_and_convert fixed.
+Splitted read_from_fd_and_display_text() in two versions for Gtk-1.2 and Gtk-2.x.
+
+12-08-2004
+Released xfprot 1.7
+
+20-08-2004
+Minor bugfix in main_window_close.
+Cleaned up char * get_uid_or_gid (int flag, long idnum) in mylib.c.
+
+08-09-2004
+Fixes in AboutWindow.c, DialogWindow.c, mygtk.c/h, TextEditWindow.c, TextViewWindow.c, 
+TextCommon.c.
+
+12-09-2004
+Realease xfprot 1.8
+
+27-09-2004
+Fixed  compiler warning with gcc 3.4.1 in struct MenuEntry with Gtk-2.4.x.
+
+04-10-2004
+Optimized and cleaned up code in DialogWindow.c: now in windows
+with only one button the button has the input focus.
+
+05-10-2004
+Modified DialogWindow to accept an int to define the default activated button
+and updated all occurences to this new api.
+
+07-10-2004
+Activate TextViewWindow ok button by default.
+Activate AboutWindow ok button by default.
+Remove textviewclose() as it was unused.
+Cleaned up read_from_fd_and_display_text() and read_and_convert().
+Removed some useless lines in xfprot and fixed indentation.
+Made TextViewWindow and AboutWindow more reliable with Gtk 2.x but somewhat also slower
+by reading the fd first and then display the widget.
+
+16-10-2004
+Added a new progress bar widget and modified texteditwindow, textcommon and mygtk.h accordingly. 
+
+22-10-2004
+Made TextViewWindow a subset of TextEditWindow, removed some duplicated code
+and moved common code to TextCommon.
+More code optimization and bug fixes in TextViewWindow.c and TextEditWindow.c.
+
+01-11-2004
+Another major rework of the text_edit_window and text_view_window widgets.
+
+02-11-2004
+Little fixes in aboutwindow.c
+Debugged a nasty random crash in main_loop() related to gtk_widget_destroy().
+
+06-11-2004
+Two days of bug fixing, no changelog because i'm too tired. Sorry :)
+
+18-11-2004
+Fixed compiling problem with gtk 2.2.4 in Textcommon.c.
+Code cleanup for gtk1.x gtk2.x window closing bug.
+
+11-01-2005
+Added a check for su or sudo to the configure file and defined SU_SUDO,
+this is needed to make the update button work in distros that use
+sudo rather than su (ubuntu).
+Added --with-install-dir (prefix) to configure script.
+Improved the configure script to use an absolute path for TERM.
+Fixed a bug in AboutWindow.c's close button with Gtk+2.x libs.
+Fixed gdk-pixbuf.h dependencies in mygtk.h.
+Fixed f-prot version check for f-prot 4.5 (not only 4.4).
+Removed int have_verno and int have_ver_4_4 and add int have_version
+to replace them.
+Changed fprot_update(void) to use int have_version rather than to do
+an lstat for UPDATE_CMD_VER_4_1.
+
+15-01-2005
+Realeased xfprot 1.9
+
+16-01-2005
+Fix configure script to allow the use of Gtk+2.6 libs.
+Improved configure script debug compiler options.
+Fixed format strings in TextCommon, TextEditWindow, DialogWindow.
+Removed redundant declarations.
+
+17-01-2005
+Added #define __GTK_ABOUT_DIALOG_H__ to mygtk.h to avoid a gcc warning
+with -Wshadow and gtk+2.6.x:
+	gtkaboutdialog.h:108: warning: declaration of 'link' shadows a global declaration
+	/usr/include/unistd.h:722: warning: shadowed declaration is here
+as mygtk doesn't use gtkaboutdialog at all.
+
+31-01-2005
+Some cosmetical fixes in AboutWindow.
+Modified window_create:
+ if x,y > 0 use them as window size
+ if x,y = 0 use default 540 x 320
+ if x,y < 0 use max size.
+
+03-03-2005
+Added Italian Translation (C) 2005 by Marcello Missiroli <piffy@treemme.org>.
+Updated mygtk.c, mylib.c, mylib.h to latest.
+
+06-03-2005
+Released xfprot 1.10
+
+12-03-2005
+Cleaned up the Copying file.
+Added German translation by Gerald Schnabel <gschnabel (at) gmx (dot) de>.
+
+10-04-2005
+Don't reuse GtkWidget vars. Fixes in xfprot_gtk.c and DialogWindow.c.
+Released xfprot 1.11
+
+20-07-2005
+Updated the email of the author of the spanish translation:
+<joseba0@auna.com>.
+Minor fix in make clean: remove also *~ backup files. 
+Released xfprot 1.12
+
+24-07-2005
+One more fix to the configure script for Ubuntu users.
+
+27-07-2005
+Released xfprot 1.13
+
+14-08-2005
+Fix version detection for f-prot 4.6.x to remove 
+a warning  message while updating.
+
+09-09-2005
+Released xfprot 1.14
+
+02-10-2005
+Fix some bugs in the configure script ( if test -x `which something` ) 
+
+30-10-2005
+Fixed bug in configure script: use -DUSE_GTK_2_4 also for gtk 2.8.x
+Released xfprot 1.15
+
+06-06-2006
+Dropped support for GTK 1.x libraries
+Update mylib.c/h and mygtk.c/h to latest.
+Added support for aterm.
+Added support for rxvt.
+Improved locale for filename handling.
+Improved UTF8 handling for the GUI.
+
+08-06-2006
+Made scan and report path boxes editable.
+
+09-06-2006
+Xfprot now can read and write a config file with user supplied default settings.
+
+04-09-2006
+Update mylib.c/h and mygtk.c/h to latest.
+Added support for xfce Terminal.
+
+24-09-2006
+Released xfprot 1.16.
+
+25-09-2006
+Fixed compilation with Gtk+ 2.4 in FileSelector.c and configure script.
+
+20-10-2006
+Fixed compilation error with pl_PL.h. 
+Cleaned up de_DE.h.
+Workaround for compilation error with pt_BR.h and fr_FR.h.
+
+21-10-2006
+Declare vars and functions static in xfprot-gtk.c and remove xfprot.h.
+
+19-11-2006
+Fixed possible memory corruption in  xfgetc_nbuf.
+
+08-12-2006
+Released xfprot 1.17
+
+10-12-2006
+Improved french translation by BEDOT Alexandre <alexandre.bedot@free.fr>.
+
+11-12-2006
+Removed --with-gtk1 --with-gtk2 from help text of configure script.
+Removed -march=`uname -m` from configure script as it breaks on x86_64.
+Fixed formatting of message about the xfprot config file.
+Fixed a bug:  -COLLECT option seems not be read from config file.
+
+12-12-2006
+Improved i18n support.
+Improved menu navigation and shortcuts.
+
+20-12-2006
+Cleaned up README file.
+
+21-12-2006
+xfprot 1.18 released.
+
+22-12-2006
+Added script to create deb package.
+Added xfprot.desktop file.
+
+30-12-2006
+Cleaned up Makefile
+
+09-01-2007
+Replace == with -eq in configure.
+
+09-03-2007
+Fixed a consistency bug in the GUI at program start.
+
+11-03-2007
+Fixed bug in fprot commandline generation preventing to use macrovirus removal options.
+
+13-03-2007
+Fixed bug preventing to restore the saved gui state.
+
+12-03-2007
+xfprot 1.19 released.
+
+14-03-2007
+Rewrote saved user configuration restoring function, this time it should work.
+Added runtime terminal emulator autodetection.
+
+02-04-2007
+Added improved signal handling.
+
+29-04-2007
+Added experimental kde menu action support.
+xfprot 1.20 released.
+
+24-09-2007
+Added experimental freedesktop.org menu support.
+
+13/11/2007
+Added detection in configure script and code for the new gtk tooltip api.
+Added detection in configure script and code for the new gtk File chooser api.
+Added workaround to circumvent idiotic GtkFileChooser limitation
+of not being able to open files OR dirs.
+
+17/11/2007
+xfprot-1.21 released.
+
+18/11/2007
+Fixed the compiling (USE_OLD_FILE_SEL / USE_NEW_TOOLTIPS) for gtk libs <= 2.10
+
+25/11/2007
+xfprot-1.22 released.
+
+26/11/2007
+Corrupted tarball fixed and xfprot-1.22.1 released.
+
+27/11/2007
+Spanish translation improved by Jose Baeza <joseba0@auna.com>
+
+28/04/2008
+Added support for f-prot 6.x.x.
+Refactored the code to make the removal of code relative to old 
+f-prot versions easier.
+Added new shell wrapper script xfprot6_pager.sh.
+Improved functions to restore saved settings.
+Added function to clear saved settings.
+
+17/05/2008
+Renamed xfprot6_pager.sh to XfprotScan.
+Added XfprotUpdate script.
+
+18/05/2008
+xfprot 1.23 released.
+
+19/05/2008
+Quote and escape update_cmd in fprot_update() when using su.
+Changed configure script to use an integer flag rather than a string for macro USE_SUDO.
+Fix make clean not to remove *.desktop files.
+Fix Xfprot_Update to not to kill the shell if su is used.
+
+21/05/2005
+Improved hueristics in fprot_update(void).
+Cleaned up Xfprot_Update.
+
+11/07/2008
+Improved grepping for gtk version in configure script
+
+14/07/2008
+Substituted all references to GTK_SIGNAL_FUNC and GtkSignalFunc
+with G_CALLBACK and GCallback as they are going to be deprecated in gtk 2.14.
+xfprot 1.24 released.
+
+22/07/08
+Moved to autoconf and automake.
+Improved french translation by "M. Alexandre BEDOT" <alexandre.bedot@free.fr>
+
+27/07/2008
+Added a workaround to prevent the window size to be bigger than the screen
+(this works only if the text strings on the gui elements are not to big).
+Fix for Xfprot_Scan and XFprot_update scripts when used with filenames
+with spaces by "Gert Hulselmans" <hulselmansgert@gmail.com>
+
+29/07/2008
+Fixed it_IT, es_ES, pt_BR files by "M. Alexandre BEDOT" <alexandre.bedot@free.fr>
+
+01/08/2008
+Generate EICAR test file on the fly.
+
+02/08/2008
+Added simple man page.
+Fixed README
+
+10/08/2008
+xfprot 1.25 released.
+
+12/08/2008
+Fixed some configure.ac magic to autodetect sudo or su.
+Added experimental support lxterminal (LXDE).
+Fixed xfprot.c:279: warning: suggest parentheses around assignment used as truth value
+
+20/08/2008
+Added support for .po files
+Added icons to menus and buttons.
+Improved the output of fp v6 helper scripts.
+Improved the main window size when used with long translated widget labels.
+Added a gtk_file_chooser_button to choose the report file instead of the gtk_text_entry.
+
+21/08/2008
+Implemented my own gtk_file_chooser_button to circumvent some limitations
+of the standard one (cannot set not existing file names).
+
+23/08/2008
+Added a ugly hack to allow gtk file chooser to open files and/or dirs,
+and bug filed at gtk bugzilla.
+
+11/09/2008
+Added my_file_selector function to fix shortcomings of gtk_file_chooser.
+
+25/09/2008
+Made Xfprot_Scan script robuster: don't pretend clear and which to exist
+in the system, use alternative commands if they coulde not be found.
+
+01/10/2008
+Added russian translation.
+
+06/10/2008
+xfprot 2.0 released
+
+13/19/2008
+Fixed Xfprot_Scan and Xfprot_Update script to work with dash on Ubuntu 7.04
+Added support for f-prot 6 option "--mount".
+Added tooltip to explain where --boot --adware --application options are for fprot 6.
+
+14/10/2008
+Added separate check button for --boot option for fprot 6.
+
+08/11/2008
+Added folder link icon to my file selection widget.
+
+13/11/2008
+Fix the configure.ac for better libintl functionality.
+
+17/11/2008
+New improved french translation by BEDOT Alexandre <alexandre.bedot@free.fr>
+
+28/11/2008
+Improved dialog window placement to be transient.
+
+04/12/2008
+Added support for roxterm. Patch by Gert Hulselmans <hulselmansgert@gmail.com>
+Fixed support for gnome-terminal. Patch by Gert Hulselmans <hulselmansgert@gmail.com>
+
+22/02/2009
+One more fix for Xfprot_Scan by Gert Hulselmans <hulselmansgert@gmail.com>
+
+14/03/2009
+xfprot 2.1 released
+
+18/03/2009
+Removed support for F-prot 3.x.x and 4.x.x
+
+22/03/2009
+Reworked the menu system to better support i18n.
+
+26/03/2009
+Fixed report file selection logic.
+Changed mode to GTK_FILE_CHOOSER_ACTION_SAVE for report file chooser dialog.
+
+29/03/2009
+xfprot 2.2 released
+
+20/04/2009
+Fix configure.ac, src/Makefile.am, my_file_selector.c and xfprot.c to build on opensolaris.
+Leftovers of f-prot 3.x and 4.x were removed.
+
+26/05/2009
+Fixed test: 49: ==: unexpected operator in Xfprot_Update script.
+
+04/11/2009
+Fixed support for lxterminal. Patch by Gert Hulselmans <hulselmansgert@gmail.com>
+
+01/01/2010
+Support for f-prot for Linux Version 6.0.3 was added.
+Xfprot 2.3 released.
+
+04/02/2010
+Fix file selection dialog not clearing content when changing dir.
+Xfprot 2.4 released.

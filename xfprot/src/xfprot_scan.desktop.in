@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=0.1
+Encoding=UTF-8
+ServiceTypes=all/allfiles,inode/directory
+Actions=xfprot_virus_scan
+[Desktop Action xfprot_virus_scan]
+Name=Scan for virus with Xfprot
+Exec=xfprot -k %U
+Icon=@ac_datarootdir@/pixmaps/xfprot-48x48.png

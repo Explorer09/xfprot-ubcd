@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+src/my_file_selector.c
+src/about_window.c
+src/dialog_window.c
+src/text_view_window.c
+src/text_edit_window.c
+src/text_common.c
+src/xfprot.c
