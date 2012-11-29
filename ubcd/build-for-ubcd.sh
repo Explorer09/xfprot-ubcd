@@ -9,7 +9,7 @@ cd `dirname $0`
 work_dir=`pwd`
 
 package_dir=$work_dir/xfprot-ubcd-pkg
-package_name=xfprot-2.4expl1-full.txz
+package_name=xfprot-2.4expl2-full.txz
 
 # For Parted Magic the locale directory structure is different, so we are
 # going to modify the locales here.
