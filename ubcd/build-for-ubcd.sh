@@ -60,9 +60,8 @@ cd ../xfprot
 
 # Restore the po directory.
 rm po/*.po
-mv po/LINGUAS
+rm po/LINGUAS
 mv po_bak/*.po po
 mv po_bak/LINGUAS po
 rmdir po_bak
-
 
