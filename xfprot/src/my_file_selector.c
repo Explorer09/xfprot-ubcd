@@ -869,14 +869,14 @@ char * my_file_selector_create(char *label, int hidden_files, int action, char *
 
 	/* Up button */
 	/* Don't use gtk_tool_button_new_from_stock as we don't want a stock label */
-	up_button = gtk_tool_button_new(NULL, "allow-none");
+	up_button = gtk_tool_button_new(NULL, NULL);
 	gtk_tool_button_set_icon_name(GTK_TOOL_BUTTON(up_button), GTK_STOCK_GO_UP);
 	gtk_tool_item_set_is_important(up_button, TRUE);
 	gtk_widget_set_sensitive(GTK_WIDGET(up_button), (strcmp(parent, "/") != 0));
 	gtk_toolbar_insert(GTK_TOOLBAR(tool_bar), up_button, -1);
 
 	/* Root button */
-	root_button = gtk_tool_button_new(NULL, "allow-none");
+	root_button = gtk_tool_button_new(NULL, NULL);
 	if (gtk_icon_theme_has_icon(theme, "computer")) {
 	/* As per http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html */
 		gtk_tool_button_set_icon_name(GTK_TOOL_BUTTON(root_button), "computer");
@@ -890,13 +890,13 @@ char * my_file_selector_create(char *label, int hidden_files, int action, char *
 
 	/* Home button */
 	/* Don't use gtk_tool_button_new_from_stock as we don't want a stock label */
-	home_button = gtk_tool_button_new(NULL, "allow-none");
+	home_button = gtk_tool_button_new(NULL, NULL);
 	gtk_tool_button_set_icon_name(GTK_TOOL_BUTTON(home_button), GTK_STOCK_HOME);
 	gtk_tool_item_set_is_important(home_button, TRUE);
 	gtk_toolbar_insert(GTK_TOOLBAR(tool_bar), home_button, -1);
 
 	/* Desktop button */
-	desktop_button = gtk_tool_button_new(NULL, "allow-none");
+	desktop_button = gtk_tool_button_new(NULL, NULL);
 	if (gtk_icon_theme_has_icon(theme, "user-desktop")) {
 		/* As per http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html */
 		gtk_tool_button_set_icon_name(GTK_TOOL_BUTTON(desktop_button), "user-desktop");
@@ -914,7 +914,7 @@ char * my_file_selector_create(char *label, int hidden_files, int action, char *
 		gtk_toolbar_insert(GTK_TOOLBAR(tool_bar), separator, -1);
 		/* Folder-New button */
 		/* Don't use gtk_tool_button_new_from_stock as we don't want a stock label */
-		folder_new_button = gtk_tool_button_new(NULL, "allow-none");
+		folder_new_button = gtk_tool_button_new(NULL, NULL);
 		if (gtk_icon_theme_has_icon(theme, "folder-new")) {
 			/* As per http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html */
 			gtk_tool_button_set_icon_name(GTK_TOOL_BUTTON(folder_new_button), "folder-new");
