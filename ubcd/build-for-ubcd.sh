@@ -57,6 +57,7 @@ rm $work_dir/xfprot-ubcd-pkg.list
 cd $work_dir
 
 cd ../xfprot
+make distclean
 
 # Restore the po directory.
 rm po/*.po
