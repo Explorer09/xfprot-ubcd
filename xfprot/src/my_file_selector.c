@@ -469,6 +469,7 @@ static void new_folder_f(GtkWidget *icon_view)
 	GtkTreeIter iter;
 	GdkDisplay* display;
 	GdkWindow* parent_win;
+	GtkAllocation *allocation = g_new0(GtkAllocation, 1);
 
 	debug_err_msg("new_folder_f");
 
@@ -490,8 +491,9 @@ static void new_folder_f(GtkWidget *icon_view)
 	parent_win = gtk_widget_get_parent_window(GTK_WIDGET(icon_view));
 	gdk_window_get_origin(parent_win, &x, &y);
 	margin = gtk_icon_view_get_margin(GTK_ICON_VIEW(icon_view));
-	x += icon_view->allocation.x + margin;
-	y += icon_view->allocation.y + margin + ICON_SIZE;
+	gtk_widget_get_allocation(icon_view, allocation);
+	x += allocation->x + margin;
+	y += allocation->y + margin + ICON_SIZE;
 	gtk_window_move(GTK_WINDOW(dir_popup), x, y);
 	/* To emulate a popup, in the worst case the window will be decorated */
 	gtk_window_set_decorated(GTK_WINDOW(dir_popup), FALSE);
@@ -511,6 +513,7 @@ static void new_folder_f(GtkWidget *icon_view)
 	gdk_display_keyboard_ungrab(display, gtk_get_current_event_time());
 	/* Reload contents: useful if Cancel was clicked and to alphasort a newly created  folder */
 	fill_store(TRUE);
+	g_free(allocation);
 }
 
 static void item_activated(GtkIconView *iconview, GtkTreePath *tree_path, gpointer user_data)
@@ -682,13 +685,16 @@ static void menu_set_position(GtkMenu *menu, gint *x, gint *y, gboolean *push_in
 	int wy;
 
 	GtkWidget *button = GTK_WIDGET(user_data);
+	GtkAllocation *allocation = g_new0(GtkAllocation, 1);
 
 	gtk_menu_set_screen(menu, gtk_widget_get_screen(button));
 	gdk_window_get_origin(gtk_widget_get_parent_window(button), &wx, &wy);
-	gtk_widget_set_size_request(GTK_WIDGET(menu), button->allocation.width, -1);
-	*x = wx + button->allocation.x;
-	*y = wy + button->allocation.y + button->allocation.height;
+	gtk_widget_get_allocation(button, allocation);
+	gtk_widget_set_size_request(GTK_WIDGET(menu), allocation->width, -1);
+	*x = wx + allocation->x;
+	*y = wy + allocation->y + allocation->height;
 	*push_in = FALSE;
+	g_free(allocation);
 }
 
 static void set_up_button( __attribute__ ((__unused__)) GtkMenuItem *menuitem, gpointer user_data)
@@ -751,14 +757,17 @@ static void pref_set_position(GtkMenu *menu, gint *x, gint *y, gboolean *push_in
 	int wy;
 
 	GtkWidget *button = GTK_WIDGET(user_data);
+	GtkAllocation *allocation = g_new0(GtkAllocation, 1);
 
 	gtk_menu_set_screen(menu, gtk_widget_get_screen(button));
 	gdk_window_get_origin(gtk_widget_get_parent_window(button), &wx, &wy);
 	gtk_widget_size_request(GTK_WIDGET(menu), &requisition);
 	gtk_widget_size_request(GTK_WIDGET(button), &b_requisition);
-	*x = wx + button->allocation.x - requisition.width + b_requisition.width;
-	*y = wy + button->allocation.y + button->allocation.height;
+	gtk_widget_get_allocation(button, allocation);
+	*x = wx + allocation->x - requisition.width + b_requisition.width;
+	*y = wy + allocation->y + allocation->height;
 	*push_in = FALSE;
+	g_free(allocation);
 }
 
 static void pref_create(GtkWidget *widget)
