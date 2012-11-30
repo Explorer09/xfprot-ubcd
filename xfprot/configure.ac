@@ -28,7 +28,7 @@
 # Process this file with autoconf to produce a configure script.
 # require autoconf 2.54
 AC_PREREQ(2.54)
-AC_INIT(XFPROT, 2.4, "tito-wolit@tiscali.it", xfprot)
+AC_INIT(XFPROT, 2.4expl3, "tito-wolit@tiscali.it", xfprot)
 
 # Save this value here, since automake will set cflags later
 cflags_set=${CFLAGS+set}
