@@ -1193,3 +1193,15 @@ Xfprot 2.3 released.
 04/02/2010
 Fix file selection dialog not clearing content when changing dir.
 Xfprot 2.4 released.
+
+26/11/2012
+- Replace the deprecated GTK_WIDGET_VISIBLE() with gtk_widget_get_visible(),
+  which fixes a compile error. Patch by Explorer09 <explorer09@gmail.com>
+- Add support for f-prot for Linux version 6.1+. Patch by Explorer09
+  <explorer09@gmail.com>
+Xfprot 2.4expl1.
+
+29/11/2012
+- Removed the label "allow-none" on the toolbar buttons. (2.4 regression)
+  Patch by Explorer09 <explorer09@gmail.com>
+Xfprot 2.4expl2.
