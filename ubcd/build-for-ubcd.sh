@@ -14,11 +14,17 @@ package_name=xfprot-2.4expl2.txz
 # For Parted Magic the locale directory structure is different, so we are
 # going to modify the locales here.
 cd ../xfprot
-mkdir -p po_bak
-mv po/*.po po_bak
-mv po/LINGUAS po_bak
+cd po
+mv it_IT.UTF-8.po it.po
+mv de_DE.UTF-8.po de.po
+mv fr_FR.UTF-8.po fr.po
+mv pt_BR.UTF-8.po pt_BR.po
+mv pl_PL.UTF-8.po pl.po
+mv ru_RU.UTF-8.po ru.po
+mv zh_TW.UTF-8.po zh_TW.po
+mv LINGUAS LINGUAS_bak
+
 cd $work_dir
-cp po/*.po ../xfprot/po
 cp po/LINGUAS ../xfprot/po
 
 # Configure and make
@@ -61,10 +67,14 @@ cd ../xfprot
 # Restore the po directory.
 cd po
 make distclean
-rm *.po
+mv it.po it_IT.UTF-8.po
+mv de.po de_DE.UTF-8.po
+mv fr.po fr_FR.UTF-8.po
+mv pt_BR.po pt_BR.UTF-8.po
+mv pl.po pl_PL.UTF-8.po
+mv ru.po ru_RU.UTF-8.po
+mv zh_TW.po zh_TW.UTF-8.po
 rm LINGUAS
-cd ..
-mv po_bak/*.po po
-mv po_bak/LINGUAS po
-rmdir po_bak
+mv LINGUAS_bak LINGUAS
 
+echo "Done."
