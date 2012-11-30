@@ -9,7 +9,7 @@ Small Business Edition (version 3.12b and superior)
 (C) by Frisk Software International (www.frisk.is) which is free of
 charge for personal use and downloadable at http://www.f-prot.com/.
 
-XFPROT is based on the Gtk+ libraries version 2.6.0 or superior.
+XFPROT is based on the Gtk+ libraries version 2.18.0 or superior.
 
 XFPROT is tested only on Debian Linux but probably should
 compile and work also on other distributions,
@@ -32,7 +32,7 @@ This program and all associated documentation is licensed under the GPL.
 Xfprot's homepage is http://web.tiscali.it/sharp/xfprot
 
 INSTALLATION
-	First of all get the Gtk+ libraries version 2.6.0 or superior
+	First of all get the Gtk+ libraries version 2.18.0 or superior
 	(runtime and development) from www.gtk.org, if they are not already
 	installed on your system.
 
