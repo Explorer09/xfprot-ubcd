@@ -1208,5 +1208,10 @@ Xfprot 2.4expl2.
 
 30/11/2012
 - Minor fix on the po file headers (plural-forms and translators fields).
-- Add Chinese (Taiwan) locale. Translation by Explorer09 <explorer09@gmail.com>
+- Add Chinese (Taiwan) translation by Explorer09 <explorer09@gmail.com>.
+- Fix the EICAR test string in xfprot.c.
+- Update the configure script and the readme, telling that Gtk+ version 2.18
+  is now required.
+- The GtkWidget members 'allocation' and 'window' are no longer directly
+  accessed.
 Xfprot 2.4expl3.
