@@ -9,7 +9,7 @@ cd `dirname $0`
 work_dir=`pwd`
 
 package_dir=$work_dir/xfprot-ubcd-pkg
-package_name=xfprot-2.4expl2-full.txz
+package_name=xfprot-2.4expl2.txz
 
 # For Parted Magic the locale directory structure is different, so we are
 # going to modify the locales here.
@@ -57,11 +57,13 @@ rm $work_dir/xfprot-ubcd-pkg.list
 cd $work_dir
 
 cd ../xfprot
-make distclean
 
 # Restore the po directory.
-rm po/*.po
-rm po/LINGUAS
+cd po
+make distclean
+rm *.po
+rm LINGUAS
+cd ..
 mv po_bak/*.po po
 mv po_bak/LINGUAS po
 rmdir po_bak
