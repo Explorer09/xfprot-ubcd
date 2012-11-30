@@ -213,7 +213,7 @@ static void fprot_test(void)
 	FILE *test_file = fopen("eicar.com", "w+");
 
 	/* EICAR virus test file signature */ 
-	fprintf(test_file, "X5O!P\%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*");
+	fprintf(test_file, "X5O!P%%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*");
 	xfclose_nostdin(test_file);
 	file = fprot_spawn("eicar.com");
 	textview_window_create(_("Test"), 530, 430, 8, NULL, file);
