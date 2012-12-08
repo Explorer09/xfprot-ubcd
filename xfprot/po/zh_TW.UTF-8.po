@@ -1,5 +1,5 @@
 # translation of xfprot.pot to chinese (TW)
-# Copyright (C) 2008 Kang-Che Sung <explorer09@gmail.com>
+# Copyright (C) 2012 Kang-Che Sung <explorer09@gmail.com>
 # This file is distributed under the same license as the Xfprot package.
 #
 # xfprot <tito-wolit@tiscali.it>, 2008, 2009.
@@ -83,7 +83,6 @@ msgid "Question"
 msgstr "詢問"
 
 #: src/dialog_window.c:144 src/dialog_window.c:147
-#, fuzzy
 msgid "Dialog Window"
 msgstr "對話框"
 
@@ -120,7 +119,6 @@ msgstr ""
 "您要覆寫它嗎？"
 
 #: src/text_edit_window.c:145
-#, fuzzy
 msgid ""
 "The destination file was modificated\n"
 "after we openend it.\n"
@@ -391,13 +389,11 @@ msgstr "病毒清單(_V)"
 
 #. Save settings
 #: src/xfprot.c:1247
-#, fuzzy
 msgid "_Save Settings"
 msgstr "儲存設定(_S)"
 
 #. clear settings
 #: src/xfprot.c:1253
-#, fuzzy
 msgid "_Clear Settings"
 msgstr "清除設定(_C)"
 
@@ -469,7 +465,6 @@ msgid "Options"
 msgstr "選項"
 
 #: src/xfprot.c:1345
-#, fuzzy
 #  In Chinese the term 'archive' and 'compress' are often confused.
 #  For example, the 'archive file' is often called 壓縮檔 ('compressed file'),
 #  while they actually mean 封存檔 ('archived file').
@@ -493,7 +488,6 @@ msgid "Follow symbolic links"
 msgstr "追蹤符號連結"
 
 #: src/xfprot.c:1364
-#, fuzzy
 msgid ""
 "Don't descend directories\n"
 "on other filesystems"
@@ -572,7 +566,6 @@ msgid "%s: too much args on command line"
 msgstr "%s: 命令列參數過多。"
 
 #: src/xfprot.c:1567
-#, fuzzy
 msgid ""
 "Cannot get password file entry.\n"
 "Aborting..."
