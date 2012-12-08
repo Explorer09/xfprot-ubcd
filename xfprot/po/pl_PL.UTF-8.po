@@ -34,9 +34,8 @@ msgid "All files (*)"
 msgstr ""
 
 #: src/my_file_selector.c:856
-#, fuzzy
 msgid "Save"
-msgstr "_Zapisz"
+msgstr "Zapisz"
 
 #: src/my_file_selector.c:856 src/text_edit_window.c:264
 msgid "Open"
