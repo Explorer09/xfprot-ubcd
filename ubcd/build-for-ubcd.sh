@@ -66,7 +66,7 @@ cd ../xfprot
 
 # Restore the po directory.
 cd po
-make distclean
+rm *.gmo
 mv it.po it_IT.UTF-8.po
 mv de.po de_DE.UTF-8.po
 mv fr.po fr_FR.UTF-8.po
