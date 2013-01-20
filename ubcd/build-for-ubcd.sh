@@ -48,8 +48,8 @@ touch $package_dir/root/.xfprot/xfprot.no_splash
 cd $package_dir
 
 # Don't include these directories because they have no use in Parted Magic.
-rm -r usr/share/apps
-rm -r usr/share/man
+rm -f -r usr/share/apps
+rm -f -r usr/share/man
 
 # Create the package.
 # Note: the --no-recursion works only for GNU tar.
@@ -58,15 +58,15 @@ tar -c -v --xz --no-recursion --files-from ../xfprot-ubcd-pkg.list -f $package_n
 mv $package_dir/$package_name $work_dir
 
 # Clean up.
-rm -r $package_dir
-rm $work_dir/xfprot-ubcd-pkg.list
+rm -f -r $package_dir
+rm -f $work_dir/xfprot-ubcd-pkg.list
 cd $work_dir
 
 cd ../xfprot
 
 # Restore the po directory.
 cd po
-rm *.gmo
+rm -f *.gmo
 mv it.po it_IT.UTF-8.po
 mv de.po de_DE.UTF-8.po
 mv fr.po fr_FR.UTF-8.po
@@ -74,7 +74,7 @@ mv pt_BR.po pt_BR.UTF-8.po
 mv pl.po pl_PL.UTF-8.po
 mv ru.po ru_RU.UTF-8.po
 mv zh_TW.po zh_TW.UTF-8.po
-rm LINGUAS
+rm -f LINGUAS
 mv LINGUAS_bak LINGUAS
 
 echo "Done."
