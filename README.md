@@ -4,14 +4,14 @@ xfprot-ubcd
 This directory contains the modified code of XFPROT 2.4, plus a script to
 build a txz package for Parted Magic or Ultimate Boot CD.
 
-The modifications are (C) 2012 Kang-Che "Explorer" Sung <explorer09@gmail.com>,
+The modifications are (C) 2012 Kang-Che "Explorer" Sung <explorer09*at*gmail*dot*com>,
 and are licensed under GNU General Public License version 2 or later.
 
 The URL of this repository is https://github.com/Explorer09/xfprot-ubcd .
 You may run 'git clone https://github.com/Explorer09/xfprot-ubcd.git' to fetch the
 modified source code.
 
-The original author of XFPROT is Tito Ragusa <tito-wolit@tiscali.it>.
+The original author of XFPROT is Tito Ragusa <tito-wolit*at*tiscali*dot*it>.
 
 ----
 
@@ -24,6 +24,7 @@ http://web.tiscali.it/sharp/xfprot/xfprot-2.4.tar.gz
 ----
 
 LICENSE
+-------
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
