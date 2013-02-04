@@ -1215,3 +1215,9 @@ Xfprot 2.4expl2.
 - The GtkWidget members 'allocation' and 'window' are no longer directly
   accessed.
 Xfprot 2.4expl3.
+
+08/12/2012
+- Minor changes to these translations: es pl pt-BR zh-TW.
+
+04/02/2013
+Xfprot 2.4expl4.

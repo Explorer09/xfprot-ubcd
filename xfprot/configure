@@ -574,8 +574,8 @@ SHELL=${CONFIG_SHELL-/bin/sh}
 # Identity of this package.
 PACKAGE_NAME='XFPROT'
 PACKAGE_TARNAME='xfprot'
-PACKAGE_VERSION='2.4expl3'
-PACKAGE_STRING='XFPROT 2.4expl3'
+PACKAGE_VERSION='2.4expl4'
+PACKAGE_STRING='XFPROT 2.4expl4'
 PACKAGE_BUGREPORT='"tito-wolit@tiscali.it"'
 
 # Factoring default headers for most tests.
