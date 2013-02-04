@@ -336,6 +336,7 @@ msgstr ""
 "%s"
 
 #: src/xfprot.c:748
+#, fuzzy
 msgid "Done"
 msgstr "sudo o su "
 
