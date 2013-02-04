@@ -18,6 +18,7 @@ cd po
 mv it_IT.UTF-8.po it.po
 mv de_DE.UTF-8.po de.po
 mv fr_FR.UTF-8.po fr.po
+mv es_ES.UTF-8.po es.po
 mv pt_BR.UTF-8.po pt_BR.po
 mv pl_PL.UTF-8.po pl.po
 mv ru_RU.UTF-8.po ru.po
@@ -70,6 +71,7 @@ rm -f *.gmo
 mv it.po it_IT.UTF-8.po
 mv de.po de_DE.UTF-8.po
 mv fr.po fr_FR.UTF-8.po
+mv es.po es_ES.UTF-8.po
 mv pt_BR.po pt_BR.UTF-8.po
 mv pl.po pl_PL.UTF-8.po
 mv ru.po ru_RU.UTF-8.po
