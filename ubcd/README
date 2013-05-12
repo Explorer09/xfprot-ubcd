@@ -5,6 +5,6 @@ packages installed. If not, run this:
 
 sudo apt-get install intltool libgtk2.0-dev
 
-Then, run ./build-for-ubcd.sh .
+Then, run "./build-for-ubcd.sh"
 
 --Explorer <explorer09@gmail.com>
