@@ -61,7 +61,7 @@ msgid "Licensed under the"
 msgstr "По лицензии"
 
 #: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1500
-msgid "This program  comes with ABSOLUTELY NO WARRANTY"
+msgid "This program comes with ABSOLUTELY NO WARRANTY"
 msgstr "Эта программа выходит АБСОЛЮТНО БЕЗ ГАРАНТИИ"
 
 #: src/about_window.c:130
@@ -122,10 +122,10 @@ msgstr ""
 
 #: src/text_edit_window.c:145
 msgid ""
-"The destination file was modificated\n"
-"after we openend it.\n"
+"The destination file was modified\n"
+"after we opened it.\n"
 "Do you want to overwrite\n"
-"this more recent  version ?"
+"this more recent version ?"
 msgstr ""
 "Файл назначения был модифицирован\n"
 "после того,как мы его открыли\n"
@@ -261,7 +261,7 @@ msgid ""
 msgstr ""
 "xfprot обнаружил файл блокировки.\n"
 "Кажется используется другой вариант xfprot \n"
-"Если вы уверены,что нет другого варианта  xfprot \n"
+"Если вы уверены,что нет другого варианта xfprot \n"
 "нажмите \"Да\" чтобы начать."
 
 #: src/xfprot.c:559
@@ -668,7 +668,7 @@ msgstr ""
 #~ msgid "Rename infected COM/EXE files to VOM/VXE"
 #~ msgstr "Назвать зараженные файлы COM/EXE именем VOM/VXE"
 
-#~ msgid "Delete  infected files"
+#~ msgid "Delete infected files"
 #~ msgstr "Удалить зараженные файлы"
 
 #~ msgid "File types"

@@ -139,7 +139,7 @@ int dialog_window(const char *title, int type, char *third_button_label, int def
 			COPYRIGHT,
 			HOMEPAGE,
 			_("Licensed under the"), LICENSE,
-			_("This program  comes with ABSOLUTELY NO WARRANTY"));
+			_("This program comes with ABSOLUTELY NO WARRANTY"));
 	} else if (!title) {
 		title = _("Dialog Window");
 	}

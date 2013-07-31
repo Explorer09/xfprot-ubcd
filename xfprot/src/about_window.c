@@ -114,7 +114,7 @@ int about_window_create(char * title, int x, int y, int border, char *labeltext,
 				COPYRIGHT,
 				HOMEPAGE,
 				_("Licensed under the"), LICENSE,
-				_("This program  comes with ABSOLUTELY NO WARRANTY"));
+				_("This program comes with ABSOLUTELY NO WARRANTY"));
 		label = gtk_label_new (NULL);
 		gtk_label_set_markup (GTK_LABEL (label), text);
 	} else {

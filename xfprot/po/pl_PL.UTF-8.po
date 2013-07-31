@@ -64,7 +64,7 @@ msgid "Licensed under the"
 msgstr "Licencja"
 
 #: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1500
-msgid "This program  comes with ABSOLUTELY NO WARRANTY"
+msgid "This program comes with ABSOLUTELY NO WARRANTY"
 msgstr "Ten program jest bez ŻADNEJ GWARANCJI"
 
 #: src/about_window.c:130
@@ -125,10 +125,10 @@ msgstr ""
 
 #: src/text_edit_window.c:145
 msgid ""
-"The destination file was modificated\n"
-"after we openend it.\n"
+"The destination file was modified\n"
+"after we opened it.\n"
 "Do you want to overwrite\n"
-"this more recent  version ?"
+"this more recent version ?"
 msgstr ""
 "Plik docelowy został zmodyfikowany\n"
 "po tym gdy go otworzyłem.\n"
@@ -661,7 +661,7 @@ msgstr ""
 #~ msgid "Rename infected COM/EXE files to VOM/VXE"
 #~ msgstr "Zmiana nazwy COM/EXE na VOM/VXE"
 
-#~ msgid "Delete  infected files"
+#~ msgid "Delete infected files"
 #~ msgstr "Usunięcie zainfekowanych plików"
 
 #~ msgid "File types"

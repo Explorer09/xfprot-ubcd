@@ -142,8 +142,8 @@ static void save_common(void)
 		mask = destfileinfo.st_mode;
 		/* File is newer */
 		if (sourcefileinfo.st_mtime!=0 && sourcefileinfo.st_mtime > destfileinfo.st_mtime ) {
-			if (overwrite(_("The destination file was modificated\nafter we openend it.\n"
-							"Do you want to overwrite\nthis more recent  version ?")) == 1)
+			if (overwrite(_("The destination file was modified\nafter we opened it.\n"
+							"Do you want to overwrite\nthis more recent version ?")) == 1)
 				return;
 		}
 	} else {

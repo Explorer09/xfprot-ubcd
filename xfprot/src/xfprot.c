@@ -1514,7 +1514,7 @@ int main(int argc, char **argv)
 	command = xmake_message("\n%s\n\n%s\n%s\n%s\n%s.\n", PACKAGE_STRING, COPYRIGHT,
 						_("Licensed under the GNU General Public License, version 2"),
 						HOMEPAGE,
-						_("This program  comes with ABSOLUTELY NO WARRANTY"));
+						_("This program comes with ABSOLUTELY NO WARRANTY"));
 	xputs(command);
 	xfree(&command);
 

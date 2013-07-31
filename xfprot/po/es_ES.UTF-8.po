@@ -61,8 +61,8 @@ msgid "Licensed under the"
 msgstr "Licencia"
 
 #: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1500
-msgid "This program  comes with ABSOLUTELY NO WARRANTY"
-msgstr "Este programa  NO ESTA GARANTIZADO"
+msgid "This program comes with ABSOLUTELY NO WARRANTY"
+msgstr "Este programa NO ESTA GARANTIZADO"
 
 #: src/about_window.c:130
 msgid "I agree, don't show it again"
@@ -122,10 +122,10 @@ msgstr ""
 
 #: src/text_edit_window.c:145
 msgid ""
-"The destination file was modificated\n"
-"after we openend it.\n"
+"The destination file was modified\n"
+"after we opened it.\n"
 "Do you want to overwrite\n"
-"this more recent  version ?"
+"this more recent version ?"
 msgstr ""
 "El archivo de destino fue modificado\n"
 "Desea sobreescribirlo ?"
@@ -289,12 +289,13 @@ msgstr ""
 "Abortandog..."
 
 #: src/xfprot.c:583
+#, fuzzy
 msgid ""
 "Cannot set owner\n"
 "of private dir.\n"
 "Aborting..."
 msgstr ""
-"Sin directorio  Xfprot \n"
+"Sin directorio Xfprot \n"
 "privado.\n"
 "Abortando..."
 
@@ -429,7 +430,7 @@ msgstr "Opciones con Macro virus"
 
 #: src/xfprot.c:1302
 msgid "Remove infected macros from docs"
-msgstr "Eliminar macros infectadas  en documentos"
+msgstr "Eliminar macros infectadas en documentos"
 
 #: src/xfprot.c:1306
 msgid "Remove all macros from infected docs"
@@ -659,7 +660,7 @@ msgstr ""
 #~ msgid "Rename infected COM/EXE files to VOM/VXE"
 #~ msgstr "Renombrar infectedos COM/EXE a VOM/VXE"
 
-#~ msgid "Delete  infected files"
+#~ msgid "Delete infected files"
 #~ msgstr "Borrar infectados"
 
 #~ msgid "File types"

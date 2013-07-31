@@ -60,7 +60,7 @@ msgid "Licensed under the"
 msgstr "Sotto licenza"
 
 #: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1500
-msgid "This program  comes with ABSOLUTELY NO WARRANTY"
+msgid "This program comes with ABSOLUTELY NO WARRANTY"
 msgstr "Questo programma e' fornito senza ALCUNA GARANZIA"
 
 #: src/about_window.c:130
@@ -121,10 +121,10 @@ msgstr ""
 
 #: src/text_edit_window.c:145
 msgid ""
-"The destination file was modificated\n"
-"after we openend it.\n"
+"The destination file was modified\n"
+"after we opened it.\n"
 "Do you want to overwrite\n"
-"this more recent  version ?"
+"this more recent version ?"
 msgstr ""
 "Il file di destinazione è stato modificato\n"
 "dopo l'apertura\n"
@@ -553,7 +553,7 @@ msgstr "\t-k        esegui come azione-menu KDE\n"
 #: src/xfprot.c:1528
 #, c-format
 msgid "\t-h        display this help and exit\n"
-msgstr "\t-h       mostra questo testo di aiuto ed esci\n"
+msgstr "\t-h        mostra questo testo di aiuto ed esci\n"
 
 #: src/xfprot.c:1529
 #, c-format
@@ -593,7 +593,7 @@ msgid ""
 "Failed to change dir to \"/\",\n"
 "Aborting..."
 msgstr ""
-"Impossibile entrare  nella cartella \"/\",\n"
+"Impossibile entrare nella cartella \"/\",\n"
 "Esco..."
 
 #. We don't want to be redirected by a link
