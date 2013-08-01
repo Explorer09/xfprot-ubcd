@@ -97,7 +97,7 @@ int about_window_create(char * title, int x, int y, int border, char *labeltext,
 	options = gtk_image_menu_item_new_with_mnemonic(_("_Options"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(options), gtk_image_new_from_stock(GTK_STOCK_PREFERENCES, GTK_ICON_SIZE_MENU));
 
-	toggle_wrap = gtk_check_menu_item_new_with_label(_("_Wrap"));
+	toggle_wrap = gtk_check_menu_item_new_with_mnemonic(_("_Wrap"));
 	gtk_widget_add_accelerator(toggle_wrap, "activate", accel_group, GDK_w, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE); 
 	g_signal_connect(G_OBJECT(toggle_wrap), "activate",G_CALLBACK(about_wrap_text), NULL);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(toggle_wrap), FALSE);
