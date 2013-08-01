@@ -22,6 +22,7 @@ mv es_ES.UTF-8.po es.po
 mv pt_BR.UTF-8.po pt_BR.po
 mv pl_PL.UTF-8.po pl.po
 mv ru_RU.UTF-8.po ru.po
+mv ja_JP.UTF-8.po ja.po
 mv zh_TW.UTF-8.po zh_TW.po
 mv LINGUAS LINGUAS_bak
 
@@ -75,6 +76,7 @@ mv es.po es_ES.UTF-8.po
 mv pt_BR.po pt_BR.UTF-8.po
 mv pl.po pl_PL.UTF-8.po
 mv ru.po ru_RU.UTF-8.po
+mv ja.po ja_JP.UTF-8.po
 mv zh_TW.po zh_TW.UTF-8.po
 rm -f LINGUAS
 mv LINGUAS_bak LINGUAS

@@ -1,0 +1,622 @@
+# Translation of xfprot.pot to Japanese
+# Original translation by Shigekazu "himajin" Satou (佐藤成一)
+# <qyg01263@gmail.com>, in 2010.
+# http://openlab.jp/puppylinux/download/packages-stray/himajin/xfprot-2.3-i486.pet
+# Translation modified by Kang-Che Sung <explorer09@gmail.com>, in 2013.
+# This file is distributed under the same license as the Xfprot package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ja_JP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-21 22:39+0900\n"
+"PO-Revision-Date: 2013-08-01 11:30+0800\n"
+"Last-Translator: xfprot <qyg01263@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/my_file_selector.c:455
+msgid "Cannot create directory!"
+msgstr "ディレクトリを作成できません！"
+
+#: src/my_file_selector.c:770
+msgid "Show _Hidden Files"
+msgstr "隠しファイルを表示(_H)"
+
+#: src/my_file_selector.c:815 src/my_file_selector.c:1018
+msgid "All files (*)"
+msgstr "全てのファイル"
+
+#: src/my_file_selector.c:856
+msgid "Save"
+msgstr "保存"
+
+#: src/my_file_selector.c:856 src/text_edit_window.c:264
+msgid "Open"
+msgstr "開く"
+
+#: src/my_file_selector.c:1096
+#, fuzzy
+msgid "No file selected!"
+msgstr ""
+
+#. Make the gui first
+#: src/about_window.c:87 src/dialog_window.c:135
+msgid "About"
+msgstr "アバウト"
+
+#: src/about_window.c:97 src/text_view_window.c:94 src/text_edit_window.c:350
+msgid "_Options"
+msgstr "オプション(_O)"
+
+#: src/about_window.c:100 src/text_view_window.c:97 src/text_edit_window.c:353
+msgid "_Wrap"
+msgstr "ラップ(_W)"
+
+#: src/about_window.c:116 src/dialog_window.c:141
+msgid "Licensed under the"
+msgstr "以下のライセンスの元に"
+
+#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1500
+msgid "This program comes with ABSOLUTELY NO WARRANTY"
+msgstr "このプログラムによる損害は全く保障されません。"
+
+#: src/about_window.c:130
+msgid "I agree, don't show it again"
+msgstr "了解、以後表示しません"
+
+#: src/dialog_window.c:121 src/xfprot.c:197
+msgid "Info"
+msgstr "情報"
+
+#: src/dialog_window.c:124
+msgid "Warning"
+msgstr "警告"
+
+#: src/dialog_window.c:128
+msgid "Error"
+msgstr "エラー"
+
+#: src/dialog_window.c:132
+msgid "Question"
+msgstr "質問"
+
+#: src/dialog_window.c:144 src/dialog_window.c:147
+msgid "Dialog Window"
+msgstr "ダイアログウィンドウ"
+
+#. File
+#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1193
+msgid "_File"
+msgstr "ファイル(_F)"
+
+#: src/text_edit_window.c:74
+msgid "No file name"
+msgstr "ファイル名がない"
+
+#: src/text_edit_window.c:82
+#, c-format
+msgid "'%s' is a directory"
+msgstr "'%s' はディレクトリです"
+
+#: src/text_edit_window.c:84
+#, c-format
+msgid "'%s' is a device file"
+msgstr "'%s' はデバイスファイルです"
+
+#: src/text_edit_window.c:107
+#, c-format
+msgid "Cannot save '%s': unknown error"
+msgstr "不明なエラー :'%s' を保存できません"
+
+#: src/text_edit_window.c:139
+msgid ""
+"The destination file exists.\n"
+"Do you want to overwrite it ?"
+msgstr ""
+"既にそのファイルは存在します。\n"
+"上書きしますか？"
+
+#: src/text_edit_window.c:145
+msgid ""
+"The destination file was modified\n"
+"after we opened it.\n"
+"Do you want to overwrite\n"
+"this more recent version ?"
+msgstr ""
+"あなたが開いた後で\n"
+"そのファイルは変更されています。\n"
+"この新しいファイルで\n"
+"上書きしますか？"
+
+#: src/text_edit_window.c:162
+#, c-format
+msgid ""
+"Cannot set file permissions on\n"
+"'%s':\n"
+"%s"
+msgstr ""
+"ファイルのパーミッションが変更できません\n"
+"'%s'：\n"
+"%s"
+
+#. No file name: ask for it
+#: src/text_edit_window.c:173 src/text_edit_window.c:188
+#: src/text_edit_window.c:244 src/text_edit_window.c:280
+msgid "Save as"
+msgstr "別名で保存"
+
+#. Some error occurred in opening the file:
+#. S_ISDIR, S_ISCHR, S_ISBLK, so create create an untitled empty edit window
+#. create an empty edit window titled or untitled
+#: src/text_edit_window.c:227 src/text_edit_window.c:231
+#: src/text_edit_window.c:251
+msgid "Untitled"
+msgstr "無題"
+
+#: src/text_edit_window.c:276
+msgid "Save file?"
+msgstr "ファイルを保存しますか？"
+
+#: src/text_edit_window.c:277
+msgid ""
+"The File has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"このファイルは変更されています。\n"
+"保存しますか？"
+
+#: src/text_common.c:565
+#, c-format
+#, fuzzy
+msgid ""
+"Unable to stat:\n"
+"%s:\n"
+"%s"
+msgstr ""
+
+#: src/text_common.c:569
+#, c-format
+msgid "\"%s\" is a directory"
+msgstr "\"%s\" はディレクトリです"
+
+#: src/text_common.c:571
+#, c-format
+msgid "\"%s\" is a device file"
+msgstr "\"%s\" はデバイスファイルです"
+
+#: src/text_common.c:586
+#, c-format
+msgid "Cannot read \"%s\": %s"
+msgstr "読めない \"%s\"：%s"
+
+#: src/text_common.c:619
+msgid "Conversion to UTF-8 failed!"
+msgstr "UTF-8 への変換に失敗！"
+
+#: src/xfprot.c:129
+msgid "Select path to scan:"
+msgstr "スキャンの path を選択："
+
+#: src/xfprot.c:149 src/xfprot.c:1329
+msgid "Report file"
+msgstr "レポートファイル"
+
+#: src/xfprot.c:206
+msgid "Virus list"
+msgstr "ウイルス一覧"
+
+#: src/xfprot.c:219
+msgid "Test"
+msgstr "テスト"
+
+#. NOT ROOT
+#: src/xfprot.c:286
+#, fuzzy
+msgid "Cannot become superuser: sudo or su not found!"
+msgstr ""
+
+#. File exists
+#. is not a regular file
+#: src/xfprot.c:356 src/xfprot.c:452
+msgid "Report file is not a regular file!"
+msgstr "レポートファイルが通常のファイルではない！"
+
+#. is a regular file
+#. Don't append
+#: src/xfprot.c:456
+msgid "Report file exists. Overwrite?"
+msgstr "レポートファイルが存在します。上書きしますか？"
+
+#: src/xfprot.c:491
+msgid ""
+"Failed to remove lock file.\n"
+"Aborting..."
+msgstr ""
+"ロックファイルの削除に失敗。\n"
+"終了します..."
+
+#: src/xfprot.c:518
+msgid "Don't show it again"
+msgstr "以後表示しません"
+
+#: src/xfprot.c:519
+msgid ""
+"You are running xfprot as root!\n"
+"Continue?"
+msgstr ""
+"root権限で実行しています！\n"
+"続けますか？"
+
+#: src/xfprot.c:549
+msgid ""
+"xfprot has detected a lock file.\n"
+"Another instance of xfprot seems to be running.\n"
+"If you have determined that there is no other xfprot running\n"
+"please click \"Yes\" to begin."
+msgstr ""
+"xfprotはロックファイルを検出しました\n"
+"xfprotは既に実行されているようです。\n"
+"他のxfprotが実行されていないと確信されましたら\n"
+"\"Yes\"をクリックして始めてください。"
+
+#: src/xfprot.c:559
+#, fuzzy
+msgid ""
+"Cannot open lock file.\n"
+"Aborting..."
+msgstr ""
+"ロックファイルが開けません。\n"
+"終了します..."
+
+#: src/xfprot.c:564
+msgid ""
+"Cannot lock lock-file.\n"
+"Aborting..."
+msgstr ""
+"ロックファイルをロックできません。\n"
+"終了します..."
+
+#: src/xfprot.c:577
+msgid ""
+"Cannot set permissions\n"
+"of private dir to 0700.\n"
+"Aborting..."
+msgstr ""
+"プライベートディレクトリの\n"
+"パーミッションを0700に設定できません。\n"
+"終了します..."
+
+#: src/xfprot.c:583
+#, fuzzy
+msgid ""
+"Cannot set owner\n"
+"of private dir.\n"
+"Aborting..."
+msgstr ""
+
+#: src/xfprot.c:589
+#, fuzzy
+msgid ""
+"Cannot change dir\n"
+"to private dir.\n"
+"Aborting..."
+msgstr ""
+"Impossivel entrar\n"
+"no diretorio privado.\n"
+"終了します..."
+
+#: src/xfprot.c:723
+#, c-format
+msgid "Error writing file '%s': %s"
+msgstr "ファイルの書き込み中にエラー '%s'：%s"
+
+#: src/xfprot.c:726
+msgid "Settings saved!!!"
+msgstr "設定を保存しました！"
+
+#: src/xfprot.c:730
+#, c-format
+msgid ""
+"Cannot open file '%s':\n"
+"%s"
+msgstr ""
+"ファイルが開けません '%s'：\n"
+"%s"
+
+#: src/xfprot.c:744
+#, c-format
+msgid ""
+"Failed to remove '%s':\n"
+"%s"
+msgstr ""
+"削除に失敗 '%s'：\n"
+"%s"
+
+#: src/xfprot.c:748
+msgid "Done"
+msgstr "行いました"
+
+#: src/xfprot.c:928
+msgid "No suitable terminal emulator found"
+msgstr "端末が見つかりません"
+
+#: src/xfprot.c:974
+msgid "F-prot binary not found"
+msgstr "F-protが見つかりません"
+
+#: src/xfprot.c:1032
+msgid ""
+"Cannot detect f-prot's version.\n"
+"Aborting..."
+msgstr ""
+"F-protのバージョンが認識不能です。\n"
+"終了します..."
+
+#. Scan
+#: src/xfprot.c:1197
+msgid "_Scan"
+msgstr "スキャン(_S)"
+
+#. Update
+#: src/xfprot.c:1203
+msgid "_Update"
+msgstr "更新(_U)"
+
+#. Report
+#: src/xfprot.c:1209
+msgid "_Report"
+msgstr "レポート(_R)"
+
+#. Tools
+#: src/xfprot.c:1225
+msgid "_Tools"
+msgstr "ツール(_T)"
+
+#. Test
+#: src/xfprot.c:1229
+msgid "T_est"
+msgstr "テスト(_E)"
+
+#. Info
+#: src/xfprot.c:1235
+msgid "_Info"
+msgstr "情報(_I)"
+
+#. Virus list
+#: src/xfprot.c:1241
+msgid "_Virus List"
+msgstr "ウイルス一覧(_V)"
+
+#. Save settings
+#: src/xfprot.c:1247
+msgid "_Save Settings"
+msgstr "設定を保存(_S)"
+
+#. clear settings
+#: src/xfprot.c:1253
+msgid "_Clear Settings"
+msgstr "設定をクリア(_C)"
+
+#: src/xfprot.c:1274
+msgid "Path to scan"
+msgstr "スキャンする場所"
+
+#: src/xfprot.c:1282
+msgid "Do not scan subdirectories"
+msgstr "サブディレクトリはスキャンしない"
+
+#: src/xfprot.c:1285
+msgid "Scan mode"
+msgstr "スキャンモード"
+
+#. Warning we can't use the ACTIVE flag here because the callback function acts on widgets
+#. we haven't created yet, so we do things manually later by calling toggle1_f()
+#: src/xfprot.c:1290
+msgid "Report only"
+msgstr "レポートのみ"
+
+#: src/xfprot.c:1293
+msgid "Automatic"
+msgstr "自動で除去"
+
+#: src/xfprot.c:1299
+msgid "Macro virus removal options"
+msgstr "マクロウイルスの削除オプション"
+
+#: src/xfprot.c:1302
+msgid "Remove infected macros from docs"
+msgstr "文書から感染したマクロを除去"
+
+#: src/xfprot.c:1306
+msgid "Remove all macros from infected docs"
+msgstr "感染した文書から全てのマクロを除去"
+
+#: src/xfprot.c:1309
+msgid "Remove all macros from doc if new variant is found"
+msgstr "新しい変種が発見されたなら、文書から全てのマクロを除去"
+
+#. --stripallmacros switch undocumented in the help text. Needs --disinfect
+#: src/xfprot.c:1313
+msgid "Remove all macros from all docs"
+msgstr "全ての文書から全てのマクロを除去"
+
+#: src/xfprot.c:1317
+msgid "Use heuristics"
+msgstr "ヒューリスティクス"
+
+#: src/xfprot.c:1320
+msgid "No"
+msgstr "No"
+
+#: src/xfprot.c:1323
+msgid "Default"
+msgstr "デフォルト"
+
+#: src/xfprot.c:1325
+msgid "Maximum"
+msgstr "最大"
+
+#: src/xfprot.c:1338
+msgid "List all scanned files"
+msgstr "スキャンしたファイルの一覧"
+
+#: src/xfprot.c:1342
+msgid "Options"
+msgstr "オプション"
+
+#: src/xfprot.c:1345
+msgid "Scan inside archives"
+msgstr "書庫内をスキャン"
+
+#: src/xfprot.c:1350
+msgid "Scan for other various malware"
+msgstr "さまざまなマルウェアをスキャン"
+
+#: src/xfprot.c:1356
+msgid "scan for adware and remote access tools"
+msgstr "アドウェアとリモートアクセスツールをスキャンします。"
+
+#: src/xfprot.c:1358
+msgid "Scan for adware and remote access tools"
+msgstr "アドウェアとリモートアクセスツールをスキャンします。"
+
+#: src/xfprot.c:1360
+msgid "Follow symbolic links"
+msgstr "シンボリックリンクを辿る"
+
+#: src/xfprot.c:1364
+msgid ""
+"Don't descend directories\n"
+"on other filesystems"
+msgstr ""
+"他のファイルシステムを\n"
+"辿らない"
+
+#: src/xfprot.c:1368
+msgid "Scan boot sectors "
+msgstr "ブートセクタをスキャン"
+
+#: src/xfprot.c:1375 src/xfprot.c:1377
+#, fuzzy
+msgid "You need administrator rights"
+msgstr ""
+
+#: src/xfprot.c:1380
+msgid "F6 Virus list"
+msgstr "F6 ウイルス一覧"
+
+#: src/xfprot.c:1382
+msgid "F5 Info"
+msgstr "F5 情報"
+
+#: src/xfprot.c:1384
+msgid "F4 Test"
+msgstr "F4 テスト"
+
+#: src/xfprot.c:1386
+msgid "F3 Report"
+msgstr "F3 レポート"
+
+#: src/xfprot.c:1388
+msgid "F2 Update"
+msgstr "F2 更新"
+
+#: src/xfprot.c:1390
+msgid "F1 Scan"
+msgstr "F1 スキャン"
+
+#: src/xfprot.c:1498
+msgid "Licensed under the GNU General Public License, version 2"
+msgstr "Licensed under the GNU General Public License, version 2"
+
+#. Version is displayed above so just exit
+#: src/xfprot.c:1526
+#, c-format
+#, fuzzy
+msgid "Usage: %s [option] [path]\n"
+msgstr ""
+
+#: src/xfprot.c:1527
+#, c-format
+#, fuzzy
+msgid "\t-k        run as KDE menu action\n"
+msgstr ""
+
+#: src/xfprot.c:1528
+#, c-format
+msgid "\t-h        display this help and exit\n"
+msgstr "\t-h        このヘルプを表示して終了\n"
+
+#: src/xfprot.c:1529
+#, c-format
+msgid ""
+"\t-v        output version information and exit\n"
+"\n"
+msgstr ""
+"\t-v        このバージョン情報を表示して終了\n"
+"\n"
+
+#: src/xfprot.c:1532
+#, c-format
+#, fuzzy
+msgid "%s: unknown command line switch: %s"
+msgstr ""
+
+#: src/xfprot.c:1551
+#, c-format
+#, fuzzy
+msgid "%s: too much args on command line"
+msgstr ""
+
+#: src/xfprot.c:1567
+msgid ""
+"Cannot get password file entry.\n"
+"Aborting..."
+msgstr ""
+"パスワードファイルのエントリが得られない。\n"
+"終了します..."
+
+#: src/xfprot.c:1573
+#, fuzzy
+msgid ""
+"Failed to change dir to user's home dir,\n"
+"trying\"/\"instead."
+msgstr ""
+
+#: src/xfprot.c:1575
+msgid ""
+"Failed to change dir to \"/\",\n"
+"Aborting..."
+msgstr ""
+"\"/\" にディレクトリを移動に失敗。\n"
+"終了します..."
+
+#. We don't want to be redirected by a link
+#: src/xfprot.c:1583
+#, fuzzy
+msgid ""
+"xfprot's private dir is a link.\n"
+"Aborting..."
+msgstr "終了します..."
+
+#: src/xfprot.c:1588
+#, fuzzy
+msgid ""
+"Cannot create xfprot's private dir.\n"
+"Aborting..."
+msgstr "終了します..."
+
+#: src/xfprot.c:1608
+msgid ""
+"Unsupported old F-prot version found,\n"
+"please update to latest.\n"
+"Aborting..."
+msgstr ""
+"サポートされていない古い F-prot のバージョンです。\n"
+"最新のものに更新してください。\n"
+"終了します..."
