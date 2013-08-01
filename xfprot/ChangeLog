@@ -1194,19 +1194,19 @@ Xfprot 2.3 released.
 Fix file selection dialog not clearing content when changing dir.
 Xfprot 2.4 released.
 
-26/11/2012
+26-Nov-2012
 - Replace the deprecated GTK_WIDGET_VISIBLE() with gtk_widget_get_visible(),
   which fixes a compile error. Patch by Explorer09 <explorer09@gmail.com>
 - Add support for f-prot for Linux version 6.1+. Patch by Explorer09
   <explorer09@gmail.com>
 Xfprot 2.4expl1.
 
-29/11/2012
+29-Nov-2012
 - Removed the label "allow-none" on the toolbar buttons. (2.4 regression)
   Patch by Explorer09 <explorer09@gmail.com>
 Xfprot 2.4expl2.
 
-30/11/2012
+30-Nov-2012
 - Minor fix on the po file headers (plural-forms and translators fields).
 - Add Chinese (Taiwan) translation by Explorer09 <explorer09@gmail.com>.
 - Fix the EICAR test string in xfprot.c.
@@ -1216,8 +1216,21 @@ Xfprot 2.4expl2.
   accessed.
 Xfprot 2.4expl3.
 
-08/12/2012
+08-Dec-2012
 - Minor changes to these translations: es pl pt-BR zh-TW.
 
-04/02/2013
+04-Feb-2013
 Xfprot 2.4expl4.
+
+12-May-2013
+- Use autoreconf with Autoconf 2.69 and Automake 1.11.6. This resolves
+  CVE-2012-3386 in makefiles.
+
+31-Jul-2013
+- Added Japanese translation (incomplete). Translation is by Himajin
+  <qyg01263@gmail.com> with modifications by Explorer09.
+
+01-Aug-2013
+- Use gtk_check_menu_item_new_with_mnemonic for "Wrap" menu item.
+- Merge 2 localizable strings (at xfprot.c:1373 xfprot.c:1375) into one.
+Xfprot 2.4expl5.
