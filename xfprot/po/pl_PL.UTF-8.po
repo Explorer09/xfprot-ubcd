@@ -478,11 +478,7 @@ msgstr "Skanuj wewnątrz archiwów"
 msgid "Scan for other various malware"
 msgstr "Szukaj innych, szkodliwych kodów"
 
-#: src/xfprot.c:1373
-msgid "scan for adware and remote access tools"
-msgstr ""
-
-#: src/xfprot.c:1375
+#: src/xfprot.c:1373 src/xfprot.c:1375
 msgid "Scan for adware and remote access tools"
 msgstr ""
 

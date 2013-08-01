@@ -482,11 +482,7 @@ msgstr "Scansione dei file compressi"
 msgid "Scan for other various malware"
 msgstr "Cercare altri tipi di malware"
 
-#: src/xfprot.c:1373
-msgid "scan for adware and remote access tools"
-msgstr "Ricerca adware e programmi per il controllo remoto"
-
-#: src/xfprot.c:1375
+#: src/xfprot.c:1373 src/xfprot.c:1375
 msgid "Scan for adware and remote access tools"
 msgstr "Ricerca adware e programmi per il controllo remoto"
 

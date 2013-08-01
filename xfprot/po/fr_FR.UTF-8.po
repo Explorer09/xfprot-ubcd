@@ -486,11 +486,7 @@ msgstr "Analyser les archives compressées"
 msgid "Scan for other various malware"
 msgstr "Rechercher des logiciels malveillants"
 
-#: src/xfprot.c:1373
-msgid "scan for adware and remote access tools"
-msgstr "recherche des \"adware\" et des outils de contrôle à distance"
-
-#: src/xfprot.c:1375
+#: src/xfprot.c:1373 src/xfprot.c:1375
 msgid "Scan for adware and remote access tools"
 msgstr "Rechercher les \"adware\" et les outils de prise en main à distance"
 

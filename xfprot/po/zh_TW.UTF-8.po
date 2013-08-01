@@ -475,11 +475,7 @@ msgstr "掃描壓縮檔內部"
 msgid "Scan for other various malware"
 msgstr "掃描其它類型的惡意軟體 [註]"
 
-#: src/xfprot.c:1373
-msgid "scan for adware and remote access tools"
-msgstr "掃描廣告軟體以及遠端存取的軟體。"
-
-#: src/xfprot.c:1375
+#: src/xfprot.c:1373 src/xfprot.c:1375
 msgid "Scan for adware and remote access tools"
 msgstr "掃描廣告軟體以及遠端存取的軟體。"
 

@@ -1370,7 +1370,7 @@ static void new_gui(GList *icon_list)
 #ifdef USE_OLD_TOOLTIP	
 	malware_tooltip = gtk_tooltips_new();
 	gtk_tooltips_set_tip(GTK_TOOLTIPS (malware_tooltip), check_button5,
-						_("scan for adware and remote access tools"), NULL);
+						_("Scan for adware and remote access tools"), NULL);
 #else
 	gtk_widget_set_tooltip_text(check_button5, _("Scan for adware and remote access tools"));
 #endif

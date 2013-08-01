@@ -477,11 +477,7 @@ msgstr "書庫内をスキャン"
 msgid "Scan for other various malware"
 msgstr "さまざまなマルウェアをスキャン"
 
-#: src/xfprot.c:1373
-msgid "scan for adware and remote access tools"
-msgstr "アドウェアとリモートアクセスツールをスキャンします。"
-
-#: src/xfprot.c:1375
+#: src/xfprot.c:1373 src/xfprot.c:1375
 msgid "Scan for adware and remote access tools"
 msgstr "アドウェアとリモートアクセスツールをスキャンします。"
 
