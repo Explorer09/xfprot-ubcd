@@ -22,23 +22,23 @@ msgstr ""
 msgid "Cannot create directory!"
 msgstr "Невозможно создать директорию!"
 
-#: src/my_file_selector.c:770
+#: src/my_file_selector.c:779
 msgid "Show _Hidden Files"
 msgstr "Показать_Скрытые файлы"
 
-#: src/my_file_selector.c:815 src/my_file_selector.c:1018
+#: src/my_file_selector.c:824 src/my_file_selector.c:1027
 msgid "All files (*)"
 msgstr "Все файлы (*)"
 
-#: src/my_file_selector.c:856
+#: src/my_file_selector.c:865
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/my_file_selector.c:856 src/text_edit_window.c:264
+#: src/my_file_selector.c:865 src/text_edit_window.c:264
 msgid "Open"
 msgstr "Открыть"
 
-#: src/my_file_selector.c:1096
+#: src/my_file_selector.c:1105
 #, fuzzy
 msgid "No file selected!"
 msgstr "Нет имени файла"
@@ -60,7 +60,7 @@ msgstr "_Перенос"
 msgid "Licensed under the"
 msgstr "По лицензии"
 
-#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1500
+#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1517
 msgid "This program comes with ABSOLUTELY NO WARRANTY"
 msgstr "Эта программа выходит АБСОЛЮТНО БЕЗ ГАРАНТИИ"
 
@@ -89,7 +89,7 @@ msgid "Dialog Window"
 msgstr "Диалоговое окно"
 
 #. File
-#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1193
+#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1210
 msgid "_File"
 msgstr "_Файл"
 
@@ -203,7 +203,7 @@ msgstr "Не удалось преобразовать в UTF-8!"
 msgid "Select path to scan:"
 msgstr "Выбрать путь сканирования:"
 
-#: src/xfprot.c:149 src/xfprot.c:1329
+#: src/xfprot.c:149 src/xfprot.c:1346
 msgid "Report file"
 msgstr "Файл отчета"
 
@@ -349,7 +349,7 @@ msgstr "Не найден подходящий эмулятор терминал
 msgid "F-prot binary not found"
 msgstr "Двоичный F-prot не найден"
 
-#: src/xfprot.c:1032
+#: src/xfprot.c:1045
 msgid ""
 "Cannot detect f-prot's version.\n"
 "Aborting..."
@@ -358,202 +358,202 @@ msgstr ""
 "Прекращение..."
 
 #. Scan
-#: src/xfprot.c:1197
+#: src/xfprot.c:1214
 msgid "_Scan"
 msgstr "_Сканировать"
 
 #. Update
-#: src/xfprot.c:1203
+#: src/xfprot.c:1220
 msgid "_Update"
 msgstr "О_бновить"
 
 #. Report
-#: src/xfprot.c:1209
+#: src/xfprot.c:1226
 msgid "_Report"
 msgstr "_Отчет"
 
 #. Tools
-#: src/xfprot.c:1225
+#: src/xfprot.c:1242
 msgid "_Tools"
 msgstr "И_нструменты"
 
 #. Test
-#: src/xfprot.c:1229
+#: src/xfprot.c:1246
 msgid "T_est"
 msgstr "Т_ест"
 
 #. Info
-#: src/xfprot.c:1235
+#: src/xfprot.c:1252
 msgid "_Info"
 msgstr "_Информация"
 
 #. Virus list
-#: src/xfprot.c:1241
+#: src/xfprot.c:1258
 msgid "_Virus List"
 msgstr "_Список вирусов"
 
 #. Save settings
-#: src/xfprot.c:1247
+#: src/xfprot.c:1264
 #, fuzzy
 msgid "_Save Settings"
 msgstr "Сохранить _установки"
 
 #. clear settings
-#: src/xfprot.c:1253
+#: src/xfprot.c:1270
 #, fuzzy
 msgid "_Clear Settings"
 msgstr "_Очистить установки"
 
-#: src/xfprot.c:1274
+#: src/xfprot.c:1291
 msgid "Path to scan"
 msgstr "Путь сканирования"
 
-#: src/xfprot.c:1282
+#: src/xfprot.c:1299
 msgid "Do not scan subdirectories"
 msgstr "Не сканировать субдиректории"
 
-#: src/xfprot.c:1285
+#: src/xfprot.c:1302
 msgid "Scan mode"
 msgstr "Режим сканирования"
 
 #. Warning we can't use the ACTIVE flag here because the callback function acts on widgets
 #. we haven't created yet, so we do things manually later by calling toggle1_f()
-#: src/xfprot.c:1290
+#: src/xfprot.c:1307
 msgid "Report only"
 msgstr "Только отчет"
 
-#: src/xfprot.c:1293
+#: src/xfprot.c:1310
 msgid "Automatic"
 msgstr "Автоматический режим"
 
-#: src/xfprot.c:1299
+#: src/xfprot.c:1316
 msgid "Macro virus removal options"
 msgstr "Опции удаления макровируса"
 
-#: src/xfprot.c:1302
+#: src/xfprot.c:1319
 msgid "Remove infected macros from docs"
 msgstr "Удалить зараженные макросы из документов"
 
-#: src/xfprot.c:1306
+#: src/xfprot.c:1323
 msgid "Remove all macros from infected docs"
 msgstr ""
 "Удалить все макросы из зараженных\n"
 "документов"
 
-#: src/xfprot.c:1309
+#: src/xfprot.c:1326
 msgid "Remove all macros from doc if new variant is found"
 msgstr ""
 "Удалить все макросы из документа,\n"
 "если найден новый вариант"
 
 #. --stripallmacros switch undocumented in the help text. Needs --disinfect
-#: src/xfprot.c:1313
+#: src/xfprot.c:1330
 msgid "Remove all macros from all docs"
 msgstr "Удалить все макросы из всех документов"
 
-#: src/xfprot.c:1317
+#: src/xfprot.c:1334
 msgid "Use heuristics"
 msgstr "Использовать эвристику"
 
-#: src/xfprot.c:1320
+#: src/xfprot.c:1337
 msgid "No"
 msgstr "Нет"
 
-#: src/xfprot.c:1323
+#: src/xfprot.c:1340
 msgid "Default"
 msgstr "По умолчанию"
 
-#: src/xfprot.c:1325
+#: src/xfprot.c:1342
 msgid "Maximum"
 msgstr "Максимум"
 
-#: src/xfprot.c:1338
+#: src/xfprot.c:1355
 msgid "List all scanned files"
 msgstr "Список отсканированных файлов"
 
-#: src/xfprot.c:1342
+#: src/xfprot.c:1359
 msgid "Options"
 msgstr "Опции"
 
-#: src/xfprot.c:1345
+#: src/xfprot.c:1362
 msgid "Scan inside archives"
 msgstr "Сканировать внутренние архивы"
 
-#: src/xfprot.c:1350
+#: src/xfprot.c:1367
 msgid "Scan for other various malware"
 msgstr "Сканировать на вредоносные программы"
 
-#: src/xfprot.c:1356
+#: src/xfprot.c:1373
 msgid "scan for adware and remote access tools"
 msgstr ""
 
-#: src/xfprot.c:1358
+#: src/xfprot.c:1375
 msgid "Scan for adware and remote access tools"
 msgstr ""
 
-#: src/xfprot.c:1360
+#: src/xfprot.c:1377
 msgid "Follow symbolic links"
 msgstr "Следовать символьным ссылкам"
 
-#: src/xfprot.c:1364
+#: src/xfprot.c:1381
 msgid ""
 "Don't descend directories\n"
 "on other filesystems"
 msgstr ""
 
-#: src/xfprot.c:1368
+#: src/xfprot.c:1385
 msgid "Scan boot sectors "
 msgstr ""
 
-#: src/xfprot.c:1375 src/xfprot.c:1377
+#: src/xfprot.c:1392 src/xfprot.c:1394
 msgid "You need administrator rights"
 msgstr ""
 
-#: src/xfprot.c:1380
+#: src/xfprot.c:1397
 msgid "F6 Virus list"
 msgstr "F6 Список вирусов"
 
-#: src/xfprot.c:1382
+#: src/xfprot.c:1399
 msgid "F5 Info"
 msgstr "F5 Информация"
 
-#: src/xfprot.c:1384
+#: src/xfprot.c:1401
 msgid "F4 Test"
 msgstr "F4 Тест"
 
-#: src/xfprot.c:1386
+#: src/xfprot.c:1403
 msgid "F3 Report"
 msgstr "F3 Отчет"
 
-#: src/xfprot.c:1388
+#: src/xfprot.c:1405
 msgid "F2 Update"
 msgstr "F2 Обновить"
 
-#: src/xfprot.c:1390
+#: src/xfprot.c:1407
 msgid "F1 Scan"
 msgstr "F1 Сканировать"
 
-#: src/xfprot.c:1498
+#: src/xfprot.c:1515
 msgid "Licensed under the GNU General Public License, version 2"
 msgstr "По лицензии GNU General Public License, версия 2"
 
 #. Version is displayed above so just exit
-#: src/xfprot.c:1526
+#: src/xfprot.c:1543
 #, c-format
 msgid "Usage: %s [option] [path]\n"
 msgstr "Использование: %s [опция] [путь]\n"
 
-#: src/xfprot.c:1527
+#: src/xfprot.c:1544
 #, c-format
 msgid "\t-k        run as KDE menu action\n"
 msgstr "\t-k        выполнить как действие меню KDE\n"
 
-#: src/xfprot.c:1528
+#: src/xfprot.c:1545
 #, c-format
 msgid "\t-h        display this help and exit\n"
 msgstr "\t-h        показать эту помощь и выйти\n"
 
-#: src/xfprot.c:1529
+#: src/xfprot.c:1546
 #, c-format
 msgid ""
 "\t-v        output version information and exit\n"
@@ -562,17 +562,17 @@ msgstr ""
 "\t-v        конечная информация и выход\n"
 "\n"
 
-#: src/xfprot.c:1532
+#: src/xfprot.c:1549
 #, c-format
 msgid "%s: unknown command line switch: %s"
 msgstr "%s: неизвестная опция коммандной строки: %s"
 
-#: src/xfprot.c:1551
+#: src/xfprot.c:1568
 #, c-format
 msgid "%s: too much args on command line"
 msgstr "%s:слишком много аргументов в коммандной строке"
 
-#: src/xfprot.c:1567
+#: src/xfprot.c:1584
 msgid ""
 "Cannot get password file entry.\n"
 "Aborting..."
@@ -580,7 +580,7 @@ msgstr ""
 "Невозможно определить запись файла паролей.\n"
 "Прекращение..."
 
-#: src/xfprot.c:1573
+#: src/xfprot.c:1590
 msgid ""
 "Failed to change dir to user's home dir,\n"
 "trying\"/\"instead."
@@ -588,7 +588,7 @@ msgstr ""
 "Не удалось изменить директорию в корневую папку пользователя директории,\n"
 "Попытка\"/\"вместо этого."
 
-#: src/xfprot.c:1575
+#: src/xfprot.c:1592
 msgid ""
 "Failed to change dir to \"/\",\n"
 "Aborting..."
@@ -597,7 +597,7 @@ msgstr ""
 "Прекращение..."
 
 #. We don't want to be redirected by a link
-#: src/xfprot.c:1583
+#: src/xfprot.c:1600
 msgid ""
 "xfprot's private dir is a link.\n"
 "Aborting..."
@@ -605,7 +605,7 @@ msgstr ""
 "Частная директория xfprot является соединением.\n"
 "Прекращение..."
 
-#: src/xfprot.c:1588
+#: src/xfprot.c:1605
 msgid ""
 "Cannot create xfprot's private dir.\n"
 "Aborting..."
@@ -613,7 +613,7 @@ msgstr ""
 "Невозможно создать частную директорию. xfprot\n"
 "Прекращение..."
 
-#: src/xfprot.c:1608
+#: src/xfprot.c:1625
 msgid ""
 "Unsupported old F-prot version found,\n"
 "please update to latest.\n"
