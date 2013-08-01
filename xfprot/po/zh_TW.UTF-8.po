@@ -1,4 +1,4 @@
-# translation of xfprot.pot to chinese (TW)
+# Translation of xfprot.pot to Chinese (Taiwan)
 # Copyright (C) 2012 Kang-Che Sung <explorer09@gmail.com>
 # This file is distributed under the same license as the Xfprot package.
 #
@@ -173,7 +173,7 @@ msgid ""
 "%s:\n"
 "%s"
 msgstr ""
-"無法取得檔案資訊 (\"stat\")：\n"
+"無法取得檔案屬性 (\"stat\")：\n"
 "'%s'：\n"
 "%s"
 
@@ -235,7 +235,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法移除 lock 檔。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:518
 msgid "Don't show it again"
@@ -268,7 +268,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法開啓 lock 檔。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:564
 msgid ""
@@ -276,7 +276,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法鎖定 lock 檔。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:577
 msgid ""
@@ -285,7 +285,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法將私用目錄的權限設定為 0700。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:583
 msgid ""
@@ -294,7 +294,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法設定私用目錄的擁有者。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:589
 msgid ""
@@ -303,7 +303,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法切換至私用目錄。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:723
 #, c-format
@@ -350,7 +350,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法辨識 f-prot 的版本。\n"
-"程式結束..."
+"程式中止..."
 
 #. Scan
 #: src/xfprot.c:1197
@@ -571,7 +571,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法取得 password 檔案之資訊。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:1573
 msgid ""
@@ -587,7 +587,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法切換至 \"/\" 目錄，\n"
-"程式結束..."
+"程式中止..."
 
 #. We don't want to be redirected by a link
 #: src/xfprot.c:1583
@@ -596,7 +596,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "xfprot 的私用目錄是符號連結。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:1588
 msgid ""
@@ -604,7 +604,7 @@ msgid ""
 "Aborting..."
 msgstr ""
 "無法建立 xfprot 的私用目錄。\n"
-"程式結束..."
+"程式中止..."
 
 #: src/xfprot.c:1608
 msgid ""
@@ -614,4 +614,4 @@ msgid ""
 msgstr ""
 "偵測到的 F-prot 版本太舊，已經不再支援，\n"
 "請升級成最新版本。\n"
-"程式結束..."
+"程式中止..."
