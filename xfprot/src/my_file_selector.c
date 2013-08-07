@@ -818,10 +818,18 @@ static GtkWidget *my_combo_path_button(char *label_str, GCallback func, gpointer
 	return button;
 }
 
+#ifdef USE_NEW_COMBO_BOX_TEXT
 static void change_filter(GtkComboBoxText *widget)
+#else
+static void change_filter(GtkComboBox *widget)
+#endif
 {
 	debug_err_msg("change_filter: current %d new %d", filter_flag, !filter_flag);
+#ifdef USE_NEW_COMBO_BOX_TEXT
 	if (strcmp(gtk_combo_box_text_get_active_text(widget),  _("All files (*)")) == 0)
+#else
+	if (strcmp(gtk_combo_box_get_active_text(widget),  _("All files (*)")) == 0)
+#endif
 		filter_flag = 0;
 	else
 		filter_flag = 1;
@@ -1023,8 +1031,13 @@ char * my_file_selector_create(char *label, int hidden_files, int action, char *
 		gtk_box_pack_start(GTK_BOX(vbox), hbox2, FALSE, FALSE, 0);
 		image = gtk_image_new_from_stock(GTK_STOCK_FIND, GTK_ICON_SIZE_MENU);
 		gtk_box_pack_start(GTK_BOX(hbox2), image, FALSE, FALSE, 0);
+#ifdef USE_NEW_COMBO_BOX_TEXT
 		filter_combo = gtk_combo_box_text_new();
 		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(filter_combo), _("All files (*)"));
+#else
+		filter_combo = gtk_combo_box_new_text();
+		gtk_combo_box_append_text(GTK_COMBO_BOX(filter_combo), _("All files (*)"));
+#endif
 		gtk_combo_box_set_active(GTK_COMBO_BOX(filter_combo), 0);
 		gtk_box_pack_start(GTK_BOX(hbox2), filter_combo, TRUE, TRUE, 0);
 		/* Filter is a NULL terminated array of strings */
@@ -1033,7 +1046,11 @@ char * my_file_selector_create(char *label, int hidden_files, int action, char *
 			/* Add the file filter */
 			extra_filter = gtk_file_filter_new ();
 			/* Add first string to the combo as label */
+#ifdef USE_NEW_COMBO_BOX_TEXT
 			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(filter_combo), *filter_str);
+#else
+			gtk_combo_box_append_text(GTK_COMBO_BOX_TEXT(filter_combo), *filter_str);
+#endif
 			/* Move on */
 			filter_str++;
 			for (; *filter_str; filter_str++) {

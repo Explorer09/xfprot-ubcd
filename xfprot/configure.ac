@@ -192,6 +192,13 @@ if test "x$ac_tooltip" = "x0"; then
 	AC_DEFINE(USE_OLD_TOOLTIP, [], [Old/new gtk tooltips.])
 fi
 
+# since 2.24
+AC_CHECK_LIB(gtk-x11-2.0, gtk_combo_box_text_new, ac_combo_box_text=1, ac_combo_box_text=0)
+
+if test "x$ac_combo_box_text" = "x1"; then
+	AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])
+fi
+
 AC_CHECK_FUNC(prctl, ac_prctl=yes, ac_prctl=no)
 if test "x$ac_prctl" = "xyes"; then
 	AC_DEFINE(HAVE_PRCTL, [], [Core dumps allowed.])
