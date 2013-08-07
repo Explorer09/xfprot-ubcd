@@ -1049,7 +1049,7 @@ char * my_file_selector_create(char *label, int hidden_files, int action, char *
 #ifdef USE_NEW_COMBO_BOX_TEXT
 			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(filter_combo), *filter_str);
 #else
-			gtk_combo_box_append_text(GTK_COMBO_BOX_TEXT(filter_combo), *filter_str);
+			gtk_combo_box_append_text(GTK_COMBO_BOX(filter_combo), *filter_str);
 #endif
 			/* Move on */
 			filter_str++;
