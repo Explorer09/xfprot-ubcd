@@ -1213,19 +1213,19 @@ static void new_gui(GList *icon_list)
 	/* Scan */
 	scan = gtk_image_menu_item_new_with_mnemonic(_("_Scan"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(scan), gtk_image_new_from_stock(GTK_STOCK_FIND, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(scan, "activate", accel_group, GDK_F1, 0, GTK_ACCEL_VISIBLE);
+	gtk_widget_add_accelerator(scan, "activate", accel_group, GDK_KEY_F1, 0, GTK_ACCEL_VISIBLE);
 	g_signal_connect(G_OBJECT(scan), "activate",G_CALLBACK(scan_f), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(filemenu), scan);
 	/* Update */
 	update = gtk_image_menu_item_new_with_mnemonic(_("_Update"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(update), gtk_image_new_from_stock(GTK_STOCK_NETWORK, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(update, "activate", accel_group, GDK_F2, 0, GTK_ACCEL_VISIBLE); 
+	gtk_widget_add_accelerator(update, "activate", accel_group, GDK_KEY_F2, 0, GTK_ACCEL_VISIBLE); 
 	g_signal_connect(G_OBJECT(update), "activate",G_CALLBACK(fprot_update), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(filemenu), update);
 	/* Report */
 	report = gtk_image_menu_item_new_with_mnemonic(_("_Report"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(report), gtk_image_new_from_stock(GTK_STOCK_EDIT, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(report, "activate", accel_group, GDK_F3, 0, GTK_ACCEL_VISIBLE); 
+	gtk_widget_add_accelerator(report, "activate", accel_group, GDK_KEY_F3, 0, GTK_ACCEL_VISIBLE); 
 	g_signal_connect(G_OBJECT(report), "activate",G_CALLBACK(view_report), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(filemenu), report);
 	/* Separator */
@@ -1245,31 +1245,31 @@ static void new_gui(GList *icon_list)
 	/* Test */
 	test = gtk_image_menu_item_new_with_mnemonic(_("T_est"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(test), gtk_image_new_from_stock(GTK_STOCK_EXECUTE, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(test, "activate", accel_group, GDK_F4, 0, GTK_ACCEL_VISIBLE);
+	gtk_widget_add_accelerator(test, "activate", accel_group, GDK_KEY_F4, 0, GTK_ACCEL_VISIBLE);
 	g_signal_connect(G_OBJECT(test), "activate",G_CALLBACK(fprot_test), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(toolsmenu), test);
 	/* Info */
 	info = gtk_image_menu_item_new_with_mnemonic(_("_Info"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(info), gtk_image_new_from_stock(GTK_STOCK_INFO, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(info, "activate", accel_group, GDK_F5, 0, GTK_ACCEL_VISIBLE);
+	gtk_widget_add_accelerator(info, "activate", accel_group, GDK_KEY_F5, 0, GTK_ACCEL_VISIBLE);
 	g_signal_connect(G_OBJECT(info), "activate",G_CALLBACK(fprot_info), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(toolsmenu), info);
 	/* Virus list */
 	viruslist = gtk_image_menu_item_new_with_mnemonic(_("_Virus List"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(viruslist), gtk_image_new_from_stock(GTK_STOCK_INDEX, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(viruslist, "activate", accel_group, GDK_F6, 0, GTK_ACCEL_VISIBLE);
+	gtk_widget_add_accelerator(viruslist, "activate", accel_group, GDK_KEY_F6, 0, GTK_ACCEL_VISIBLE);
 	g_signal_connect(G_OBJECT(viruslist), "activate",G_CALLBACK(fprot_virlist), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(toolsmenu), viruslist);
 	/* Save settings */
 	save_settings = gtk_image_menu_item_new_with_mnemonic(_("_Save Settings"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(save_settings), gtk_image_new_from_stock(GTK_STOCK_SAVE, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(save_settings, "activate", accel_group, GDK_F7, 0, GTK_ACCEL_VISIBLE);
+	gtk_widget_add_accelerator(save_settings, "activate", accel_group, GDK_KEY_F7, 0, GTK_ACCEL_VISIBLE);
 	g_signal_connect(G_OBJECT(save_settings), "activate",G_CALLBACK(save_settings_f), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(toolsmenu), save_settings);
 	/* clear settings */
 	clear_settings = gtk_image_menu_item_new_with_mnemonic(_("_Clear Settings"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(clear_settings), gtk_image_new_from_stock(GTK_STOCK_DELETE, GTK_ICON_SIZE_MENU));	
-	gtk_widget_add_accelerator(clear_settings, "activate", accel_group, GDK_F8, 0, GTK_ACCEL_VISIBLE);
+	gtk_widget_add_accelerator(clear_settings, "activate", accel_group, GDK_KEY_F8, 0, GTK_ACCEL_VISIBLE);
 	g_signal_connect(G_OBJECT(clear_settings), "activate",G_CALLBACK(clear_settings_f), NULL);
 	gtk_menu_shell_append(GTK_MENU_SHELL(toolsmenu), clear_settings);
 	
