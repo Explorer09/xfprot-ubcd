@@ -27,6 +27,7 @@
 #define	__HAVE_MYGTK_ 1
 
 #include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 #include <sys/types.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -97,6 +98,36 @@
 #define SCREEN_MARGIN	80
 
 # define ATTRIBUTE_UNUSED __attribute__ ((__unused__))
+
+/* Backward-compatibility with GDK_<keyname> macros.
+   In case the header <gdk/gdkkeysyms-compat.h> is not available. */
+#if (!defined(GDK_KEY_w) && defined(GDK_w))
+#define GDK_KEY_w GDK_w
+#endif
+#if (!defined(GDK_KEY_F1) && defined(GDK_F1))
+#define GDK_KEY_F1 GDK_F1
+#endif
+#if (!defined(GDK_KEY_F2) && defined(GDK_F2))
+#define GDK_KEY_F2 GDK_F2
+#endif
+#if (!defined(GDK_KEY_F3) && defined(GDK_F3))
+#define GDK_KEY_F3 GDK_F3
+#endif
+#if (!defined(GDK_KEY_F4) && defined(GDK_F4))
+#define GDK_KEY_F4 GDK_F4
+#endif
+#if (!defined(GDK_KEY_F5) && defined(GDK_F5))
+#define GDK_KEY_F5 GDK_F5
+#endif
+#if (!defined(GDK_KEY_F6) && defined(GDK_F6))
+#define GDK_KEY_F6 GDK_F6
+#endif
+#if (!defined(GDK_KEY_F7) && defined(GDK_F7))
+#define GDK_KEY_F7 GDK_F7
+#endif
+#if (!defined(GDK_KEY_F8) && defined(GDK_F8))
+#define GDK_KEY_F8 GDK_F8
+#endif
 
 void find_toplevel_set_transient(GtkWidget *window);
 void main_loop(GtkWidget **window);
