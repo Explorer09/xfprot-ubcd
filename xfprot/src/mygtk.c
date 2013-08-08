@@ -172,7 +172,7 @@ GtkWidget *radio_create(GtkWidget * last_of_group, char *label,
 	}
 
 	if (func) {
-		g_signal_connect(GTK_OBJECT(button), "toggled", G_CALLBACK(func), func_data);
+		g_signal_connect(G_OBJECT(button), "toggled", G_CALLBACK(func), func_data);
 	}
 
 	if (active == ACTIVE) {
@@ -231,7 +231,7 @@ GtkWidget *check_create(char *label, GCallback func, gpointer func_data, int act
 		button = gtk_check_button_new_with_label(label);
 	}
 	if (func) {
-		g_signal_connect(GTK_OBJECT(button), "toggled", G_CALLBACK(func), func_data);
+		g_signal_connect(G_OBJECT(button), "toggled", G_CALLBACK(func), func_data);
 	}
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button), (active == ACTIVE) ? TRUE : FALSE);
 	return button;
@@ -282,7 +282,7 @@ GtkWidget *button_create(char *label, GCallback func, gpointer func_data)
 		}
 	}
 	if (func) {
-		g_signal_connect(GTK_OBJECT(button), "clicked", G_CALLBACK(func), func_data);
+		g_signal_connect(G_OBJECT(button), "clicked", G_CALLBACK(func), func_data);
 	}
 	return button;
 }
@@ -509,9 +509,9 @@ GtkWidget *window_create(int x, int y, int border, const char *title,
 	gtk_window_set_default_size(GTK_WINDOW(window), x, y);
 	gtk_window_set_resizable(GTK_WINDOW(window), TRUE);
 	if (func) {
-		g_signal_connect(GTK_OBJECT(window), "delete_event", G_CALLBACK(func), func_data);
+		g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(func), func_data);
 	} else {
-		g_signal_connect(GTK_OBJECT(window), "delete_event", G_CALLBACK(gtk_true), func_data);
+		g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_true), func_data);
 	}
 
 	if (!title)
@@ -722,7 +722,7 @@ static void text_editing_started (GtkCellRenderer ATTRIBUTE_#if 0  /* UNUSED */ 
 	if (GTK_IS_ENTRY (editable)) {
 		GtkEntry *entry = GTK_ENTRY (editable);
 		GCallback cb_func = data;
-		g_signal_connect(GTK_OBJECT(entry), "activate", (GCallback)cb_func, (char *)xstrdup(path));
+		g_signal_connect(G_OBJECT(entry), "activate", (GCallback)cb_func, (char *)xstrdup(path));
 	}
 }
 
@@ -771,9 +771,9 @@ GtkWidget *string_list_create(int num, GCallback func, int show_hide, int editab
 		if (editable == EDITABLE || (editable == CUSTOM && va_arg(titles, int) == EDITABLE)) {
 			g_object_set(renderer,"editable", TRUE, NULL);
 			g_object_set_data(G_OBJECT(renderer), "column", GUINT_TO_POINTER(i));
-			g_signal_connect(GTK_OBJECT(renderer), "edited", G_CALLBACK(list_edited), tree);
+			g_signal_connect(G_OBJECT(renderer), "edited", G_CALLBACK(list_edited), tree);
 			if (editable == CUSTOM) {
-				g_signal_connect(GTK_OBJECT(renderer), "editing-started", G_CALLBACK(text_editing_started),
+				g_signal_connect(G_OBJECT(renderer), "editing-started", G_CALLBACK(text_editing_started),
 				(gpointer) va_arg(titles, void*));
 			}
 		}
@@ -862,9 +862,9 @@ GtkWidget *string_list_create_on_table(int num, GCallback func,
 		if (editable == EDITABLE || (editable == CUSTOM && va_arg(titles, int) == EDITABLE)) {
 			g_object_set(renderer,"editable", TRUE, NULL);
 			g_object_set_data(G_OBJECT(renderer), "column", GUINT_TO_POINTER(i));	
-			g_signal_connect(GTK_OBJECT(renderer), "edited", G_CALLBACK(list_edited), tree);
+			g_signal_connect(G_OBJECT(renderer), "edited", G_CALLBACK(list_edited), tree);
 			if (editable == CUSTOM) {
-				g_signal_connect(GTK_OBJECT(renderer), "editing-started", G_CALLBACK(text_editing_started),
+				g_signal_connect(G_OBJECT(renderer), "editing-started", G_CALLBACK(text_editing_started),
 				(gpointer) va_arg(titles, void*));
 			}
 		}
