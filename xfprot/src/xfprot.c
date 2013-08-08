@@ -1524,7 +1524,6 @@ int main(int argc, char **argv)
 	unixsignal_install(SIGINT, terminate, NULL);
 	
 	/* Initialize i18n support */
-	gtk_set_locale();
 	gtk_init (&argc, &argv);
 
 	/* Force the output to be unbuffered when debugging.*/
