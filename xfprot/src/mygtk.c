@@ -1042,9 +1042,9 @@ static gboolean progress_timeout(gpointer data )
 		val += 0.05;
 		if (val > 1.0) {
 			val = 0.0;
-			gtk_progress_bar_set_orientation(GTK_PROGRESS_BAR (pdata->pbar), 
-					(gtk_progress_bar_get_orientation (GTK_PROGRESS_BAR (pdata->pbar)) == GTK_PROGRESS_RIGHT_TO_LEFT) ?
-					GTK_PROGRESS_LEFT_TO_RIGHT : GTK_PROGRESS_RIGHT_TO_LEFT);
+			gtk_progress_bar_set_inverted(GTK_PROGRESS_BAR (pdata->pbar), 
+					(gtk_progress_bar_get_inverted (GTK_PROGRESS_BAR (pdata->pbar)) == TRUE) ?
+					FALSE : TRUE);
 		}
 	}
 	
