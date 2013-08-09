@@ -7688,7 +7688,7 @@ rm -f core conftest.err conftest.$ac_objext \
      fi
      GTK_CFLAGS=""
      GTK_LIBS=""
-     :
+     as_fn_error $? "Gtk+ 2.18 not found. XFPROT required Gtk+ to compile." "$LINENO" 5
   fi
 
 
