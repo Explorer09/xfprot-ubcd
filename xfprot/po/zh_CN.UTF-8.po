@@ -548,7 +548,7 @@ msgstr "用法：%s [选项] [路径]\n"
 #: src/xfprot.c:1544
 #, c-format
 msgid "\t-k        run as KDE menu action\n"
-msgstr "\t-k        作为 KDE 菜单命令来运行\n"
+msgstr "\t-k        以 KDE 菜单动作来运行\n"
 
 #: src/xfprot.c:1545
 #, c-format

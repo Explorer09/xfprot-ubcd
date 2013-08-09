@@ -543,7 +543,7 @@ msgstr "用法：%s [選項] [路徑]\n"
 #: src/xfprot.c:1544
 #, c-format
 msgid "\t-k        run as KDE menu action\n"
-msgstr "\t-k        作為 KDE 選單指令來執行\n"
+msgstr "\t-k        以 KDE 選單動作來執行\n"
 
 #: src/xfprot.c:1545
 #, c-format
