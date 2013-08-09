@@ -1,0 +1,625 @@
+# translation of xfprot.pot to Chinese (PRC)
+# Copyright (C) 2012 Kang-Che Sung <explorer09@gmail.com>
+# This file is distributed under the same license as the Xfprot package.
+#
+# xfprot <tito-wolit@tiscali.it>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: zh_CN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-06 21:10+0100\n"
+"PO-Revision-Date: 2013-08-09 18:15+0800\n"
+"Last-Translator: Kang-Che Sung <explorer09@gmail.com>\n"
+"Language-Team: chinese <explorer09@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/my_file_selector.c:455
+msgid "Cannot create directory!"
+msgstr "无法新建文件夹！"
+
+#: src/my_file_selector.c:779
+msgid "Show _Hidden Files"
+msgstr "显示隐藏文件(_H)"
+
+#: src/my_file_selector.c:824 src/my_file_selector.c:1027
+msgid "All files (*)"
+msgstr "所有文件 (*)"
+
+#: src/my_file_selector.c:865
+msgid "Save"
+msgstr "保存"
+
+#: src/my_file_selector.c:865 src/text_edit_window.c:264
+msgid "Open"
+msgstr "打开"
+
+#: src/my_file_selector.c:1105
+msgid "No file selected!"
+msgstr "未选取任何文件！"
+
+#. Make the gui first
+#: src/about_window.c:87 src/dialog_window.c:135
+msgid "About"
+msgstr "关于"
+
+#: src/about_window.c:97 src/text_view_window.c:94 src/text_edit_window.c:350
+msgid "_Options"
+msgstr "选项(_O)"
+
+#: src/about_window.c:100 src/text_view_window.c:97 src/text_edit_window.c:353
+msgid "_Wrap"
+msgstr "自动换行(_W)"
+
+#: src/about_window.c:116 src/dialog_window.c:141
+msgid "Licensed under the"
+msgstr "采用许可协议："
+
+#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1517
+msgid "This program comes with ABSOLUTELY NO WARRANTY"
+msgstr "本程序 ＊不负任何担保责任＊"
+
+#: src/about_window.c:130
+msgid "I agree, don't show it again"
+msgstr "我同意；以后不要再显示。"
+
+#: src/dialog_window.c:121 src/xfprot.c:197
+msgid "Info"
+msgstr "信息"
+
+#: src/dialog_window.c:124
+msgid "Warning"
+msgstr "警告"
+
+#: src/dialog_window.c:128
+msgid "Error"
+msgstr "错误"
+
+#: src/dialog_window.c:132
+msgid "Question"
+msgstr "询问"
+
+#: src/dialog_window.c:144 src/dialog_window.c:147
+msgid "Dialog Window"
+msgstr "对话框"
+
+#. File
+#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1210
+msgid "_File"
+msgstr "文件(_F)"
+
+#: src/text_edit_window.c:74
+msgid "No file name"
+msgstr "未输入文件名。"
+
+#: src/text_edit_window.c:82
+#, c-format
+msgid "'%s' is a directory"
+msgstr "'%s' 为一个文件夹。"
+
+#: src/text_edit_window.c:84
+#, c-format
+msgid "'%s' is a device file"
+msgstr "'%s' 为一个设备文件。"
+
+#: src/text_edit_window.c:107
+#, c-format
+msgid "Cannot save '%s': unknown error"
+msgstr "无法保存 '%s': 未知的错误。"
+
+#: src/text_edit_window.c:139
+msgid ""
+"The destination file exists.\n"
+"Do you want to overwrite it ?"
+msgstr ""
+"目标的文件已存在，\n"
+"您要覆写它吗？"
+
+#: src/text_edit_window.c:145
+msgid ""
+"The destination file was modified\n"
+"after we opened it.\n"
+"Do you want to overwrite\n"
+"this more recent version ?"
+msgstr ""
+"目标的文件在我们打开之后，\n"
+"已经被其它程序修改，\n"
+"您确定要覆写这个较新的文件吗？"
+
+#: src/text_edit_window.c:162
+#, c-format
+msgid ""
+"Cannot set file permissions on\n"
+"'%s':\n"
+"%s"
+msgstr ""
+"无法修改文件权限\n"
+"'%s'：\n"
+"%s"
+
+#. No file name: ask for it
+#: src/text_edit_window.c:173 src/text_edit_window.c:188
+#: src/text_edit_window.c:244 src/text_edit_window.c:280
+msgid "Save as"
+msgstr "另存为"
+
+#. Some error occurred in opening the file:
+#. S_ISDIR, S_ISCHR, S_ISBLK, so create create an untitled empty edit window
+#. create an empty edit window titled or untitled
+#: src/text_edit_window.c:227 src/text_edit_window.c:231
+#: src/text_edit_window.c:251
+msgid "Untitled"
+msgstr "未命名"
+
+#: src/text_edit_window.c:276
+msgid "Save file?"
+msgstr "保存文件？"
+
+#: src/text_edit_window.c:277
+msgid ""
+"The File has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"文件内容已被修改，\n"
+"您要保存它吗？"
+
+#: src/text_common.c:565
+#, c-format
+msgid ""
+"Unable to stat:\n"
+"%s:\n"
+"%s"
+msgstr ""
+"无法取得文件属性 (\"stat\")：\n"
+"'%s'：\n"
+"%s"
+
+#: src/text_common.c:569
+#, c-format
+msgid "\"%s\" is a directory"
+msgstr "\"%s\" 为一个文件夹。"
+
+#: src/text_common.c:571
+#, c-format
+msgid "\"%s\" is a device file"
+msgstr "\"%s\" 为一个设备文件。"
+
+#: src/text_common.c:586
+#, c-format
+msgid "Cannot read \"%s\": %s"
+msgstr "无法读取文件 \"%s\"：%s"
+
+#: src/text_common.c:619
+msgid "Conversion to UTF-8 failed!"
+msgstr "转换成 UTF-8 编码失败！"
+
+#: src/xfprot.c:129
+msgid "Select path to scan:"
+msgstr "选择扫描路径："
+
+#: src/xfprot.c:149 src/xfprot.c:1346
+msgid "Report file"
+msgstr "报告文件"
+
+#: src/xfprot.c:206
+msgid "Virus list"
+msgstr "病毒列表"
+
+#: src/xfprot.c:219
+msgid "Test"
+msgstr "测试"
+
+#. NOT ROOT
+#: src/xfprot.c:286
+msgid "Cannot become superuser: sudo or su not found!"
+msgstr "无法切换成 root 用户：找不到 sudo 或 su！"
+
+#. File exists
+#. is not a regular file
+#: src/xfprot.c:356 src/xfprot.c:452
+#  In Chinese (PRC) 'regular file' may be translated as 普通文件 or 常规文件.
+#  Both are widely used but the former is more popular.
+msgid "Report file is not a regular file!"
+msgstr "报告的文件不是普通文件 (regular file)！"
+
+#. is a regular file
+#. Don't append
+#: src/xfprot.c:456
+msgid "Report file exists. Overwrite?"
+msgstr "报告的文件已存在，要覆写吗？"
+
+#: src/xfprot.c:491
+msgid ""
+"Failed to remove lock file.\n"
+"Aborting..."
+msgstr ""
+"无法删除 lock 文件。\n"
+"程序中止..."
+
+#: src/xfprot.c:518
+msgid "Don't show it again"
+msgstr "以后不要再显示"
+
+#: src/xfprot.c:519
+msgid ""
+"You are running xfprot as root!\n"
+"Continue?"
+msgstr ""
+"您现在以 root 身份运行 xfprot！\n"
+"确定要继续？"
+
+#: src/xfprot.c:549
+#  In Chinese the term 'instance' (of a program) is seldom used.
+msgid ""
+"xfprot has detected a lock file.\n"
+"Another instance of xfprot seems to be running.\n"
+"If you have determined that there is no other xfprot running\n"
+"please click \"Yes\" to begin."
+msgstr ""
+"xfprot 侦测到有 lock 文件存在。\n"
+"可能有另一个 xfprot 程序正在运行中。\n"
+"如果您确定已经没有其它 xfprot 正在运行，\n"
+"请点击「是」来开始。"
+
+#: src/xfprot.c:559
+msgid ""
+"Cannot open lock file.\n"
+"Aborting..."
+msgstr ""
+"无法打开 lock 文件。\n"
+"程序中止..."
+
+#: src/xfprot.c:564
+msgid ""
+"Cannot lock lock-file.\n"
+"Aborting..."
+msgstr ""
+"无法锁定 lock 文件。\n"
+"程序中止..."
+
+#: src/xfprot.c:577
+msgid ""
+"Cannot set permissions\n"
+"of private dir to 0700.\n"
+"Aborting..."
+msgstr ""
+"无法将私用目录的权限设置为 0700。\n"
+"程序中止..."
+
+#: src/xfprot.c:583
+#  There is no consensus about which Chinese term should be used for a
+#  'file owner' in Unix/Linux. Three translations are found among Chinese
+#  websites: 所有者, 拥有者, and 属主.
+#  '所有者' is frequently used in Mainland China; '拥有者' (擁有者) is dominant in
+#  Taiwan; '属主' is less common.
+msgid ""
+"Cannot set owner\n"
+"of private dir.\n"
+"Aborting..."
+msgstr ""
+"无法设置私用目录的所有者。\n"
+"程序中止..."
+
+#: src/xfprot.c:589
+msgid ""
+"Cannot change dir\n"
+"to private dir.\n"
+"Aborting..."
+msgstr ""
+"无法切换至私用目录。\n"
+"程序中止..."
+
+#: src/xfprot.c:723
+#, c-format
+msgid "Error writing file '%s': %s"
+msgstr "文件写入错误 '%s'：%s"
+
+#: src/xfprot.c:726
+msgid "Settings saved!!!"
+msgstr "设置已保存!!!"
+
+#: src/xfprot.c:730
+#, c-format
+msgid ""
+"Cannot open file '%s':\n"
+"%s"
+msgstr ""
+"无法打开文件 '%s'：\n"
+"%s"
+
+#: src/xfprot.c:744
+#, c-format
+msgid ""
+"Failed to remove '%s':\n"
+"%s"
+msgstr ""
+"无法删除 '%s'：\n"
+"%s"
+
+#: src/xfprot.c:748
+msgid "Done"
+msgstr "已清除。"
+
+#: src/xfprot.c:928
+#  In Chinese 'emulator' has been mis-translated as 模拟器 ('simulator') for
+#  many years. Using the accurate term 仿真器 ('emulator') would look strange
+#  these days (except in technical writing).
+msgid "No suitable terminal emulator found"
+msgstr "找不到适合的终端模拟器。"
+
+#: src/xfprot.c:974
+#  可执行文件 means 'executable file'.
+#  In Chinese 'binary' is seldom used as noun.
+msgid "F-prot binary not found"
+msgstr "找不到 F-prot 的可执行文件。"
+
+#: src/xfprot.c:1045
+#  辨认 means to 'identify' in Chinese.
+msgid ""
+"Cannot detect f-prot's version.\n"
+"Aborting..."
+msgstr ""
+"无法辨认 f-prot 的版本。\n"
+"程序中止..."
+
+#. Scan
+#: src/xfprot.c:1214
+msgid "_Scan"
+msgstr "扫描(_S)"
+
+#. Update
+#: src/xfprot.c:1220
+msgid "_Update"
+msgstr "更新(_U)"
+
+#. Report
+#: src/xfprot.c:1226
+msgid "_Report"
+msgstr "报告(_R)"
+
+#. Tools
+#: src/xfprot.c:1242
+msgid "_Tools"
+msgstr "工具(_T)"
+
+#. Test
+#: src/xfprot.c:1246
+msgid "T_est"
+msgstr "测试(_E)"
+
+#. Info
+#: src/xfprot.c:1252
+msgid "_Info"
+msgstr "信息(_I)"
+
+#. Virus list
+#: src/xfprot.c:1258
+msgid "_Virus List"
+msgstr "病毒列表(_V)"
+
+#. Save settings
+#: src/xfprot.c:1264
+msgid "_Save Settings"
+msgstr "保存设置(_S)"
+
+#. clear settings
+#: src/xfprot.c:1270
+msgid "_Clear Settings"
+msgstr "清除设置(_C)"
+
+#: src/xfprot.c:1291
+msgid "Path to scan"
+msgstr "扫描的路径"
+
+#: src/xfprot.c:1299
+msgid "Do not scan subdirectories"
+msgstr "不要扫描子文件夹"
+
+#: src/xfprot.c:1302
+msgid "Scan mode"
+msgstr "扫描模式"
+
+#. Warning we can't use the ACTIVE flag here because the callback function acts on widgets
+#. we haven't created yet, so we do things manually later by calling toggle1_f()
+#: src/xfprot.c:1307
+msgid "Report only"
+msgstr "只作回报"
+
+#: src/xfprot.c:1310
+msgid "Automatic"
+msgstr "自动清除病毒"
+
+#: src/xfprot.c:1316
+msgid "Macro virus removal options"
+msgstr "宏病毒去除选项"
+
+#: src/xfprot.c:1319
+msgid "Remove infected macros from docs"
+msgstr "只去除文档中被感染的宏 (默认)"
+
+#: src/xfprot.c:1323
+msgid "Remove all macros from infected docs"
+msgstr "去除被感染文档中的所有宏"
+
+#: src/xfprot.c:1326
+msgid "Remove all macros from doc if new variant is found"
+msgstr "只在发现变种时，去除文档的所有宏"
+
+#. --stripallmacros switch undocumented in the help text. Needs --disinfect
+#: src/xfprot.c:1330
+msgid "Remove all macros from all docs"
+msgstr "去除所有文档的所有宏 (危险！)"
+
+#: src/xfprot.c:1334
+msgid "Use heuristics"
+msgstr "启发式侦测"
+
+#: src/xfprot.c:1337
+msgid "No"
+msgstr "关闭"
+
+#: src/xfprot.c:1340
+msgid "Default"
+msgstr "默认等级"
+
+#: src/xfprot.c:1342
+msgid "Maximum"
+msgstr "最高等级"
+
+#: src/xfprot.c:1355
+msgid "List all scanned files"
+msgstr "列出所有扫描的文件"
+
+#: src/xfprot.c:1359
+msgid "Options"
+msgstr "选项"
+
+#: src/xfprot.c:1362
+msgid "Scan inside archives"
+msgstr "扫描归档内部"
+
+#: src/xfprot.c:1367
+msgid "Scan for other various malware"
+msgstr "扫描其它类型的恶意软件 [注]"
+
+#: src/xfprot.c:1373 src/xfprot.c:1375
+msgid "Scan for adware and remote access tools"
+msgstr "扫描广告软件以及远程访问的软件。"
+
+#: src/xfprot.c:1377
+#  Avira AntiVir (zh-CN) uses the term 跟踪符号链接 for this. 跟随 is more
+#  popular on the web.
+msgid "Follow symbolic links"
+msgstr "跟随符号链接"
+
+#: src/xfprot.c:1381
+msgid ""
+"Don't descend directories\n"
+"on other filesystems"
+msgstr ""
+"不要进入(挂载)其它\n"
+"文件系统的目录"
+
+#: src/xfprot.c:1385
+msgid "Scan boot sectors "
+msgstr "扫描引导扇区 [注]"
+
+#: src/xfprot.c:1392 src/xfprot.c:1394
+msgid "You need administrator rights"
+msgstr "您需要管理员权限。"
+
+#: src/xfprot.c:1397
+msgid "F6 Virus list"
+msgstr "F6 病毒列表"
+
+#: src/xfprot.c:1399
+msgid "F5 Info"
+msgstr "F5 信息"
+
+#: src/xfprot.c:1401
+msgid "F4 Test"
+msgstr "F4 测试"
+
+#: src/xfprot.c:1403
+msgid "F3 Report"
+msgstr "F3 报告"
+
+#: src/xfprot.c:1405
+msgid "F2 Update"
+msgstr "F2 更新"
+
+#: src/xfprot.c:1407
+msgid "F1 Scan"
+msgstr "F1 扫描"
+
+#: src/xfprot.c:1515
+msgid "Licensed under the GNU General Public License, version 2"
+msgstr "采用 GNU 通用公共许可证第 2 版 (GNU GPLv2) 进行许可"
+
+#. Version is displayed above so just exit
+#: src/xfprot.c:1543
+#, c-format
+msgid "Usage: %s [option] [path]\n"
+msgstr "用法：%s [选项] [路径]\n"
+
+#: src/xfprot.c:1544
+#, c-format
+msgid "\t-k        run as KDE menu action\n"
+msgstr "\t-k        作为 KDE 菜单命令来运行\n"
+
+#: src/xfprot.c:1545
+#, c-format
+msgid "\t-h        display this help and exit\n"
+msgstr "\t-h        显示此帮助并结束\n"
+
+#: src/xfprot.c:1546
+#, c-format
+msgid ""
+"\t-v        output version information and exit\n"
+"\n"
+msgstr "\t-v        显示版本信息并结束\n"
+"\n"
+
+#: src/xfprot.c:1549
+#, c-format
+msgid "%s: unknown command line switch: %s"
+msgstr "%s: 未知的命令行参数：%s"
+
+#: src/xfprot.c:1568
+#, c-format
+msgid "%s: too much args on command line"
+msgstr "%s: 命令行参数过多。"
+
+#: src/xfprot.c:1584
+msgid ""
+"Cannot get password file entry.\n"
+"Aborting..."
+msgstr ""
+"无法取得 password 文件之记录。\n"
+"程序中止..."
+
+#: src/xfprot.c:1590
+msgid ""
+"Failed to change dir to user's home dir,\n"
+"trying\"/\"instead."
+msgstr ""
+"无法切换至用户的家目录，\n"
+"目前改用 \"/\"。"
+
+#: src/xfprot.c:1592
+msgid ""
+"Failed to change dir to \"/\",\n"
+"Aborting..."
+msgstr ""
+"无法切换至 \"/\" 目录，\n"
+"程序中止..."
+
+#. We don't want to be redirected by a link
+#: src/xfprot.c:1600
+msgid ""
+"xfprot's private dir is a link.\n"
+"Aborting..."
+msgstr ""
+"xfprot 的私用目录是符号链接。\n"
+"程序中止..."
+
+#: src/xfprot.c:1605
+msgid ""
+"Cannot create xfprot's private dir.\n"
+"Aborting..."
+msgstr ""
+"无法创建 xfprot 的私用目录。\n"
+"程序中止..."
+
+#: src/xfprot.c:1625
+msgid ""
+"Unsupported old F-prot version found,\n"
+"please update to latest.\n"
+"Aborting..."
+msgstr ""
+"侦测到的 F-prot 版本太旧，已经不再支持，\n"
+"请升级成最新版本。\n"
+"程序中止..."

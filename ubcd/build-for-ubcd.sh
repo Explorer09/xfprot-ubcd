@@ -19,14 +19,15 @@ restore_xfprot () {
     # Restore the po directory.
     cd $xfprot_dir/po
     rm -f *.gmo
-    mv it.po it_IT.UTF-8.po
-    mv de.po de_DE.UTF-8.po
-    mv fr.po fr_FR.UTF-8.po
-    mv es.po es_ES.UTF-8.po
+    mv it.po    it_IT.UTF-8.po
+    mv de.po    de_DE.UTF-8.po
+    mv fr.po    fr_FR.UTF-8.po
+    mv es.po    es_ES.UTF-8.po
     mv pt_BR.po pt_BR.UTF-8.po
-    mv pl.po pl_PL.UTF-8.po
-    mv ru.po ru_RU.UTF-8.po
-    mv ja.po ja_JP.UTF-8.po
+    mv pl.po    pl_PL.UTF-8.po
+    mv ru.po    ru_RU.UTF-8.po
+    mv ja.po    ja_JP.UTF-8.po
+    mv zh_CN.po zh_CN.UTF-8.po
     mv zh_TW.po zh_TW.UTF-8.po
     if [ -f LINGUAS_bak ]; then
         rm -f LINGUAS
@@ -54,6 +55,7 @@ mv pt_BR.UTF-8.po pt_BR.po
 mv pl_PL.UTF-8.po pl.po
 mv ru_RU.UTF-8.po ru.po
 mv ja_JP.UTF-8.po ja.po
+mv zh_CN.UTF-8.po zh_CN.po
 mv zh_TW.UTF-8.po zh_TW.po
 mv LINGUAS LINGUAS_bak
 
