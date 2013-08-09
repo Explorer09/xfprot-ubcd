@@ -1382,7 +1382,7 @@ static void new_gui(GList *icon_list)
 										G_CALLBACK(flag_callback), &flag_mount,
 										INACTIVE, option_table, 0, 5, 3, 4);
 
-	check_button8 = check_create_on_table(_("Scan boot sectors "),
+	check_button8 = check_create_on_table(_("Scan boot sectors"),
 										G_CALLBACK(flag_callback), &flag_boot,
 										INACTIVE, option_table, 0, 5, 4, 5);
 

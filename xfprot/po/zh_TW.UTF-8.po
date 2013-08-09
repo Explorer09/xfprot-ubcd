@@ -499,7 +499,7 @@ msgstr ""
 #: src/xfprot.c:1385
 #  In Chinese (Taiwan) 'boot sector' may be translated as 開機磁區 or 啟動磁區.
 #  Both are widely used but the former is more popular.
-msgid "Scan boot sectors "
+msgid "Scan boot sectors"
 msgstr "掃描開機磁區 [註]"
 
 #: src/xfprot.c:1392 src/xfprot.c:1394

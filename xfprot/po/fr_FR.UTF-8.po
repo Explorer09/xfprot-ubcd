@@ -504,7 +504,7 @@ msgstr ""
 "sur les autres systèmes de fichiers"
 
 #: src/xfprot.c:1385
-msgid "Scan boot sectors "
+msgid "Scan boot sectors"
 msgstr "Analyser les secteurs d'amorçage"
 
 #: src/xfprot.c:1392 src/xfprot.c:1394

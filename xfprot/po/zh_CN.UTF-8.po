@@ -504,7 +504,7 @@ msgstr ""
 "文件系统的目录"
 
 #: src/xfprot.c:1385
-msgid "Scan boot sectors "
+msgid "Scan boot sectors"
 msgstr "扫描引导扇区 [注]"
 
 #: src/xfprot.c:1392 src/xfprot.c:1394

@@ -494,7 +494,7 @@ msgstr ""
 "辿らない"
 
 #: src/xfprot.c:1385
-msgid "Scan boot sectors "
+msgid "Scan boot sectors"
 msgstr "ブートセクタをスキャン"
 
 #: src/xfprot.c:1392 src/xfprot.c:1394
