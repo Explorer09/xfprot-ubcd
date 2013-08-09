@@ -86,7 +86,7 @@ AM_PROG_CC_C_O
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 AC_HEADER_STDC
-AC_LANG_C
+AC_LANG([C])
 
 changequote(,)dnl
 if test "x$GCC" = "xyes"; then
