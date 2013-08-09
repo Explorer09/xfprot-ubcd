@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-06 21:10+0100\n"
-"PO-Revision-Date: 2013-07-31 14:56+0800\n"
+"PO-Revision-Date: 2013-08-09 18:15+0800\n"
 "Last-Translator: Kang-Che Sung <explorer09@gmail.com>\n"
 "Language-Team: chinese <explorer09@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr "採用授權條款："
 
 #: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1517
 msgid "This program comes with ABSOLUTELY NO WARRANTY"
-msgstr "本程式 **不負任何擔保責任**"
+msgstr "本程式 ＊不負任何擔保責任＊"
 
 #: src/about_window.c:130
 msgid "I agree, don't show it again"
@@ -337,14 +337,19 @@ msgid "Done"
 msgstr "已清除。"
 
 #: src/xfprot.c:928
+#  In Chinese 'emulator' has been mis-translated as 模擬器 ('simulator') for
+#  many years. Using the accurate term 仿真器 ('emulator') would look strange
+#  these days (except in technical writing).
 msgid "No suitable terminal emulator found"
 msgstr "找不到適合的終端機模擬器。"
 
 #: src/xfprot.c:974
+#  執行檔 means 'executable file'. In Chinese 'binary' is seldom used as noun.
 msgid "F-prot binary not found"
 msgstr "找不到 F-prot 的執行檔。"
 
 #: src/xfprot.c:1045
+#  辨識 means to 'identify' in Chinese.
 msgid ""
 "Cannot detect f-prot's version.\n"
 "Aborting..."
@@ -465,7 +470,7 @@ msgid "Options"
 msgstr "選項"
 
 #: src/xfprot.c:1362
-#  In Chinese the term 'archive' and 'compress' are often confused.
+#  In Chinese (Taiwan) the term 'archive' and 'compress' are often confused.
 #  For example, the 'archive file' is often called 壓縮檔 ('compressed file'),
 #  while they actually mean 封存檔 ('archived file').
 msgid "Scan inside archives"
@@ -488,10 +493,12 @@ msgid ""
 "Don't descend directories\n"
 "on other filesystems"
 msgstr ""
-"不要進入其它(掛載)\n"
+"不要進入(掛載)其它\n"
 "檔案系統的資料夾"
 
 #: src/xfprot.c:1385
+#  In Chinese (Taiwan) 'boot sector' may be translated as 開機磁區 or 啟動磁區.
+#  Both are widely used but the former is more popular.
 msgid "Scan boot sectors "
 msgstr "掃描開機磁區 [註]"
 
@@ -566,7 +573,7 @@ msgid ""
 "Cannot get password file entry.\n"
 "Aborting..."
 msgstr ""
-"無法取得 password 檔案之資訊。\n"
+"無法取得 password 檔案之記錄。\n"
 "程式中止..."
 
 #: src/xfprot.c:1590
