@@ -34,7 +34,7 @@ AC_INIT(XFPROT, 2.4expl5, tito-wolit@tiscali.it, xfprot)
 cflags_set=${CFLAGS+set}
 
 AM_INIT_AUTOMAKE(no-define)
-AM_CONFIG_HEADER(src/config.h)
+AC_CONFIG_HEADERS(src/config.h)
 
 IT_PROG_INTLTOOL([0.23],[no-xml])
 AC_CHECK_HEADERS([libintl.h])
