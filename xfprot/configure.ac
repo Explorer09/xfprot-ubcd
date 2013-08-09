@@ -60,7 +60,7 @@ case {$host} in
 esac
 
 # Enable debugging argument option.
-AC_ARG_ENABLE(debug,AC_HELP_STRING([--enable-debug], [enable debugging (default=no)]),	[ac_debug="$enableval"])
+AC_ARG_ENABLE(debug,AS_HELP_STRING([--enable-debug], [enable debugging (default=no)]),	[ac_debug="$enableval"])
 
 if test "x$ac_debug" = "xyes"; then
 	AC_DEFINE(DEBUG, [], [Define if debugging is enabled.])
@@ -134,11 +134,11 @@ ac_elevator="none"
 
 # Prefer use of sudo if available for updates
 AC_ARG_ENABLE(sudo,
-	AC_HELP_STRING([--enable-sudo], [prefer use of sudo if available for updates]), ac_elevator="sudo")
+	AS_HELP_STRING([--enable-sudo], [prefer use of sudo if available for updates]), ac_elevator="sudo")
 
 # Prefer use of su if availbale for updates
 AC_ARG_ENABLE(su,
-	AC_HELP_STRING([--enable-su], [prefer use of su if availbale for updates]), ac_elevator="su")
+	AS_HELP_STRING([--enable-su], [prefer use of su if availbale for updates]), ac_elevator="su")
 
 # Try to autodetect, preferring sudo if found
 if test "x$ac_elevator" = "xnone"; then
@@ -208,7 +208,7 @@ else
 fi
 
 AC_ARG_WITH(kdeprefix,
-	[AC_HELP_STRING(--with-kdeprefix=PATH,
+	[AS_HELP_STRING(--with-kdeprefix=PATH,
 		[prefix for KDE libraries for KDE3 desktop integration])],
 		kdeprefix=$withval,
 		kdeprefix="none")
