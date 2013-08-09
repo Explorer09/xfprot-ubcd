@@ -172,7 +172,7 @@ fi
 
 dnl it will define GTK_CFLAGS and GTK_LIBS for us,
 dnl comes from gtk.m4 (aclocal will find it for us)
-AM_PATH_GTK_2_0(2.18.0, [], AC_MSG_ERROR([Gtk+ 2.18 not found. XFPROT required Gtk+ to compile.]))
+AM_PATH_GTK_2_0(2.18.0, [], AC_MSG_ERROR([Gtk+ 2.18 not found. XFPROT requires Gtk+ to compile.]))
 
 gtk_config_major_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
            sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
