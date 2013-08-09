@@ -75,9 +75,6 @@ else
 	ac_debug="release"
 fi
 
-# Build time sanity check...
-AM_SANITY_CHECK
-
 # Checks for programs.
 AC_ISC_POSIX
 AC_PROG_CC
