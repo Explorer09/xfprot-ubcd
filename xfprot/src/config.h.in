@@ -36,7 +36,7 @@
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H
 
-/* Core dumps allowed. */
+/* Define if core dump is NOT allowed. */
 #undef HAVE_PRCTL
 
 /* Define to 1 if you have the <stdint.h> header file. */

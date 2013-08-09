@@ -198,7 +198,7 @@ fi
 
 AC_CHECK_FUNC(prctl, ac_prctl=yes, ac_prctl=no)
 if test "x$ac_prctl" = "xyes"; then
-	AC_DEFINE(HAVE_PRCTL, [], [Core dumps allowed.])
+	AC_DEFINE(HAVE_PRCTL, [], [Define if core dump is NOT allowed.])
 	ac_prctl="not allowed"
 else
 	ac_prctl="allowed"
