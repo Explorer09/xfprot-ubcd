@@ -1183,7 +1183,7 @@ static void new_gui(GList *icon_list)
 	GtkWidget *help;
 	GtkWidget *about;
 	GtkAccelGroup *accel_group = NULL;
-#ifdef USE_OLD_TOOLTIP
+#if !defined(USE_NEW_TOOLTIP)
 	GtkTooltips *action_tooltip;
 	GtkTooltips *onlyheur_tooltip;
 #endif
@@ -1367,12 +1367,12 @@ static void new_gui(GList *icon_list)
 	check_button5 = check_create_on_table(_("Scan for other various malware"),
 										G_CALLBACK(flag_callback), &flag_collect,
 										INACTIVE, option_table, 0, 5, 1, 2);
-#ifdef USE_OLD_TOOLTIP	
+#ifdef USE_NEW_TOOLTIP
+	gtk_widget_set_tooltip_text(check_button5, _("Scan for adware and remote access tools"));
+#else
 	malware_tooltip = gtk_tooltips_new();
 	gtk_tooltips_set_tip(GTK_TOOLTIPS (malware_tooltip), check_button5,
 						_("Scan for adware and remote access tools"), NULL);
-#else
-	gtk_widget_set_tooltip_text(check_button5, _("Scan for adware and remote access tools"));
 #endif
 	check_button6 = check_create_on_table(_("Follow symbolic links"),
 										G_CALLBACK(flag_callback), &flag_follow,
@@ -1386,12 +1386,12 @@ static void new_gui(GList *icon_list)
 										G_CALLBACK(flag_callback), &flag_boot,
 										INACTIVE, option_table, 0, 5, 4, 5);
 
-#ifdef USE_OLD_TOOLTIP	
+#ifdef USE_NEW_TOOLTIP	
+	gtk_widget_set_tooltip_text(check_button8, _("You need administrator rights"));
+#else
 	boot_tooltip = gtk_tooltips_new();
 	gtk_tooltips_set_tip(GTK_TOOLTIPS (boot_tooltip), check_button8,
 						_("You need administrator rights"), NULL);
-#else
-	gtk_widget_set_tooltip_text(check_button8, _("You need administrator rights"));
 #endif
 
 	button3 = button_create_on_table(_("F6 Virus list"),G_CALLBACK(fprot_virlist),	 NULL, table1, 7, 8,  20, 21);

@@ -7991,16 +7991,10 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gtk_x11_2_0_gtk_widget_set_tooltip_text" >&5
 $as_echo "$ac_cv_lib_gtk_x11_2_0_gtk_widget_set_tooltip_text" >&6; }
 if test "x$ac_cv_lib_gtk_x11_2_0_gtk_widget_set_tooltip_text" = xyes; then :
-  ac_tooltip=1
-else
-  ac_tooltip=0
+
+$as_echo "#define USE_NEW_TOOLTIP /**/" >>confdefs.h
+
 fi
-
-	if test "x$ac_tooltip" = "x0"; then
-
-$as_echo "#define USE_OLD_TOOLTIP /**/" >>confdefs.h
-
-	fi
 
 	# since 2.24
 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk_combo_box_text_new in -lgtk-x11-2.0" >&5
@@ -8040,20 +8034,15 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gtk_x11_2_0_gtk_combo_box_text_new" >&5
 $as_echo "$ac_cv_lib_gtk_x11_2_0_gtk_combo_box_text_new" >&6; }
 if test "x$ac_cv_lib_gtk_x11_2_0_gtk_combo_box_text_new" = xyes; then :
-  ac_combo_box_text=1
-else
-  ac_combo_box_text=0
+
+$as_echo "#define USE_NEW_COMBO_BOX_TEXT /**/" >>confdefs.h
+
 fi
-
-	if test "x$ac_combo_box_text" = "x1"; then
-
-$as_echo "#define USE_NEW_COMBO_BOX_TEXT /**/" >>confdefs.h
-
-	fi
 else
 
-$as_echo "#define USE_NEW_COMBO_BOX_TEXT /**/" >>confdefs.h
+$as_echo "#define USE_NEW_TOOLTIP /**/" >>confdefs.h
 
+$as_echo "#define USE_NEW_COMBO_BOX_TEXT /**/" >>confdefs.h
 
 	# since 3.0
 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk_progress_bar_set_inverted in -lgtk-3" >&5
@@ -8093,16 +8082,10 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gtk_3_gtk_progress_bar_set_inverted" >&5
 $as_echo "$ac_cv_lib_gtk_3_gtk_progress_bar_set_inverted" >&6; }
 if test "x$ac_cv_lib_gtk_3_gtk_progress_bar_set_inverted" = xyes; then :
-  ac_progress_bar=1
-else
-  ac_progress_bar=0
-fi
-
-	if test "x$ac_progress_bar" = "x1"; then
 
 $as_echo "#define USE_NEW_PROGRESS_BAR /**/" >>confdefs.h
 
-	fi
+fi
 
 	# since 3.0
 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk_widget_get_preferred_size in -lgtk-3" >&5
@@ -8142,16 +8125,10 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gtk_3_gtk_widget_get_preferred_size" >&5
 $as_echo "$ac_cv_lib_gtk_3_gtk_widget_get_preferred_size" >&6; }
 if test "x$ac_cv_lib_gtk_3_gtk_widget_get_preferred_size" = xyes; then :
-  ac_preferred_size=1
-else
-  ac_preferred_size=0
-fi
-
-	if test "x$ac_preferred_size" = "x1"; then
 
 $as_echo "#define USE_NEW_PREFERRED_SIZE /**/" >>confdefs.h
 
-	fi
+fi
 fi
 
 ac_fn_c_check_func "$LINENO" "prctl" "ac_cv_func_prctl"

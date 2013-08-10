@@ -217,30 +217,23 @@ fi
 
 if test "x$ac_gtk2" != "xno"; then
 	# since 2.12
-	AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_set_tooltip_text, ac_tooltip=1, ac_tooltip=0)
-	if test "x$ac_tooltip" = "x0"; then
-		AC_DEFINE(USE_OLD_TOOLTIP, [], [Old/new gtk tooltips.])
-	fi
+	AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_set_tooltip_text,
+		[AC_DEFINE(USE_NEW_TOOLTIP, [], [Old/new gtk tooltips.])])dnl
 
 	# since 2.24
-	AC_CHECK_LIB(gtk-x11-2.0, gtk_combo_box_text_new, ac_combo_box_text=1, ac_combo_box_text=0)
-	if test "x$ac_combo_box_text" = "x1"; then
-		AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])
-	fi
+	AC_CHECK_LIB(gtk-x11-2.0, gtk_combo_box_text_new,
+		[AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])])dnl
 else
-	AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])
+	AC_DEFINE(USE_NEW_TOOLTIP, [], [Old/new gtk tooltips.])dnl
+	AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])dnl
 
 	# since 3.0
-	AC_CHECK_LIB(gtk-3, gtk_progress_bar_set_inverted, ac_progress_bar=1, ac_progress_bar=0)
-	if test "x$ac_progress_bar" = "x1"; then
-		AC_DEFINE(USE_NEW_PROGRESS_BAR, [], [Use new gtk_progress_bar_set_inverted() API.])
-	fi
+	AC_CHECK_LIB(gtk-3, gtk_progress_bar_set_inverted,
+		[AC_DEFINE(USE_NEW_PROGRESS_BAR, [], [Use new gtk_progress_bar_set_inverted() API.])])dnl
 
 	# since 3.0
-	AC_CHECK_LIB(gtk-3, gtk_widget_get_preferred_size, ac_preferred_size=1, ac_preferred_size=0)
-	if test "x$ac_preferred_size" = "x1"; then
-		AC_DEFINE(USE_NEW_PREFERRED_SIZE, [], [Use new gtk_widget_get_preferred_size() API.])
-	fi
+	AC_CHECK_LIB(gtk-3, gtk_widget_get_preferred_size,
+		[AC_DEFINE(USE_NEW_PREFERRED_SIZE, [], [Use new gtk_widget_get_preferred_size() API.])])dnl
 fi
 
 AC_CHECK_FUNC(prctl, ac_prctl=yes, ac_prctl=no)

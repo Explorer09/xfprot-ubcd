@@ -109,4 +109,4 @@
 #undef USE_NEW_PROGRESS_BAR
 
 /* Old/new gtk tooltips. */
-#undef USE_OLD_TOOLTIP
+#undef USE_NEW_TOOLTIP
