@@ -167,33 +167,74 @@ if test "x$ac_elevator" = "xsudo"; then
 	AC_DEFINE(PREFER_SUDO, [], [Prefer use of sudo if available for updates.])
 fi
 
-dnl it will define GTK_CFLAGS and GTK_LIBS for us,
-dnl comes from gtk.m4 (aclocal will find it for us)
-AM_PATH_GTK_2_0(2.18.0, [], AC_MSG_ERROR([Gtk+ 2.18 not found. XFPROT requires Gtk+ to compile.]))
+AC_ARG_WITH(gtk3,
+	[AS_HELP_STRING([--with-gtk3], [Use Gtk+ 3.x (default).])], [ac_gtk3="$withval"])
+AC_ARG_WITH(gtk2,
+	[AS_HELP_STRING([--with-gtk2], [Use Gtk+ 2.x (requires at least 2.18.0).])], [ac_gtk2="$withval"])
 
-gtk_config_major_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
-           sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
-gtk_config_minor_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
-           sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\2/'`
-gtk_config_micro_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
-           sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\3/'`
-
-if test "x$ac_tooltip" = "x1"; then
-	AC_DEFINE(USE_OLD_TOOLTIP, [], [Old/new gtk tooltips.])
+# Specifying --with-gtk3 but no --with-gtk2 implies --without-gtk2
+# and vice versa
+if test "x$ac_gtk3" = "xyes"; then
+	if test "x$ac_gtk2" != "xyes"; then
+		ac_gtk2="no"
+	fi
+fi
+if test "x$ac_gtk2" = "xyes"; then
+	if test "x$ac_gtk3" != "xyes"; then
+		ac_gtk3="no"
+	fi
 fi
 
-# since 2.12
-AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_set_tooltip_text, ac_tooltip=1, ac_tooltip=0)
+if test "x$ac_gtk3" != "xno"; then
+	AM_PATH_GTK_3_0(3.0.0, [ac_gtk2="no"], [ac_gtk3="no"])
+	dnl [ac_gtk2="no"] skips the check for Gtk2 since we will use Gtk3.
 
-if test "x$ac_tooltip" = "x0"; then
-	AC_DEFINE(USE_OLD_TOOLTIP, [], [Old/new gtk tooltips.])
+	gtk_config_major_version=`$PKG_CONFIG --modversion gtk+-3.0 | \
+		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+	gtk_config_minor_version=`$PKG_CONFIG --modversion gtk+-3.0 | \
+		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\2/'`
+	gtk_config_micro_version=`$PKG_CONFIG --modversion gtk+-3.0 | \
+		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\3/'`
+fi
+if test "x$ac_gtk2" != "xno"; then
+	dnl AM_PATH_GTK_* will define GTK_CFLAGS and GTK_LIBS for us,
+	dnl comes from gtk.m4 (aclocal will find it for us)
+	AM_PATH_GTK_2_0(2.18.0, [],
+		AC_MSG_ERROR([Gtk+ 2.18.0 not found. XFPROT requires Gtk+ to compile.]))
+
+	gtk_config_major_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
+		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+	gtk_config_minor_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
+		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\2/'`
+	gtk_config_micro_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
+		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\3/'`
+else
+	dnl Either Gtk3 is used or it is the error below
+	if test "x$ac_gtk3" = "xno"; then
+		AC_MSG_ERROR([--without-gtk2 is specified but Gtk+ 3 is not found.])
+	fi
 fi
 
-# since 2.24
-AC_CHECK_LIB(gtk-x11-2.0, gtk_combo_box_text_new, ac_combo_box_text=1, ac_combo_box_text=0)
+if test "x$ac_gtk2" != "xno"; then
+	# since 2.12
+	AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_set_tooltip_text, ac_tooltip=1, ac_tooltip=0)
+	if test "x$ac_tooltip" = "x0"; then
+		AC_DEFINE(USE_OLD_TOOLTIP, [], [Old/new gtk tooltips.])
+	fi
 
-if test "x$ac_combo_box_text" = "x1"; then
+	# since 2.24
+	AC_CHECK_LIB(gtk-x11-2.0, gtk_combo_box_text_new, ac_combo_box_text=1, ac_combo_box_text=0)
+	if test "x$ac_combo_box_text" = "x1"; then
+		AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])
+	fi
+else
 	AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])
+
+	# since 3.0
+	AC_CHECK_LIB(gtk-3, gtk_progress_bar_set_inverted, ac_progress_bar=1, ac_progress_bar=0)
+	if test "x$ac_progress_bar" = "x1"; then
+		AC_DEFINE(USE_NEW_PROGRESS_BAR, [], [Use new gtk_progress_bar_set_inverted() API.])
+	fi
 fi
 
 AC_CHECK_FUNC(prctl, ac_prctl=yes, ac_prctl=no)

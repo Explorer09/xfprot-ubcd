@@ -102,5 +102,8 @@
 /* Define if GtkComboBoxText (new API) is supported. */
 #undef USE_NEW_COMBO_BOX_TEXT
 
+/* Use new gtk_progress_bar_set_inverted() API. */
+#undef USE_NEW_PROGRESS_BAR
+
 /* Old/new gtk tooltips. */
 #undef USE_OLD_TOOLTIP
