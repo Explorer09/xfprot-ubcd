@@ -1322,7 +1322,7 @@ static void new_gui(GList *icon_list)
 	flag_macro = 0;
 	
 	frame5 = frame_create_on_table(_("Macro virus removal options"), table1, 5, 10, 4, 8);
-	macro_remove_table = table_create(1, 3, frame5, 2 ,  HOMOGENEUS);
+	macro_remove_table = table_create(1, 4, frame5, 2 ,  HOMOGENEUS);
 
 	macro_1_button = radio_create_on_table(	NULL, _("Remove infected macros from docs"),
 											G_CALLBACK(flag_macro_action_callback), "0",
