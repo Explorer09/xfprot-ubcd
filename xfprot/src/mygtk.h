@@ -99,7 +99,13 @@
 
 # define ATTRIBUTE_UNUSED __attribute__ ((__unused__))
 
-/* Backward-compatibility with GDK_<keyname> macros.
+/* Backward-compatibility with GTK_WIDGET_VISIBLE() (deprecated since 2.20)
+   gtk_widget_get_visible() is available since 2.18. */
+#if !defined(USE_NEW_GET_VISIBLE)
+#define gtk_widget_get_visible(widget) GTK_WIDGET_VISIBLE(widget)
+#endif
+
+/* Backward-compatibility with GDK_<keyname> macros (deprecated since 2.22).
    In case the header <gdk/gdkkeysyms-compat.h> is not available. */
 #if (!defined(GDK_KEY_w) && defined(GDK_w))
 #define GDK_KEY_w GDK_w
