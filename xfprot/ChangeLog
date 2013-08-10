@@ -1234,3 +1234,35 @@ Xfprot 2.4expl4.
 - Use gtk_check_menu_item_new_with_mnemonic for "Wrap" menu item.
 - Merge 2 localizable strings (at xfprot.c:1373 xfprot.c:1375) into one.
 Xfprot 2.4expl5.
+
+07-Aug-2013
+- Fix an autoconf warning "AC_INIT: not a literal" in configure.ac
+- Add support of the new GtkComboBoxText API (Gtk+ 2.24). The configure script
+  will check if your library supports it and use the old API if not.
+
+08-Aug-2013
+- Add message in the man page that only f-prot 6.X is supported.
+
+09-Aug-2013
+- Improve zh_TW translation.
+- Add Simplified Chinese (zh_CN) translation by Explorer09.
+- Remove whitespace at end of gettext string "Scan boot sectors".
+- Gtk+ compatibility:
+    Replace GDK_<keyname> macros with GDK_KEY_<keyname>. (Gtk+ 2.21.8)
+    Replace GTK_OBJECT() type cast with G_OBJECT() in g_signal_connect() arguments.
+    Remove useless gtk_set_locale() call.
+- configure script improvements:
+    Update config.guess and config.sub to latest.
+    Fix some deprecated and obsolete autoconf macros.
+
+10-Aug-2013
+- Xfprot can now be built with Gtk+ 3. Two configure switches, --with-gtk3 and
+  --with-gtk2 have been added so you can choose which Gtk+ version. There are
+  still work to be done - many deprecated API calls not replaced yet.
+- Fix zh_CN and zh_TW translations.
+- Merge two pairs of localizable strings in text_edit_window.c and text_common.c.
+- Gtk+ compatibility:
+    Use gtk_progress_bar_set_inverted() instead of gtk_progress_bar_set_orientation().
+    Use gtk_widget_get_preferred_size() instead of gtk_widget_size_request().
+    Use gtk_separator_new() instead of gtk_vseparator_new().
+Xfprot 2.4expl6.

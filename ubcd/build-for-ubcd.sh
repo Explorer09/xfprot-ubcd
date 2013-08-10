@@ -10,7 +10,7 @@ work_dir=`pwd`
 xfprot_dir=$work_dir/../xfprot
 
 package_dir=$work_dir/xfprot-ubcd-pkg
-package_name=xfprot-2.4expl5.txz
+package_name=xfprot-2.4expl6.txz
 
 # restore_xfprot restore the xfprot directory to its original state except
 # it does not run 'make distclean'.
