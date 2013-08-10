@@ -21,23 +21,24 @@ msgstr ""
 msgid "Cannot create directory!"
 msgstr "无法新建文件夹！"
 
-#: src/my_file_selector.c:779
+#: src/my_file_selector.c:784
 msgid "Show _Hidden Files"
 msgstr "显示隐藏文件(_H)"
 
-#: src/my_file_selector.c:824 src/my_file_selector.c:1027
+#: src/my_file_selector.c:842 src/my_file_selector.c:844
+#: src/my_file_selector.c:1049 src/my_file_selector.c:1052
 msgid "All files (*)"
 msgstr "所有文件 (*)"
 
-#: src/my_file_selector.c:865
+#: src/my_file_selector.c:886
 msgid "Save"
 msgstr "保存"
 
-#: src/my_file_selector.c:865 src/text_edit_window.c:264
+#: src/my_file_selector.c:886 src/text_edit_window.c:264
 msgid "Open"
 msgstr "打开"
 
-#: src/my_file_selector.c:1105
+#: src/my_file_selector.c:1135
 msgid "No file selected!"
 msgstr "未选取任何文件！"
 
@@ -58,7 +59,7 @@ msgstr "自动换行(_W)"
 msgid "Licensed under the"
 msgstr "采用许可协议："
 
-#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1517
+#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1525
 msgid "This program comes with ABSOLUTELY NO WARRANTY"
 msgstr "本程序 ＊不负任何担保责任＊"
 
@@ -87,7 +88,7 @@ msgid "Dialog Window"
 msgstr "对话框"
 
 #. File
-#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1210
+#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1218
 msgid "_File"
 msgstr "文件(_F)"
 
@@ -190,7 +191,7 @@ msgstr "转换成 UTF-8 编码失败！"
 msgid "Select path to scan:"
 msgstr "选择扫描路径："
 
-#: src/xfprot.c:149 src/xfprot.c:1346
+#: src/xfprot.c:149 src/xfprot.c:1354
 msgid "Report file"
 msgstr "报告文件"
 
@@ -356,136 +357,136 @@ msgstr ""
 "程序中止..."
 
 #. Scan
-#: src/xfprot.c:1214
+#: src/xfprot.c:1222
 msgid "_Scan"
 msgstr "扫描(_S)"
 
 #. Update
-#: src/xfprot.c:1220
+#: src/xfprot.c:1228
 msgid "_Update"
 msgstr "更新(_U)"
 
 #. Report
-#: src/xfprot.c:1226
+#: src/xfprot.c:1234
 msgid "_Report"
 msgstr "报告(_R)"
 
 #. Tools
-#: src/xfprot.c:1242
+#: src/xfprot.c:1250
 msgid "_Tools"
 msgstr "工具(_T)"
 
 #. Test
-#: src/xfprot.c:1246
+#: src/xfprot.c:1254
 msgid "T_est"
 msgstr "测试(_E)"
 
 #. Info
-#: src/xfprot.c:1252
+#: src/xfprot.c:1260
 msgid "_Info"
 msgstr "信息(_I)"
 
 #. Virus list
-#: src/xfprot.c:1258
+#: src/xfprot.c:1266
 msgid "_Virus List"
 msgstr "病毒列表(_V)"
 
 #. Save settings
-#: src/xfprot.c:1264
+#: src/xfprot.c:1272
 msgid "_Save Settings"
 msgstr "保存设置(_S)"
 
 #. clear settings
-#: src/xfprot.c:1270
+#: src/xfprot.c:1278
 msgid "_Clear Settings"
 msgstr "清除设置(_C)"
 
-#: src/xfprot.c:1291
+#: src/xfprot.c:1299
 msgid "Path to scan"
 msgstr "扫描的路径"
 
-#: src/xfprot.c:1299
+#: src/xfprot.c:1307
 msgid "Do not scan subdirectories"
 msgstr "不要扫描子文件夹"
 
-#: src/xfprot.c:1302
+#: src/xfprot.c:1310
 msgid "Scan mode"
 msgstr "扫描模式"
 
 #. Warning we can't use the ACTIVE flag here because the callback function acts on widgets
 #. we haven't created yet, so we do things manually later by calling toggle1_f()
-#: src/xfprot.c:1307
+#: src/xfprot.c:1315
 msgid "Report only"
 msgstr "只作回报"
 
-#: src/xfprot.c:1310
+#: src/xfprot.c:1318
 msgid "Automatic"
 msgstr "自动清除病毒"
 
-#: src/xfprot.c:1316
+#: src/xfprot.c:1324
 msgid "Macro virus removal options"
 msgstr "宏病毒去除选项"
 
-#: src/xfprot.c:1319
+#: src/xfprot.c:1327
 msgid "Remove infected macros from docs"
 msgstr "只去除文档中被感染的宏 (默认)"
 
-#: src/xfprot.c:1323
+#: src/xfprot.c:1331
 msgid "Remove all macros from infected docs"
 msgstr "去除被感染文档中的所有宏"
 
-#: src/xfprot.c:1326
+#: src/xfprot.c:1334
 msgid "Remove all macros from doc if new variant is found"
 msgstr "只在发现变种时，去除文档的所有宏"
 
 #. --stripallmacros switch undocumented in the help text. Needs --disinfect
-#: src/xfprot.c:1330
+#: src/xfprot.c:1338
 msgid "Remove all macros from all docs"
 msgstr "去除所有文档的所有宏 (危险！)"
 
-#: src/xfprot.c:1334
+#: src/xfprot.c:1342
 msgid "Use heuristics"
 msgstr "启发式侦测"
 
-#: src/xfprot.c:1337
+#: src/xfprot.c:1345
 msgid "No"
 msgstr "关闭"
 
-#: src/xfprot.c:1340
+#: src/xfprot.c:1348
 msgid "Default"
 msgstr "默认等级"
 
-#: src/xfprot.c:1342
+#: src/xfprot.c:1350
 msgid "Maximum"
 msgstr "最高等级"
 
-#: src/xfprot.c:1355
+#: src/xfprot.c:1363
 msgid "List all scanned files"
 msgstr "列出所有扫描的文件"
 
-#: src/xfprot.c:1359
+#: src/xfprot.c:1367
 msgid "Options"
 msgstr "选项"
 
-#: src/xfprot.c:1362
+#: src/xfprot.c:1370
 msgid "Scan inside archives"
 msgstr "扫描归档内部"
 
-#: src/xfprot.c:1367
+#: src/xfprot.c:1375
 msgid "Scan for other various malware"
 msgstr "扫描其它类型的恶意软件 [注]"
 
-#: src/xfprot.c:1373 src/xfprot.c:1375
+#: src/xfprot.c:1379 src/xfprot.c:1383
 msgid "Scan for adware and remote access tools"
 msgstr "扫描广告软件以及远程访问的软件。"
 
-#: src/xfprot.c:1377
+#: src/xfprot.c:1385
 #  Avira AntiVir (zh-CN) uses the term 跟踪符号链接 for this. 跟随 is more
 #  popular on the web.
 msgid "Follow symbolic links"
 msgstr "跟随符号链接"
 
-#: src/xfprot.c:1381
+#: src/xfprot.c:1389
 msgid ""
 "Don't descend directories\n"
 "on other filesystems"
@@ -493,59 +494,59 @@ msgstr ""
 "不要进入(挂载)其它\n"
 "文件系统的目录"
 
-#: src/xfprot.c:1385
+#: src/xfprot.c:1393
 msgid "Scan boot sectors"
 msgstr "扫描引导扇区 [注]"
 
-#: src/xfprot.c:1392 src/xfprot.c:1394
+#: src/xfprot.c:1398 src/xfprot.c:1402
 msgid "You need administrator rights"
 msgstr "您需要管理员权限。"
 
-#: src/xfprot.c:1397
+#: src/xfprot.c:1405
 msgid "F6 Virus list"
 msgstr "F6 病毒列表"
 
-#: src/xfprot.c:1399
+#: src/xfprot.c:1407
 msgid "F5 Info"
 msgstr "F5 信息"
 
-#: src/xfprot.c:1401
+#: src/xfprot.c:1409
 msgid "F4 Test"
 msgstr "F4 测试"
 
-#: src/xfprot.c:1403
+#: src/xfprot.c:1411
 msgid "F3 Report"
 msgstr "F3 报告"
 
-#: src/xfprot.c:1405
+#: src/xfprot.c:1413
 msgid "F2 Update"
 msgstr "F2 更新"
 
-#: src/xfprot.c:1407
+#: src/xfprot.c:1415
 msgid "F1 Scan"
 msgstr "F1 扫描"
 
-#: src/xfprot.c:1515
+#: src/xfprot.c:1523
 msgid "Licensed under the GNU General Public License, version 2"
 msgstr "采用 GNU 通用公共许可证第 2 版 (GNU GPLv2) 进行许可"
 
 #. Version is displayed above so just exit
-#: src/xfprot.c:1543
+#: src/xfprot.c:1550
 #, c-format
 msgid "Usage: %s [option] [path]\n"
 msgstr "用法：%s [选项] [路径]\n"
 
-#: src/xfprot.c:1544
+#: src/xfprot.c:1551
 #, c-format
 msgid "\t-k        run as KDE menu action\n"
 msgstr "\t-k        以 KDE 菜单动作来运行\n"
 
-#: src/xfprot.c:1545
+#: src/xfprot.c:1552
 #, c-format
 msgid "\t-h        display this help and exit\n"
 msgstr "\t-h        显示此帮助并结束\n"
 
-#: src/xfprot.c:1546
+#: src/xfprot.c:1553
 #, c-format
 msgid ""
 "\t-v        output version information and exit\n"
@@ -553,17 +554,17 @@ msgid ""
 msgstr "\t-v        显示版本信息并结束\n"
 "\n"
 
-#: src/xfprot.c:1549
+#: src/xfprot.c:1556
 #, c-format
 msgid "%s: unknown command line switch: %s"
 msgstr "%s: 未知的命令行参数：%s"
 
-#: src/xfprot.c:1568
+#: src/xfprot.c:1575
 #, c-format
 msgid "%s: too much args on command line"
 msgstr "%s: 命令行参数过多。"
 
-#: src/xfprot.c:1584
+#: src/xfprot.c:1591
 msgid ""
 "Cannot get password file entry.\n"
 "Aborting..."
@@ -571,7 +572,7 @@ msgstr ""
 "无法取得 password 文件之记录。\n"
 "程序中止..."
 
-#: src/xfprot.c:1590
+#: src/xfprot.c:1597
 msgid ""
 "Failed to change dir to user's home dir,\n"
 "trying\"/\"instead."
@@ -579,7 +580,7 @@ msgstr ""
 "无法切换至用户的家目录，\n"
 "目前改用 \"/\"。"
 
-#: src/xfprot.c:1592
+#: src/xfprot.c:1599
 msgid ""
 "Failed to change dir to \"/\",\n"
 "Aborting..."
@@ -588,7 +589,7 @@ msgstr ""
 "程序中止..."
 
 #. We don't want to be redirected by a link
-#: src/xfprot.c:1600
+#: src/xfprot.c:1607
 msgid ""
 "xfprot's private dir is a link.\n"
 "Aborting..."
@@ -596,7 +597,7 @@ msgstr ""
 "xfprot 的私用目录是符号链接。\n"
 "程序中止..."
 
-#: src/xfprot.c:1605
+#: src/xfprot.c:1612
 msgid ""
 "Cannot create xfprot's private dir.\n"
 "Aborting..."
@@ -604,7 +605,7 @@ msgstr ""
 "无法创建 xfprot 的私用目录。\n"
 "程序中止..."
 
-#: src/xfprot.c:1625
+#: src/xfprot.c:1632
 msgid ""
 "Unsupported old F-prot version found,\n"
 "please update to latest.\n"

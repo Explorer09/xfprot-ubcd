@@ -21,23 +21,24 @@ msgstr ""
 msgid "Cannot create directory!"
 msgstr "Kann das Verzeichnis nicht erstellen!"
 
-#: src/my_file_selector.c:779
+#: src/my_file_selector.c:784
 msgid "Show _Hidden Files"
 msgstr "Zeige _versteckte Dateien"
 
-#: src/my_file_selector.c:824 src/my_file_selector.c:1027
+#: src/my_file_selector.c:842 src/my_file_selector.c:844
+#: src/my_file_selector.c:1049 src/my_file_selector.c:1052
 msgid "All files (*)"
 msgstr "Alle Dateien (*)"
 
-#: src/my_file_selector.c:865
+#: src/my_file_selector.c:886
 msgid "Save"
 msgstr "Speichern"
 
-#: src/my_file_selector.c:865 src/text_edit_window.c:264
+#: src/my_file_selector.c:886 src/text_edit_window.c:264
 msgid "Open"
 msgstr "Öffnen"
 
-#: src/my_file_selector.c:1105
+#: src/my_file_selector.c:1135
 #, fuzzy
 msgid "No file selected!"
 msgstr "Kein Dateiname"
@@ -59,7 +60,7 @@ msgstr "_Zeilenumbruch"
 msgid "Licensed under the"
 msgstr "Lizensiert unter der"
 
-#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1517
+#: src/about_window.c:117 src/dialog_window.c:142 src/xfprot.c:1525
 msgid "This program comes with ABSOLUTELY NO WARRANTY"
 msgstr "Dieses Programm kommt mit ABSOLUT KEINER GARANTIE"
 
@@ -88,7 +89,7 @@ msgid "Dialog Window"
 msgstr "Dialog Window"
 
 #. File
-#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1210
+#: src/text_view_window.c:85 src/text_edit_window.c:322 src/xfprot.c:1218
 msgid "_File"
 msgstr "_Datei"
 
@@ -194,7 +195,7 @@ msgstr "Konnte conversion zu UTF-8 nicht durchfüren!"
 msgid "Select path to scan:"
 msgstr "Pfad zum Scannen auswählen:"
 
-#: src/xfprot.c:149 src/xfprot.c:1346
+#: src/xfprot.c:149 src/xfprot.c:1354
 msgid "Report file"
 msgstr "Report-Datei"
 
@@ -351,196 +352,196 @@ msgstr ""
 "Abbruch..."
 
 #. Scan
-#: src/xfprot.c:1214
+#: src/xfprot.c:1222
 msgid "_Scan"
 msgstr "_Scannen"
 
 #. Update
-#: src/xfprot.c:1220
+#: src/xfprot.c:1228
 msgid "_Update"
 msgstr "_Aktualisieren"
 
 #. Report
-#: src/xfprot.c:1226
+#: src/xfprot.c:1234
 msgid "_Report"
 msgstr "_Report"
 
 #. Tools
-#: src/xfprot.c:1242
+#: src/xfprot.c:1250
 msgid "_Tools"
 msgstr "_Tools"
 
 #. Test
-#: src/xfprot.c:1246
+#: src/xfprot.c:1254
 msgid "T_est"
 msgstr "_Test"
 
 #. Info
-#: src/xfprot.c:1252
+#: src/xfprot.c:1260
 msgid "_Info"
 msgstr "_Info"
 
 #. Virus list
-#: src/xfprot.c:1258
+#: src/xfprot.c:1266
 msgid "_Virus List"
 msgstr "_Virenliste"
 
 #. Save settings
-#: src/xfprot.c:1264
+#: src/xfprot.c:1272
 #, fuzzy
 msgid "_Save Settings"
 msgstr "_Einstellungen speichern"
 
 #. clear settings
-#: src/xfprot.c:1270
+#: src/xfprot.c:1278
 #, fuzzy
 msgid "_Clear Settings"
 msgstr "Einstellungen _Löschen"
 
-#: src/xfprot.c:1291
+#: src/xfprot.c:1299
 msgid "Path to scan"
 msgstr "Scan-Pfad"
 
-#: src/xfprot.c:1299
+#: src/xfprot.c:1307
 msgid "Do not scan subdirectories"
 msgstr "Unterverzeichnisse nicht scannen"
 
-#: src/xfprot.c:1302
+#: src/xfprot.c:1310
 msgid "Scan mode"
 msgstr "Scan-Modus"
 
 #. Warning we can't use the ACTIVE flag here because the callback function acts on widgets
 #. we haven't created yet, so we do things manually later by calling toggle1_f()
-#: src/xfprot.c:1307
+#: src/xfprot.c:1315
 msgid "Report only"
 msgstr "Nur Report erstellen"
 
-#: src/xfprot.c:1310
+#: src/xfprot.c:1318
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: src/xfprot.c:1316
+#: src/xfprot.c:1324
 msgid "Macro virus removal options"
 msgstr "Optionen zum Entfernen von Makroviren"
 
-#: src/xfprot.c:1319
+#: src/xfprot.c:1327
 msgid "Remove infected macros from docs"
 msgstr "Infizierte Makros von Dokumenten entfernen"
 
-#: src/xfprot.c:1323
+#: src/xfprot.c:1331
 msgid "Remove all macros from infected docs"
 msgstr "Alle Makros von infizierten Dokumenten entfernen"
 
-#: src/xfprot.c:1326
+#: src/xfprot.c:1334
 msgid "Remove all macros from doc if new variant is found"
 msgstr ""
 "Alle Makros von infizierten Dokumenten entfernen\n"
 "wenn eine neue variante gefunden wird"
 
 #. --stripallmacros switch undocumented in the help text. Needs --disinfect
-#: src/xfprot.c:1330
+#: src/xfprot.c:1338
 msgid "Remove all macros from all docs"
 msgstr "Alle Makros von allen Dokumenten entfernen"
 
-#: src/xfprot.c:1334
+#: src/xfprot.c:1342
 msgid "Use heuristics"
 msgstr "Heuristik verwenden"
 
-#: src/xfprot.c:1337
+#: src/xfprot.c:1345
 msgid "No"
 msgstr "Nein"
 
-#: src/xfprot.c:1340
+#: src/xfprot.c:1348
 msgid "Default"
 msgstr "Normal"
 
-#: src/xfprot.c:1342
+#: src/xfprot.c:1350
 msgid "Maximum"
 msgstr "Maximum"
 
-#: src/xfprot.c:1355
+#: src/xfprot.c:1363
 msgid "List all scanned files"
 msgstr "Alle gescannten Dateien auflisten"
 
-#: src/xfprot.c:1359
+#: src/xfprot.c:1367
 msgid "Options"
 msgstr "Optionen"
 
-#: src/xfprot.c:1362
+#: src/xfprot.c:1370
 msgid "Scan inside archives"
 msgstr "Innerhalb von Archiven scannen"
 
-#: src/xfprot.c:1367
+#: src/xfprot.c:1375
 msgid "Scan for other various malware"
 msgstr "Nach diversen weiteren Schadprogrammen scannen"
 
-#: src/xfprot.c:1373 src/xfprot.c:1375
+#: src/xfprot.c:1379 src/xfprot.c:1383
 msgid "Scan for adware and remote access tools"
 msgstr ""
 
-#: src/xfprot.c:1377
+#: src/xfprot.c:1385
 msgid "Follow symbolic links"
 msgstr "Symbolischen Verknüpfungen folgen"
 
-#: src/xfprot.c:1381
+#: src/xfprot.c:1389
 msgid ""
 "Don't descend directories\n"
 "on other filesystems"
 msgstr ""
 
-#: src/xfprot.c:1385
+#: src/xfprot.c:1393
 msgid "Scan boot sectors"
 msgstr ""
 
-#: src/xfprot.c:1392 src/xfprot.c:1394
+#: src/xfprot.c:1398 src/xfprot.c:1402
 msgid "You need administrator rights"
 msgstr ""
 
-#: src/xfprot.c:1397
+#: src/xfprot.c:1405
 msgid "F6 Virus list"
 msgstr "F6 Virenliste"
 
-#: src/xfprot.c:1399
+#: src/xfprot.c:1407
 msgid "F5 Info"
 msgstr "F5 Info"
 
-#: src/xfprot.c:1401
+#: src/xfprot.c:1409
 msgid "F4 Test"
 msgstr "F4 Test"
 
-#: src/xfprot.c:1403
+#: src/xfprot.c:1411
 msgid "F3 Report"
 msgstr "F3 Report"
 
-#: src/xfprot.c:1405
+#: src/xfprot.c:1413
 msgid "F2 Update"
 msgstr "F2 Aktualisieren"
 
-#: src/xfprot.c:1407
+#: src/xfprot.c:1415
 msgid "F1 Scan"
 msgstr "F1 Scannen"
 
-#: src/xfprot.c:1515
+#: src/xfprot.c:1523
 msgid "Licensed under the GNU General Public License, version 2"
 msgstr "Lizensiert unter der GNU General Public License, Version 2"
 
 #. Version is displayed above so just exit
-#: src/xfprot.c:1543
+#: src/xfprot.c:1550
 #, c-format
 msgid "Usage: %s [option] [path]\n"
 msgstr "Anwendung: %s [optionen] [pfad]\n"
 
-#: src/xfprot.c:1544
+#: src/xfprot.c:1551
 #, c-format
 msgid "\t-k        run as KDE menu action\n"
 msgstr "\t-k        KDE menu action\n"
 
-#: src/xfprot.c:1545
+#: src/xfprot.c:1552
 #, c-format
 msgid "\t-h        display this help and exit\n"
 msgstr "\t-h        hilfe\n"
 
-#: src/xfprot.c:1546
+#: src/xfprot.c:1553
 #, c-format
 msgid ""
 "\t-v        output version information and exit\n"
@@ -549,17 +550,17 @@ msgstr ""
 "\t-v        version\n"
 "\n"
 
-#: src/xfprot.c:1549
+#: src/xfprot.c:1556
 #, c-format
 msgid "%s: unknown command line switch: %s"
 msgstr "%s: unbekannte kommando zeilen option: %s"
 
-#: src/xfprot.c:1568
+#: src/xfprot.c:1575
 #, c-format
 msgid "%s: too much args on command line"
 msgstr "%s: zu viele argumente auf der kommando zeile"
 
-#: src/xfprot.c:1584
+#: src/xfprot.c:1591
 msgid ""
 "Cannot get password file entry.\n"
 "Aborting..."
@@ -567,7 +568,7 @@ msgstr ""
 "Passwort-Datei konnte nicht geöffnet werden.\n"
 "Abbruch..."
 
-#: src/xfprot.c:1590
+#: src/xfprot.c:1597
 msgid ""
 "Failed to change dir to user's home dir,\n"
 "trying\"/\"instead."
@@ -575,7 +576,7 @@ msgstr ""
 "Es konnte nicht in das Heimverzeichnis gewechselt werden,\n"
 "versuche es stattdessen mit \"/\"."
 
-#: src/xfprot.c:1592
+#: src/xfprot.c:1599
 msgid ""
 "Failed to change dir to \"/\",\n"
 "Aborting..."
@@ -584,7 +585,7 @@ msgstr ""
 "Abbruch..."
 
 #. We don't want to be redirected by a link
-#: src/xfprot.c:1600
+#: src/xfprot.c:1607
 msgid ""
 "xfprot's private dir is a link.\n"
 "Aborting..."
@@ -592,7 +593,7 @@ msgstr ""
 "Das Privatverzeichnis von xfprot ist eine Verknfung.\n"
 "Abbruch..."
 
-#: src/xfprot.c:1605
+#: src/xfprot.c:1612
 msgid ""
 "Cannot create xfprot's private dir.\n"
 "Aborting..."
@@ -600,7 +601,7 @@ msgstr ""
 "Kann das Privatverzeichnis für xfprot nicht erstellen.\n"
 "Abbruch..."
 
-#: src/xfprot.c:1625
+#: src/xfprot.c:1632
 msgid ""
 "Unsupported old F-prot version found,\n"
 "please update to latest.\n"
