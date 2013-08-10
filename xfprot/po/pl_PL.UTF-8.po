@@ -100,12 +100,12 @@ msgstr "_Plik"
 msgid "No file name"
 msgstr "Brak nazwy pliku"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "'%s' jest katalogiem"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
 msgstr "Plik '%s' jest plikiem urządzenia"
@@ -183,19 +183,9 @@ msgstr ""
 "%s:\n"
 "%s"
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\"%s\" jest katalogiem"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "Plik \"%s\" jest plikiem urządzenia"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
+msgid "Cannot read '%s': %s"
 msgstr "Błąd odczytu pliku: %s: %s"
 
 #: src/text_common.c:619

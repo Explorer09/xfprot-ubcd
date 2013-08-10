@@ -566,9 +566,9 @@ FILE *open_file (char *filename )
 	} else if (S_ISDIR (fileinfo.st_mode) || S_ISCHR (fileinfo.st_mode) || S_ISBLK (fileinfo.st_mode)) {
 		/* Don't open character or block files.  Sorry, /dev/sndstat! */
 		if(S_ISDIR (fileinfo.st_mode)) {
-			dialog_window(GTK_STOCK_DIALOG_ERROR, ONE_BUTTON, NULL, 1, _("\"%s\" is a directory"), filename);
+			dialog_window(GTK_STOCK_DIALOG_ERROR, ONE_BUTTON, NULL, 1, _("'%s' is a directory"), filename);
 		} else {
-			dialog_window(GTK_STOCK_DIALOG_ERROR, ONE_BUTTON, NULL, 1, _("\"%s\" is a device file"), filename);
+			dialog_window(GTK_STOCK_DIALOG_ERROR, ONE_BUTTON, NULL, 1, _("'%s' is a device file"), filename);
 		}
 	} else if ((fd = open (filename, O_RDONLY)) == -1) {
 		dialog_window (GTK_STOCK_DIALOG_ERROR, ONE_BUTTON, NULL, 1, "%s: %s", filename, strerror(errno));
@@ -583,7 +583,7 @@ FILE *open_file (char *filename )
 		file = fdopen (fd, "rb");
 		if (file == NULL) {
 			dialog_window(GTK_STOCK_DIALOG_ERROR, ONE_BUTTON, NULL, 1, 
-						_("Cannot read \"%s\": %s"), filename, strerror(errno));
+						_("Cannot read '%s': %s"), filename, strerror(errno));
 			close(fd);
 		}
 	}

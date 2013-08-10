@@ -97,15 +97,15 @@ msgstr "_Archivo"
 msgid "No file name"
 msgstr "Archivo sin nombre"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "'%s' es un directorio"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
-msgstr "Archivo '%s' es undispositivo"
+msgstr "Archivo '%s' es un dispositivo"
 
 #: src/text_edit_window.c:107
 #, c-format
@@ -178,20 +178,10 @@ msgstr ""
 "%s:\n"
 "%s"
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\"%s\" es un directorio"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "Archivo \"%s\" es un dispositivo"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
-msgstr "Error Leyendo archivo:\" %s\": %s"
+msgid "Cannot read '%s': %s"
+msgstr "Error Leyendo archivo: '%s': %s"
 
 #: src/text_common.c:619
 msgid "Conversion to UTF-8 failed!"

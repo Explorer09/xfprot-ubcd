@@ -97,12 +97,12 @@ msgstr "_Fichier"
 msgid "No file name"
 msgstr "Pas de nom pour ce fichier"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "« %s » est un dossier"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
 msgstr "Le fichier « %s » est un fichier de périphérique"
@@ -180,21 +180,11 @@ msgstr ""
 "%s :\n"
 "%s"
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\" %s \" est un dossier"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "Le fichier \" %s \" est un fichier de périphérique"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
+msgid "Cannot read '%s': %s"
 msgstr ""
-"Impossible de lire le fichier \" %s \" :\n"
+"Impossible de lire le fichier « %s » :\n"
 "%s"
 
 #: src/text_common.c:619
@@ -315,7 +305,7 @@ msgstr ""
 #: src/xfprot.c:723
 #, c-format
 msgid "Error writing file '%s': %s"
-msgstr "Erreur d'écriture du fichier : « %s » : %s"
+msgstr "Erreur d'écriture du fichier « %s » : %s"
 
 #: src/xfprot.c:726
 msgid "Settings saved!!!"

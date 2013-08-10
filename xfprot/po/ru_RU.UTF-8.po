@@ -97,12 +97,12 @@ msgstr "_Файл"
 msgid "No file name"
 msgstr "Нет имени файла"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "'%s' это директория"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
 msgstr "'%s' это файл устройства"
@@ -180,20 +180,10 @@ msgstr ""
 "%s:\n"
 "%s"
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\"%s\" это директория"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "\"%s\" это файл устройства"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
-msgstr "Невозможно прочитать \"%s\": %s"
+msgid "Cannot read '%s': %s"
+msgstr "Невозможно прочитать '%s': %s"
 
 #: src/text_common.c:619
 msgid "Conversion to UTF-8 failed!"

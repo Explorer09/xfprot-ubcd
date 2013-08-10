@@ -96,12 +96,12 @@ msgstr "_Datei"
 msgid "No file name"
 msgstr "Kein Dateiname"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "'%s' ist ein Verzeichnis"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
 msgstr "Die Datei '%s' ist ein Gerät"
@@ -179,21 +179,11 @@ msgstr ""
 "\"%s\":\n"
 "%s"
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\"%s\" ist ein Verzeichnis"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "Die Datei \"%s\" ist ein Gerät"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
+msgid "Cannot read '%s': %s"
 msgstr ""
-"Konnte Datei \"%s\" nicht öffnen:\n"
+"Konnte Datei '%s' nicht öffnen:\n"
 " %s"
 
 #: src/text_common.c:619
@@ -316,7 +306,7 @@ msgstr ""
 #: src/xfprot.c:723
 #, c-format
 msgid "Error writing file '%s': %s"
-msgstr "Konnte Datei nicht schreiben:' %s': %s"
+msgstr "Konnte Datei nicht schreiben: '%s': %s"
 
 #: src/xfprot.c:726
 msgid "Settings saved!!!"

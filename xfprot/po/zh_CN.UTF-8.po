@@ -95,12 +95,12 @@ msgstr "文件(_F)"
 msgid "No file name"
 msgstr "未输入文件名。"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "'%s' 为一个文件夹。"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
 msgstr "'%s' 为一个设备文件。"
@@ -177,20 +177,10 @@ msgstr ""
 "'%s'：\n"
 "%s"
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\"%s\" 为一个文件夹。"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "\"%s\" 为一个设备文件。"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
-msgstr "无法读取文件 \"%s\"：%s"
+msgid "Cannot read '%s': %s"
+msgstr "无法读取文件 '%s'：%s"
 
 #: src/text_common.c:619
 msgid "Conversion to UTF-8 failed!"

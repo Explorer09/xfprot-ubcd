@@ -98,12 +98,12 @@ msgstr "ファイル(_F)"
 msgid "No file name"
 msgstr "ファイル名がない"
 
-#: src/text_edit_window.c:82
+#: src/text_edit_window.c:82 src/text_common.c:569
 #, c-format
 msgid "'%s' is a directory"
 msgstr "'%s' はディレクトリです"
 
-#: src/text_edit_window.c:84
+#: src/text_edit_window.c:84 src/text_common.c:571
 #, c-format
 msgid "'%s' is a device file"
 msgstr "'%s' はデバイスファイルです"
@@ -179,20 +179,10 @@ msgid ""
 "%s"
 msgstr ""
 
-#: src/text_common.c:569
-#, c-format
-msgid "\"%s\" is a directory"
-msgstr "\"%s\" はディレクトリです"
-
-#: src/text_common.c:571
-#, c-format
-msgid "\"%s\" is a device file"
-msgstr "\"%s\" はデバイスファイルです"
-
 #: src/text_common.c:586
 #, c-format
-msgid "Cannot read \"%s\": %s"
-msgstr "読めない \"%s\"：%s"
+msgid "Cannot read '%s': %s"
+msgstr "読めない '%s'：%s"
 
 #: src/text_common.c:619
 msgid "Conversion to UTF-8 failed!"
