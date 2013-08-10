@@ -806,7 +806,11 @@ static GtkWidget *my_combo_path_button(char *label_str, GCallback func, gpointer
 	image = gtk_image_new_from_stock(GTK_STOCK_OPEN, GTK_ICON_SIZE_MENU);
 	gtk_box_pack_start(GTK_BOX(box), image, FALSE, FALSE, 0);
 
+#ifdef USE_NEW_SEPARATOR
+	sep = gtk_separator_new(GTK_ORIENTATION_VERTICAL);
+#else
 	sep = gtk_vseparator_new();
+#endif
 	gtk_box_pack_start(GTK_BOX(box), sep, FALSE, FALSE, 0);
 	
 	my_chooser_button_label = gtk_label_new(label_str);
@@ -814,7 +818,11 @@ static GtkWidget *my_combo_path_button(char *label_str, GCallback func, gpointer
 	gtk_misc_set_alignment(GTK_MISC(my_chooser_button_label), 0.0, 0.5);
 	gtk_container_add(GTK_CONTAINER(box), my_chooser_button_label);
 
+#ifdef USE_NEW_SEPARATOR
+	sep = gtk_separator_new(GTK_ORIENTATION_VERTICAL);
+#else
 	sep = gtk_vseparator_new();
+#endif
 	gtk_box_pack_start(GTK_BOX(box), sep, FALSE, FALSE, 0);
 	
 	image = gtk_image_new_from_stock(GTK_STOCK_GO_DOWN, GTK_ICON_SIZE_MENU);

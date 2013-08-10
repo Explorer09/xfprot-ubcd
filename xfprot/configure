@@ -8129,6 +8129,50 @@ if test "x$ac_cv_lib_gtk_3_gtk_widget_get_preferred_size" = xyes; then :
 $as_echo "#define USE_NEW_PREFERRED_SIZE /**/" >>confdefs.h
 
 fi
+
+	# gtk_separator_new() is available since 3.0. (The class was abstract before that.)
+	# The old gtk_vseparator_new() is deprecated since 3.2.
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk_separator_new in -lgtk-3" >&5
+$as_echo_n "checking for gtk_separator_new in -lgtk-3... " >&6; }
+if ${ac_cv_lib_gtk_3_gtk_separator_new+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  ac_check_lib_save_LIBS=$LIBS
+LIBS="-lgtk-3  $LIBS"
+cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+
+/* Override any GCC internal prototype to avoid an error.
+   Use char because int might match the return type of a GCC
+   builtin and then its argument prototype would still apply.  */
+#ifdef __cplusplus
+extern "C"
+#endif
+char gtk_separator_new ();
+int
+main ()
+{
+return gtk_separator_new ();
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_c_try_link "$LINENO"; then :
+  ac_cv_lib_gtk_3_gtk_separator_new=yes
+else
+  ac_cv_lib_gtk_3_gtk_separator_new=no
+fi
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
+LIBS=$ac_check_lib_save_LIBS
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gtk_3_gtk_separator_new" >&5
+$as_echo "$ac_cv_lib_gtk_3_gtk_separator_new" >&6; }
+if test "x$ac_cv_lib_gtk_3_gtk_separator_new" = xyes; then :
+
+$as_echo "#define USE_NEW_SEPARATOR /**/" >>confdefs.h
+
+fi
 fi
 
 ac_fn_c_check_func "$LINENO" "prctl" "ac_cv_func_prctl"

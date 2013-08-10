@@ -234,6 +234,11 @@ else
 	# since 3.0
 	AC_CHECK_LIB(gtk-3, gtk_widget_get_preferred_size,
 		[AC_DEFINE(USE_NEW_PREFERRED_SIZE, [], [Use new gtk_widget_get_preferred_size() API.])])dnl
+
+	# gtk_separator_new() is available since 3.0. (The class was abstract before that.)
+	# The old gtk_vseparator_new() is deprecated since 3.2.
+	AC_CHECK_LIB(gtk-3, gtk_separator_new,
+		[AC_DEFINE(USE_NEW_SEPARATOR, [], [Use new gtk_separator_new() API.])])dnl
 fi
 
 AC_CHECK_FUNC(prctl, ac_prctl=yes, ac_prctl=no)

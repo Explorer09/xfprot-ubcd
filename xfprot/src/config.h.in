@@ -108,5 +108,8 @@
 /* Use new gtk_progress_bar_set_inverted() API. */
 #undef USE_NEW_PROGRESS_BAR
 
+/* Use new gtk_separator_new() API. */
+#undef USE_NEW_SEPARATOR
+
 /* Old/new gtk tooltips. */
 #undef USE_NEW_TOOLTIP
