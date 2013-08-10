@@ -761,8 +761,13 @@ static void pref_set_position(GtkMenu *menu, gint *x, gint *y, gboolean *push_in
 
 	gtk_menu_set_screen(menu, gtk_widget_get_screen(button));
 	gdk_window_get_origin(gtk_widget_get_parent_window(button), &wx, &wy);
+#ifdef USE_NEW_PREFERRED_SIZE
+	gtk_widget_get_preferrred_size(GTK_WIDGET(menu), NULL, &requisition);
+	gtk_widget_get_preferrred_size(GTK_WIDGET(button), NULL, &b_requisition);
+#else
 	gtk_widget_size_request(GTK_WIDGET(menu), &requisition);
 	gtk_widget_size_request(GTK_WIDGET(button), &b_requisition);
+#endif
 	gtk_widget_get_allocation(button, allocation);
 	*x = wx + allocation->x - requisition.width + b_requisition.width;
 	*y = wy + allocation->y + allocation->height;

@@ -235,6 +235,12 @@ else
 	if test "x$ac_progress_bar" = "x1"; then
 		AC_DEFINE(USE_NEW_PROGRESS_BAR, [], [Use new gtk_progress_bar_set_inverted() API.])
 	fi
+
+	# since 3.0
+	AC_CHECK_LIB(gtk-3, gtk_widget_get_preferred_size, ac_preferred_size=1, ac_preferred_size=0)
+	if test "x$ac_preferred_size" = "x1"; then
+		AC_DEFINE(USE_NEW_PREFERRED_SIZE, [], [Use new gtk_widget_get_preferred_size() API.])
+	fi
 fi
 
 AC_CHECK_FUNC(prctl, ac_prctl=yes, ac_prctl=no)

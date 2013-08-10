@@ -102,6 +102,9 @@
 /* Define if GtkComboBoxText (new API) is supported. */
 #undef USE_NEW_COMBO_BOX_TEXT
 
+/* Use new gtk_widget_get_preferred_size() API. */
+#undef USE_NEW_PREFERRED_SIZE
+
 /* Use new gtk_progress_bar_set_inverted() API. */
 #undef USE_NEW_PROGRESS_BAR
 
