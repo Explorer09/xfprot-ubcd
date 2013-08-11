@@ -212,7 +212,9 @@ static void fprot_test(void)
 	FILE *file;
 	FILE *test_file = fopen("eicar.com", "w+");
 
-	/* EICAR virus test file signature */ 
+	/* EICAR virus test file signature. Note that the compiled binary will
+	   contain escaped '%%' so existing antivirus won't complain it (until
+	   printed out). */
 	fprintf(test_file, "X5O!P%%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*");
 	xfclose_nostdin(test_file);
 	file = fprot_spawn("eicar.com");
