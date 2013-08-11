@@ -170,7 +170,7 @@ fi
 AC_ARG_WITH(gtk3,
 	[AS_HELP_STRING([--with-gtk3], [Use Gtk+ 3.x (default).])], [ac_gtk3="$withval"])
 AC_ARG_WITH(gtk2,
-	[AS_HELP_STRING([--with-gtk2], [Use Gtk+ 2.x (requires at least 2.18.0).])], [ac_gtk2="$withval"])
+	[AS_HELP_STRING([--with-gtk2], [Use Gtk+ 2.x (requires at least 2.8.0).])], [ac_gtk2="$withval"])
 
 # Specifying --with-gtk3 but no --with-gtk2 implies --without-gtk2
 # and vice versa
@@ -199,8 +199,8 @@ fi
 if test "x$ac_gtk2" != "xno"; then
 	dnl AM_PATH_GTK_* will define GTK_CFLAGS and GTK_LIBS for us,
 	dnl comes from gtk.m4 (aclocal will find it for us)
-	AM_PATH_GTK_2_0(2.18.0, [],
-		AC_MSG_ERROR([Gtk+ 2.18.0 not found. XFPROT requires Gtk+ to compile.]))
+	AM_PATH_GTK_2_0(2.8.0, [],
+		AC_MSG_ERROR([Gtk+ 2.8.0 not found. XFPROT requires Gtk+ to compile.]))
 
 	gtk_config_major_version=`$PKG_CONFIG --modversion gtk+-2.0 | \
 		sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`

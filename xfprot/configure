@@ -1425,7 +1425,7 @@ Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
   --with-gtk3             Use Gtk+ 3.x (default).
-  --with-gtk2             Use Gtk+ 2.x (requires at least 2.18.0).
+  --with-gtk2             Use Gtk+ 2.x (requires at least 2.8.0).
   --with-kdeprefix=PATH   prefix for KDE libraries for KDE3 desktop
                           integration
 
@@ -7754,7 +7754,7 @@ fi
     no_gtk=yes
   fi
 
-  min_gtk_version=2.18.0
+  min_gtk_version=2.8.0
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTK+ - version >= $min_gtk_version" >&5
 $as_echo_n "checking for GTK+ - version >= $min_gtk_version... " >&6; }
 
@@ -7933,7 +7933,7 @@ rm -f core conftest.err conftest.$ac_objext \
      fi
      GTK_CFLAGS=""
      GTK_LIBS=""
-     as_fn_error $? "Gtk+ 2.18.0 not found. XFPROT requires Gtk+ to compile." "$LINENO" 5
+     as_fn_error $? "Gtk+ 2.8.0 not found. XFPROT requires Gtk+ to compile." "$LINENO" 5
   fi
 
 
