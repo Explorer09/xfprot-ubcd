@@ -99,6 +99,12 @@
 
 # define ATTRIBUTE_UNUSED __attribute__ ((__unused__))
 
+/* Backward-compatibility when gtk_widget_get_window() is not available (i.e.
+   older than 2.14). In this case, direct access to the member is needed. */
+#if !defined(USE_NEW_GET_WINDOW)
+#define gtk_widget_get_window(widget) ((widget)->window)
+#endif
+
 /* Backward-compatibility with GTK_WIDGET_VISIBLE() (deprecated since 2.20)
    gtk_widget_get_visible() is available since 2.18. */
 #if !defined(USE_NEW_GET_VISIBLE)

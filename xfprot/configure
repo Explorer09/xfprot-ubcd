@@ -7996,6 +7996,49 @@ $as_echo "#define USE_NEW_TOOLTIP /**/" >>confdefs.h
 
 fi
 
+	# since 2.14
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk_widget_get_window in -lgtk-x11-2.0" >&5
+$as_echo_n "checking for gtk_widget_get_window in -lgtk-x11-2.0... " >&6; }
+if ${ac_cv_lib_gtk_x11_2_0_gtk_widget_get_window+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  ac_check_lib_save_LIBS=$LIBS
+LIBS="-lgtk-x11-2.0  $LIBS"
+cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+
+/* Override any GCC internal prototype to avoid an error.
+   Use char because int might match the return type of a GCC
+   builtin and then its argument prototype would still apply.  */
+#ifdef __cplusplus
+extern "C"
+#endif
+char gtk_widget_get_window ();
+int
+main ()
+{
+return gtk_widget_get_window ();
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_c_try_link "$LINENO"; then :
+  ac_cv_lib_gtk_x11_2_0_gtk_widget_get_window=yes
+else
+  ac_cv_lib_gtk_x11_2_0_gtk_widget_get_window=no
+fi
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
+LIBS=$ac_check_lib_save_LIBS
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gtk_x11_2_0_gtk_widget_get_window" >&5
+$as_echo "$ac_cv_lib_gtk_x11_2_0_gtk_widget_get_window" >&6; }
+if test "x$ac_cv_lib_gtk_x11_2_0_gtk_widget_get_window" = xyes; then :
+
+$as_echo "#define USE_NEW_GET_WINDOW /**/" >>confdefs.h
+
+fi
+
 	# gtk_widget_get_visible() is available since 2.18
 	# USE_NEW_GET_VISIBLE() is deprecated since 2.20
 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk_widget_get_visible in -lgtk-x11-2.0" >&5
@@ -8085,6 +8128,8 @@ fi
 else
 
 $as_echo "#define USE_NEW_TOOLTIP /**/" >>confdefs.h
+
+$as_echo "#define USE_NEW_GET_WINDOW /**/" >>confdefs.h
 
 $as_echo "#define USE_NEW_COMBO_BOX_TEXT /**/" >>confdefs.h
 

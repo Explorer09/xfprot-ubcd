@@ -220,6 +220,10 @@ if test "x$ac_gtk2" != "xno"; then
 	AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_set_tooltip_text,
 		[AC_DEFINE(USE_NEW_TOOLTIP, [], [Old/new gtk tooltips.])])dnl
 
+	# since 2.14
+	AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_get_window,
+		[AC_DEFINE(USE_NEW_GET_WINDOW, [], [Use new gtk_widget_get_window() API.])])dnl
+
 	# gtk_widget_get_visible() is available since 2.18
 	# USE_NEW_GET_VISIBLE() is deprecated since 2.20
 	AC_CHECK_LIB(gtk-x11-2.0, gtk_widget_get_visible,
@@ -230,6 +234,7 @@ if test "x$ac_gtk2" != "xno"; then
 		[AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])])dnl
 else
 	AC_DEFINE(USE_NEW_TOOLTIP, [], [Old/new gtk tooltips.])dnl
+	AC_DEFINE(USE_NEW_GET_WINDOW, [], [Use new gtk_widget_get_window() API.])dnl
 	AC_DEFINE(USE_NEW_COMBO_BOX_TEXT, [], [Define if GtkComboBoxText (new API) is supported.])dnl
 	AC_DEFINE(USE_NEW_GET_VISIBLE, [], [Use new gtk_widget_get_visible() API.])dnl
 

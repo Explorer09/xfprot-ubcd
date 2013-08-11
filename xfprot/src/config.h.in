@@ -105,6 +105,9 @@
 /* Use new gtk_widget_get_visible() API. */
 #undef USE_NEW_GET_VISIBLE
 
+/* Use new gtk_widget_get_window() API. */
+#undef USE_NEW_GET_WINDOW
+
 /* Use new gtk_widget_get_preferred_size() API. */
 #undef USE_NEW_PREFERRED_SIZE
 
