@@ -44,6 +44,42 @@ sighandler () {
     exit 1
 }
 
+# make_package creates the .txz package. This section may be run in a fakeroot
+# environment.
+make_package () {
+    cd $package_dir
+
+    chmod 755 $package_dir
+    chmod 755 root
+    chmod 755 root/.xfprot
+    chmod 644 root/.xfprot/xfprot.config
+    chmod 644 root/.xfprot/xfprot.no_root_warn
+    chmod 644 root/.xfprot/xfprot.no_splash
+
+    # Override the user's umask setting and force all directories in the
+    # package to have mode 755.
+    find . -type d -exec chmod 755 '{}' \;
+
+    chown -h 0:0 .
+    chown -Rh 0:0 *
+
+    # Don't include these directories because they have no use in Parted Magic.
+    rm -f -r usr/share/apps
+    rm -f -r usr/share/man
+
+    # Create the package.
+    # Note: the --no-recursion works only for GNU tar.
+    find . | LC_ALL=C sort | sed -e '2,$ s/^\.\///g' -e '1 s/^\.$/\.\//' | \
+    tar -c -v --xz --no-recursion --files-from - -f $package_name
+}
+
+# -----------------------------------------------------------------------------
+
+if [ "x$1" = "x_make_package" ]; then
+    make_package
+    exit 0
+fi
+
 # For Parted Magic the locale directory structure is different, so we are
 # going to modify the locales here.
 cd $xfprot_dir/po
@@ -73,7 +109,6 @@ fi
 
 if [ "$?" -eq "0" ]; then
     mkdir -p $package_dir
-    chmod 755 $package_dir
     make DESTDIR=$package_dir install-strip
 
     cd $package_dir
@@ -84,24 +119,19 @@ if [ "$?" -eq "0" ]; then
     touch root/.xfprot/xfprot.no_root_warn
     touch root/.xfprot/xfprot.no_splash
 
-    chmod 755 root
-    chmod 755 root/.xfprot
-    chmod 644 root/.xfprot/xfprot.config
-    chmod 644 root/.xfprot/xfprot.no_root_warn
-    chmod 644 root/.xfprot/xfprot.no_splash
+    if [ `id -u` = "0" ]; then
+        make_package
+    elif [ `which fakeroot` ]; then
+        echo "build-for-ubcd: Faking root privileges when possible..."
+        fakeroot -- "./`basename $0`" _make_package
+    else
+        echo "build-for-ubcd: Root privilege or a fakeroot environment is needed to create" >&2
+        echo "the package." >&2
+        trap - 1 2 3 15
+        restore_xfprot
+        exit 1
+    fi
 
-    # Override the user's umask setting and force all directories in the
-    # package to have mode 755.
-    find . -type d -exec chmod 755 '{}' \;
-
-    # Don't include these directories because they have no use in Parted Magic.
-    rm -f -r usr/share/apps
-    rm -f -r usr/share/man
-
-    # Create the package.
-    # Note: the --no-recursion works only for GNU tar.
-    find . | LC_ALL=C sort | sed -e '2,$ s/^\.\///g' -e '1 s/^\.$/\.\//' > $work_dir/xfprot-ubcd-pkg.list
-    tar -c -v --xz --no-recursion --files-from $work_dir/xfprot-ubcd-pkg.list -f $package_name
     mv $package_dir/$package_name $work_dir
 
     # Clean up.
