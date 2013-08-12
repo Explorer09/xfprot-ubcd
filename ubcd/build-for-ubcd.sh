@@ -73,17 +73,26 @@ fi
 
 if [ "$?" -eq "0" ]; then
     mkdir -p $package_dir
+    chmod 755 $package_dir
     make DESTDIR=$package_dir install-strip
 
-    cd $work_dir
+    cd $package_dir
 
     # Copy the config files for the root user into the package
-    mkdir -p $package_dir/root/.xfprot
-    cp root/xfprot/xfprot.config $package_dir/root/.xfprot/xfprot.config
-    touch $package_dir/root/.xfprot/xfprot.no_root_warn
-    touch $package_dir/root/.xfprot/xfprot.no_splash
+    mkdir -p root/.xfprot
+    cp $work_dir/root/xfprot/xfprot.config root/.xfprot/xfprot.config
+    touch root/.xfprot/xfprot.no_root_warn
+    touch root/.xfprot/xfprot.no_splash
 
-    cd $package_dir
+    chmod 755 root
+    chmod 755 root/.xfprot
+    chmod 644 root/.xfprot/xfprot.config
+    chmod 644 root/.xfprot/xfprot.no_root_warn
+    chmod 644 root/.xfprot/xfprot.no_splash
+
+    # Override the user's umask setting and force all directories in the
+    # package to have mode 755.
+    find . -type d -exec chmod 755 '{}' \;
 
     # Don't include these directories because they have no use in Parted Magic.
     rm -f -r usr/share/apps
