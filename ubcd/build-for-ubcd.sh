@@ -123,7 +123,7 @@ if [ "$?" -eq "0" ]; then
         make_package
     elif [ `which fakeroot` ]; then
         echo "build-for-ubcd: Faking root privileges when possible..."
-        fakeroot -- "./`basename $0`" _make_package
+        fakeroot -- "$work_dir/`basename $0`" _make_package
     else
         echo "build-for-ubcd: Root privilege or a fakeroot environment is needed to create" >&2
         echo "the package." >&2
