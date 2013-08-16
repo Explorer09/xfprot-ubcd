@@ -99,7 +99,7 @@
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
 
-/* Define if GtkComboBoxText (new API) is supported. */
+/* Use new GtkComboBoxText API. */
 #undef USE_NEW_COMBO_BOX_TEXT
 
 /* Use new gtk_widget_get_allocation() API. */
