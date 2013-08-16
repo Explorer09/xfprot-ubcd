@@ -1213,7 +1213,7 @@ static void new_gui(GList *icon_list)
 	table1 = table_create(10, 21, main_window, 2 , NOT_HOMOGENEUS);
 
 	menubar = gtk_menu_bar_new();
-	gtk_table_attach_defaults(GTK_TABLE(table1),menubar, 0, 10, 0, 1);
+	attach_to_table(table1, menubar, 0, 10, 0, 1);
 	/* File Menu */
 	filemenu = gtk_menu_new();
 	/* File */

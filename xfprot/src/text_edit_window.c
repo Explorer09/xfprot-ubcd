@@ -314,9 +314,9 @@ void textedit_window_create(char * title, int x, int y, int border, char *filena
 	accel_group = gtk_accel_group_new();
 	gtk_window_add_accel_group(GTK_WINDOW(edit_window), accel_group);
 
-	edit_table = table_create( 20, 21,GTK_WIDGET(edit_window), 0, HOMOGENEUS);
+	edit_table = table_create(20, 21, GTK_WIDGET(edit_window), 0, HOMOGENEUS);
 	menubar = gtk_menu_bar_new();
-	gtk_table_attach_defaults (GTK_TABLE(edit_table),GTK_WIDGET(menubar), 0, 20, 0, 1);
+	attach_to_table (edit_table, menubar, 0, 20, 0, 1);
 
 	filemenu = gtk_menu_new();
 	file = gtk_image_menu_item_new_with_mnemonic(_("_File"));

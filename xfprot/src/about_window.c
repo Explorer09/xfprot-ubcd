@@ -88,10 +88,10 @@ int about_window_create(char * title, int x, int y, int border, char *labeltext,
 	accel_group = gtk_accel_group_new();
 	gtk_window_add_accel_group(GTK_WINDOW(about_window), accel_group);
 	find_toplevel_set_transient(about_window);
-	table = table_create( 20, 18, about_window , 0, NOT_HOMOGENEUS);
+	table = table_create(20, 18, about_window , 0, NOT_HOMOGENEUS);
 
 	menubar = gtk_menu_bar_new();
-	gtk_table_attach_defaults (GTK_TABLE(table), GTK_WIDGET(menubar), 0, 20, 0, 1);
+	attach_to_table(table, menubar, 0, 20, 0, 1);
 
 	option_menu = gtk_menu_new();
 	options = gtk_image_menu_item_new_with_mnemonic(_("_Options"));

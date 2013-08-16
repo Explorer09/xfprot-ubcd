@@ -80,7 +80,8 @@ void textview_window_create(char * title, int x, int y, int border, char *filena
 	table =  table_create(20, 21,GTK_WIDGET(view_window), 0, HOMOGENEUS);
 
 	menubar = gtk_menu_bar_new();
-	gtk_table_attach_defaults (GTK_TABLE(table),GTK_WIDGET(menubar), 0, 20, 0, 1);
+	attach_to_table (table, menubar, 0, 20, 0, 1);
+
 	filemenu = gtk_menu_new();
 	file = gtk_image_menu_item_new_with_mnemonic(_("_File"));
 	gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(file), gtk_image_new_from_stock(GTK_STOCK_FILE, GTK_ICON_SIZE_MENU));	
