@@ -1112,7 +1112,7 @@ static GtkWidget *my_gtk_file_chooser_button(char *label_str)
 	my_chooser_button_label = gtk_label_new(label_str);
 	gtk_label_set_ellipsize (GTK_LABEL(my_chooser_button_label), PANGO_ELLIPSIZE_START);
 	gtk_misc_set_alignment (GTK_MISC(my_chooser_button_label), 0.0, 0.5);
-	gtk_container_add(GTK_CONTAINER(box), my_chooser_button_label);
+	gtk_box_pack_start(GTK_BOX(box), my_chooser_button_label, TRUE, TRUE, 0);
 	
 #ifdef USE_NEW_SEPARATOR
 	sep = gtk_separator_new(GTK_ORIENTATION_VERTICAL);
