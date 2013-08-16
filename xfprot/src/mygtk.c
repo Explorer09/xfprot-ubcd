@@ -91,6 +91,7 @@ GtkWidget *default_text_box_create_on_table(char *text, int editable, GtkWidget 
 	return entry_box;
 }
 
+#if 0  /* UNUSED */
 GtkWidget *text_box_create_on_table(char *text, int editable, GtkWidget * table,
 					int start_col, int end_col, int start_row, int end_row,
 					GtkAttachOptions xoptions,  GtkAttachOptions yoptions,  
@@ -110,6 +111,7 @@ GtkWidget *text_box_create_on_table(char *text, int editable, GtkWidget * table,
 	}
 	return entry_box;
 }
+#endif
 
 void my_gtk_entry_set_text(GtkEntry *entry, char *data)
 {
@@ -135,6 +137,7 @@ GtkWidget *text_box_create(char *text, int editable)
 	gtk_editable_set_editable(GTK_EDITABLE (entry_box), (editable == EDITABLE) ? TRUE : FALSE);
 	return entry_box;
 }
+
 #if 0  /* UNUSED */
 char *my_gtk_entry_get_text(GtkEntry *entry)
 {
@@ -144,11 +147,12 @@ char *my_gtk_entry_get_text(GtkEntry *entry)
 	trim(tmp);
 	return (tmp) ? tmp : "";
 }
+#endif
 
 /********************* End of Text box widget ********************************/
 
 /********************* Standard radio button widget **************************/
-#endif
+
 GtkWidget *radio_create(GtkWidget * last_of_group, char *label,
 			GCallback func, gpointer func_data, int active)
 {
@@ -211,11 +215,12 @@ GtkWidget *default_radio_create_on_table(GtkWidget * last_of_group, char *label,
 	attach_to_table(table, button, start_col, end_col, start_row, end_row);
 	return button;
 }
+#endif
 
 /****************End of radio button on table widget *************************/
 
 /********************* Check button widgets **************************/
-#endif
+
 GtkWidget *check_create(char *label, GCallback func, gpointer func_data, int active)
 {
 	GtkWidget *button;
@@ -246,6 +251,7 @@ GtkWidget *check_create_on_table(char *label, GCallback func, gpointer func_data
 	attach_to_table(table, button, start_col, end_col, start_row, end_row);
 	return button;
 }
+
 #if 0  /* UNUSED */
 GtkWidget *default_check_create_on_table(char *label, GCallback func, int active,
 						GtkWidget * table, int start_col, int end_col, int start_row,
@@ -257,11 +263,12 @@ GtkWidget *default_check_create_on_table(char *label, GCallback func, int active
 	attach_to_table(table, button, start_col, end_col, start_row, end_row);
 	return button;
 }
+#endif
 
 /***************End of Check button widgets **********************************/
 
 /********************* Standard button widget ********************************/
-#endif
+
 GtkWidget *button_create(char *label, GCallback func, gpointer func_data)
 {
 	GtkWidget *button;
@@ -426,10 +433,12 @@ GtkWidget *label_create_on_table(char *label_text, GtkWidget * table,
 	gtk_misc_set_alignment (GTK_MISC (label), xalign, yalign);
 	return label;	
 }
+#endif
 
 /***************End of Label on table widget ********************************/
-#endif
+
 /********************* Standard table widget ********************************/
+
 GtkWidget *table_create(int cols, int rows, GtkWidget * window, int border, int homogeneus)
 {
 	GtkWidget *table;
@@ -440,24 +449,26 @@ GtkWidget *table_create(int cols, int rows, GtkWidget * window, int border, int 
 	gtk_container_set_border_width(GTK_CONTAINER(table), border);
 	return table;
 }
-#if 0  /* UNUSED */
-	GtkWidget *table_create_on_table(int cols, int rows, GtkWidget * table, int border,
-					int homogeneus, int start_col, int end_col, int start_row, int end_row)
-{
-		GtkWidget *new_table;
 
-		new_table = gtk_table_new(rows, cols, TRUE);
-		gtk_table_set_homogeneous(GTK_TABLE(new_table), homogeneus);
-		gtk_table_attach_defaults(GTK_TABLE(table), GTK_WIDGET(new_table), 
+#if 0  /* UNUSED */
+GtkWidget *table_create_on_table(int cols, int rows, GtkWidget * table, int border,
+				int homogeneus, int start_col, int end_col, int start_row, int end_row)
+{
+	GtkWidget *new_table;
+
+	new_table = gtk_table_new(rows, cols, TRUE);
+	gtk_table_set_homogeneous(GTK_TABLE(new_table), homogeneus);
+	gtk_table_attach_defaults(GTK_TABLE(table), GTK_WIDGET(new_table), 
 									start_col, end_col, start_row, end_row);
-		gtk_container_set_border_width(GTK_CONTAINER(table), border);
-		return new_table;
-	}
+	gtk_container_set_border_width(GTK_CONTAINER(table), border);
+	return new_table;
+}
+#endif
 
 /********************* Standard table widget ********************************/
 
 /********************* Standard window widget ********************************/
-#endif
+
 GtkWidget *window_create(int x, int y, int border, const char *title, 
 						GCallback func, void *func_data, int modal)
 {
@@ -565,9 +576,10 @@ GtkWidget *frame_create_on_table(char *label, GtkWidget * table,
 }
 
 /**************End of Frame on table widget ********************************/
-#if 0  /* UNUSED */
+
 /************** Create a separator *****************************************/
 
+#if 0  /* UNUSED */
 GtkWidget *separator_create_on_table(int orientation, GtkWidget * table, int start_col, int end_col,
 						int start_row, int end_row) {
 	GtkWidget *separator;
@@ -580,11 +592,13 @@ GtkWidget *separator_create_on_table(int orientation, GtkWidget * table, int sta
 	attach_to_table(table, separator, start_col, end_col, start_row, end_row);
 	return separator;
 }
+#endif
 
 /************** End of Create a separator **********************************/
 
 /************** Create a Multi column scrolled list ************************/
 
+#if 0  /* UNUSED */
 static void view_popup_menu (GtkWidget *treeview, GdkEventButton *event, gpointer userdata)
 {
 	GtkWidget *menu, *menu_items;
@@ -845,7 +859,7 @@ GtkWidget *string_list_create_on_table(int num, GCallback func,
 	gtk_container_add(GTK_CONTAINER(scrolled_window), GTK_WIDGET(tree));
 
 	if (table) {
-		attach_to_table(table, GTK_WIDGET(scrolled_window), start_col, end_col, start_row, end_row);
+		attach_to_table(table, scrolled_window, start_col, end_col, start_row, end_row);
 	}
 
 	/* The view now holds a reference.  We can get rid of our own reference */
@@ -888,11 +902,13 @@ GtkWidget *string_list_create_on_table(int num, GCallback func,
 	gtk_tree_view_set_headers_visible(GTK_TREE_VIEW(tree), (show_hide == HIDE) ? FALSE : TRUE);
 	return tree;
 }
+#endif
 
 /******** End of Create a Multi column scrolled list ************************/
 
 /************** Create a statusbar **********************************/
 
+#if 0  /* UNUSED */
 GtkWidget *statusbar_create_on_table(GtkWidget *table, GtkWidget **label, char *labeltext, int start_col,
 						int end_col, int start_row, int end_row)
 {
@@ -915,9 +931,10 @@ GtkWidget *statusbar_create_on_table(GtkWidget *table, GtkWidget **label, char *
 	gtk_container_add(GTK_CONTAINER(frame), GTK_WIDGET(*label));
 	return frame;
 }
+#endif
 
 /************** End of Create a statusbar **********************************/
-#endif
+
 /******************* Create a Textpad **************************************/
 
 GtkWidget *textpad_create(int editable, GCallback func, void *func_arg, int wrap)
@@ -1120,9 +1137,10 @@ ProgressData *progressbar_create(int mode)
 }
 
 /************ Progressbar widget  ******************************************/
-#if 0  /* UNUSED */
+
 /************** Create a Pack box  ************************************/
 
+#if 0  /* UNUSED */
 GtkWidget *box_create(int orientation, int homogeneous, int spacing)
 {
 	GtkWidget *box;
@@ -1161,9 +1179,10 @@ GtkWidget *box_create_on_table(int orientation, int homogeneous, GtkWidget * tab
 										xoptions, yoptions, xpadding, ypadding);
 	return box;
 }
+#endif
 
 /************ Create a pack box  ********************************/
-#endif
+
 /************ Set busy cursor  ********************************/
 
 void setbusycursor(GtkWidget *widget, int flag)

@@ -147,17 +147,21 @@ void refresh_gui(void);
 void attach_to_table(GtkWidget *table, GtkWidget *widget, int start_col, int end_col, int start_row, int end_row);
 
 /********************* Text box widget ***************************************/
+
 GtkWidget *text_box_create(char *text, int editable);
 GtkWidget *default_text_box_create_on_table(char *text, int editable, GtkWidget *table,
 								 int start_col, int end_col, int start_row, int end_row);
+#if 0  /* UNUSED */
 GtkWidget *text_box_create_on_table(char *text, int editable, GtkWidget * table,
 					int start_col, int end_col, int start_row, int end_row,
 					GtkAttachOptions xoptions,  GtkAttachOptions yoptions,  
 					 guint xpadding, guint ypadding, int maxlen, int width);
+#endif
 #if 0  /* UNUSED */
 void my_gtk_entry_set_text(GtkEntry *entry, char *data);
 #endif
 char *my_gtk_entry_get_text(GtkEntry *entry);
+
 /********************* End of Text box widget ********************************/
 
 /********************* Standard radio button widget **************************/
@@ -177,6 +181,7 @@ GtkWidget *default_radio_create_on_table(GtkWidget *last_of_group, char *label, 
 										int active, GtkWidget *table, int start_col, int end_col,
 										int start_row, int end_row );
 #endif
+
 /****************End of radio button on table widget *************************/
 
 /********************* Check button widgets **************************/
@@ -188,6 +193,7 @@ GtkWidget *check_create_on_table(char *label, GCallback func, gpointer func_data
 GtkWidget *default_check_create_on_table(char *label, GCallback func, int active,
 			 GtkWidget *table, int start_col, int end_col, int start_row, int end_row );
 #endif
+
 /***************End of Check button widgets **********************************/
 
 /********************* Standard button widget ********************************/
@@ -211,6 +217,7 @@ GtkWidget *button_create_in_container(char *label, GCallback func, gpointer func
 /*************End of Button in container widget *****************************/
 
 /********************* Buttonbox widget **************************************/
+
 GtkWidget *button_box_create(int orientation, int layout, int border, int spacing);
 
 GtkWidget *default_button_box_create(int orientation);
@@ -239,11 +246,12 @@ GtkWidget *label_create(char *label_text);
 
 /********************* Standard table widget ********************************/
 
-GtkWidget *table_create(int cols, int rows , GtkWidget* window , int border, int homogeneus);
+GtkWidget *table_create(int cols, int rows, GtkWidget* window, int border, int homogeneus);
 #if 0  /* UNUSED */
 GtkWidget *table_create_on_table(int cols , int rows,  GtkWidget* table, int border, int homogeneus,
 									int start_col, int end_col, int start_row, int end_row);
 #endif
+
 /********************* Standard table widget ********************************/
 
 /********************* Standard window widget ********************************/
@@ -262,6 +270,7 @@ GtkWidget *frame_create(char *label);
 /**************End of Frame on table widget ********************************/
 
 /********************* Dialog window widget **********************************/
+
 typedef	struct	Dialog_data			Dialog_data;
 struct Dialog_data {
 	GtkWidget	*window;
@@ -275,6 +284,7 @@ void error_dialog(const char *message);
 #if 0  /* UNUSED */
 void not_implemented(void);
 #endif
+
 /**************End of Dialog window widget **********************************/
 
 /********************* For the file selection widget *************************/
@@ -283,17 +293,21 @@ char *file_chooser(const char *title, GtkFileChooserAction fs_action, gboolean l
 					const char *filename, const char *folder, const char *shortcut_folder);
 char *default_file_chooser(const char *title, GtkFileChooserAction fs_action);
 char *my_file_selector_create(char *label, int hidden_files, int action, char *path, char **filter_str);
+
 /*************End of the file selection widget********************************/
 
 /************** Create a separator on table   ********************************/
+
 #if 0  /* UNUSED */
 GtkWidget *separator_create_on_table(int direction, GtkWidget *table,
 									 int start_col,int end_col, int start_row, int end_row );
+#endif
 
 /**********End of  Create a separator on table********************************/
 
 /************** Create a Multi column scrolled list ************************/
 
+#if 0  /* UNUSED */
 typedef struct StringListPopupMenuEntry {
 	gpointer label;						/* Menu Label */
 	int id;								/* Menu id */
@@ -308,16 +322,22 @@ GtkWidget *string_list_create_on_table(int num,GCallback func,
 										GtkWidget *table, int start_col, int end_col,
 										int start_row, int end_row ,int show_hide, int editable, ...);
 void add_data_to_list(GtkWidget * tree, char *data_string[], int n_columns, int autoscroll);
+#endif
+
 /******** End of Create a Multi column scrolled list ************************/
 
 /************** Create a statusbar **********************************/
 
+#if 0  /* UNUSED */
 GtkWidget * statusbar_create_on_table(GtkWidget *table, GtkWidget **label, char* labeltext,
 								int start_col, int end_col, int start_row, int end_row );
+#endif
 
 /******* End of Create a statusbar **********************************/
 
 /************** Create a Permissions window **********************************/
+
+#if 0  /* UNUSED */
 typedef	struct	Perm_data			Perm_data;
 struct Perm_data {
 	GtkWidget	*window;
@@ -332,6 +352,7 @@ struct Perm_data {
 
 int PermissionWindow(char *filename);
 #endif
+
 /*****************End of Permissions window **********************************/
 
 /************** Text window Common  functions ********************************/
@@ -400,33 +421,41 @@ ProgressData *progressbar_create_on_table(int mode, GtkWidget *table,
 											int start_row, int end_row);
 #if 0  /* UNUSED */
 ProgressData * progressbar_window(char* title, int mode, int modal);
+#endif
 
 /************** Create a Progressbar **********************************/
 
 /************** Create a File System Info Window **********************/
 
+#if 0  /* UNUSED */
 void df_window(void);
+#endif
 
 /************** Create a File System Info Window **********************/
 
 /************** Create a Process Manager Window  **********************/
 
+#if 0  /* UNUSED */
 void ps_window(void);
 void kill_pid(GtkWidget *widget);
 void refresh_ps(GtkWidget *widget, GtkWidget *pslist);
 void ps_main(GtkWidget *pslist);
 void pslist_f(GtkWidget *tree);
+#endif
 
 /************** Create a Process Manager Window  **********************/
 
 /************** Create a Image Viewer Window  *************************/
 
+#if 0  /* UNUSED */
 void ViewImageWindow(char *filename);
+#endif
 
 /************** Create a Image Viewer Window  *************************/
 
 /************** Create a Pack box  ************************************/
 
+#if 0  /* UNUSED */
 GtkWidget *box_create( int orientation, int homogeneous, int spacing);
 GtkWidget *default_box_create_on_table( int orientation, int homogeneous, GtkWidget * table,
 							int spacing, int start_col, int end_col, int start_row, int end_row);
@@ -434,19 +463,23 @@ GtkWidget *box_create_on_table(int orientation, int homogeneous, GtkWidget * tab
 				int spacing, int start_col, int end_col, int start_row, int end_row,
 				GtkAttachOptions xoptions,  GtkAttachOptions yoptions,  
 				 guint xpadding, guint ypadding);
+#endif
 
 /************** Create a Pack box  ************************************/
 
 /************** Create a Calendar  ************************************/
 
+#if 0  /* UNUSED */
 char *Calendar_Window(char *title, int flag);
+#endif
 
 /************** Create a Calendar  ************************************/
-#endif
+
 /************** Misc stuff  *******************************************/
 
 void setbusycursor(GtkWidget *widget, int flag);
 
 /************** Misc stuff  *******************************************/
+
 #endif /* __HAVE_MYGTK_  */
 
